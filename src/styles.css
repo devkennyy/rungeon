@@ -1,0 +1,216 @@
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+html,
+body {
+  height: 100%;
+  user-select: none;
+  /* cursor: url("https://cdn.discordapp.com/attachments/961138819111993354/993090951604097075/Untitled2.png"), auto; */
+}
+
+#key:hover {
+  cursor: pointer;
+}
+
+/* Screen One */
+
+.screenOne {
+  height: 100%;
+  color: #adacad;
+  background-color: #212024;
+}
+
+.screenOne .icon {
+  margin-top: 9%;
+  margin-left: 33%;
+  margin-bottom: 50px;
+}
+
+.screenOne h1 {
+  margin-left: 33%;
+  margin-bottom: 20px;
+  font-size: x-large;
+}
+
+.screenOne p {
+  margin-left: 33%;
+  margin-bottom: 40px;
+  font-size: large;
+}
+
+.screenOne button {
+  border: 0;
+  border-radius: 4px;
+  color: #010101;
+  background-color: #90b4fc;
+  cursor: pointer;
+  font-size: .875em;
+  padding: 8px 16px;
+  user-select: none;
+  margin-left: 33%;
+}
+
+/* Screen Two */
+
+.screenTwo {
+  display: none;
+  height: 100%;
+  color: #adacad;
+  background-color: #212024;
+  cursor: url("https://cdn.discordapp.com/attachments/961138819111993354/993081073976213555/hammer.png"), auto;
+}
+
+.screenTwo h1 {
+  margin-left: 33%;
+  margin-bottom: 20px;
+  font-size: x-large;
+}
+
+.screenTwo p {
+  margin-left: 33%;
+  margin-bottom: 40px;
+  font-size: large;
+}
+
+.screenTwo .icon {
+  margin-top: 9%;
+  margin-left: 33%;
+  margin-bottom: 50px;
+}
+
+.screenTwo button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+  color: #010101;
+  background-color: #90b4fc;
+  font-size: .875em;
+  padding: 8px 16px;
+  user-select: none;
+  margin-left: 33%;
+  opacity: 30%;
+}
+
+/* Screen Three */
+
+.screenThree {
+  display: none;
+  height: 100%;
+  color: #adacad;
+  background-color: #212024;
+}
+
+.screenThree h1 {
+  margin-left: 33%;
+  margin-bottom: 20px;
+  font-size: x-large;
+}
+
+.screenThree p {
+  margin-left: 33%;
+  margin-bottom: 40px;
+  font-size: large;
+}
+
+.screenThree .icon {
+  margin-top: 9%;
+  margin-left: 33%;
+  margin-bottom: 50px;
+}
+
+.screenThree button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+  color: #010101;
+  background-color: #90b4fc;
+  font-size: .875em;
+  padding: 8px 16px;
+  user-select: none;
+  margin-left: 33%;
+}
+
+/* Screen Four */
+
+.screenFour {
+  display: none;
+  height: 100%;
+  color: #adacad;
+  background-color: #212024;
+}
+
+.screenFour .icon {
+  margin-top: 9%;
+  margin-left: 33%;
+  margin-bottom: 50px;
+  cursor: url("https://cdn.discordapp.com/attachments/961138819111993354/993103064192004226/Untitled_1.png"), auto;
+}
+
+.screenFour h1 {
+  margin-left: 33%;
+  margin-bottom: 20px;
+  font-size: x-large;
+}
+
+.screenFour p {
+  margin-left: 33%;
+  margin-bottom: 40px;
+  font-size: large;
+}
+
+.screenFour button {
+  border: 0;
+  border-radius: 4px;
+  color: #010101;
+  background-color: #90b4fc;
+  cursor: pointer;
+  opacity: 30%;
+  font-size: .875em;
+  padding: 8px 16px;
+  user-select: none;
+  margin-left: 33%;
+}
+
+/* Screen Five */
+
+.screenFive {
+  display: none;
+  height: 100%;
+  color: #adacad;
+  background-color: #212024;
+}
+
+.screenFive .icon {
+  margin-top: 9%;
+  margin-left: 33%;
+  margin-bottom: 50px;
+}
+
+.screenFive h1 {
+  margin-left: 33%;
+  margin-bottom: 20px;
+  font-size: x-large;
+}
+
+.screenFive p {
+  margin-left: 33%;
+  margin-bottom: 40px;
+  font-size: large;
+}
+
+.screenFive button {
+  border: 0;
+  border-radius: 4px;
+  color: #010101;
+  background-color: #90b4fc;
+  cursor: pointer;
+  font-size: .875em;
+  padding: 8px 16px;
+  user-select: none;
+  margin-left: 33%;
+}
+
+
