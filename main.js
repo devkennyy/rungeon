@@ -1,3 +1,7 @@
+console.log(
+  "01001001 01101110 00100000 01110000 01110010 01101111 01100111 01110010 01100101 01110011 01110011 00101110 00101110 00101110"
+);
+
 function exitGame() {
   window.close();
 }
@@ -18,7 +22,6 @@ function toScreenFour() {
   document.title = "██████░░░░";
   document.getElementById("screenThree").style.display = "none";
   document.getElementById("screenFour").style.display = "block";
-  console.log("🔑");
 }
 
 function toScreenFive() {
