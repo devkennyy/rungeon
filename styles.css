@@ -37,9 +37,8 @@ body {
 .sectionWrapper .icon{
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 45%;
   transform: translate(-50%, -50%);
-  border: 5px solid #FFFF00;
   cursor: pointer;
   animation: blink 1s;
   animation-iteration-count: infinite;
