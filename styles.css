@@ -15,6 +15,61 @@ body {
   cursor: pointer;
 }
 
+.returnButton {
+  border: 0;
+  border-radius: 4px;
+  color: #010101;
+  background-color: #90b4fc;
+  cursor: pointer;
+  font-size: .875em;
+  padding: 8px 16px;
+  user-select: none;
+}
+
+.sectionWrapper {
+  text-align: center;
+  font-size: 2rem;
+  height: 100%;
+  color: #adacad;
+  background-color: #212024;
+}
+
+.sectionWrapper .icon{
+  cursor: pointer;
+  margin-top: 75px;
+  margin-bottom: 50px;
+  animation: blink 1s;
+  animation-iteration-count: infinite;
+}
+
+.sectionWrapper .section {
+  margin-top: 30px;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.sectionWrapper .locked{
+  cursor: default;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* .locked {
+  filter: brightness(-50%);
+} */
+
 /* Screen One */
 
 .screenOne {
@@ -41,7 +96,7 @@ body {
   font-size: large;
 }
 
-.screenOne button {
+.screenOne #screenOneButton {
   border: 0;
   border-radius: 4px;
   color: #010101;
@@ -81,7 +136,7 @@ body {
   margin-bottom: 50px;
 }
 
-.screenTwo button {
+.screenTwo #bugButton {
   cursor: pointer;
   border: 0;
   border-radius: 4px;
@@ -121,7 +176,7 @@ body {
   margin-bottom: 50px;
 }
 
-.screenThree button {
+.screenThree #screenThreeButton {
   cursor: pointer;
   border: 0;
   border-radius: 4px;
@@ -161,7 +216,7 @@ body {
   font-size: large;
 }
 
-.screenFour button {
+.screenFour #screenFourButton {
   border: 0;
   border-radius: 4px;
   color: #010101;
@@ -201,7 +256,7 @@ body {
   font-size: large;
 }
 
-.screenFive button {
+.screenFive #screenFiveButton {
   border: 0;
   border-radius: 4px;
   color: #010101;

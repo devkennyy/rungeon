@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>░░░░░░░░░░</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=JetBrains+Mono&family=Roboto&display=swap");
+    </style>
+    <script
+      src="https://kit.fontawesome.com/384a80988d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" type="image/x-icon" href="dungeon.ico" />
+  </head>
+  <body>
+    <div class="screenOne" id="screenOne">
+      <i class="icon fas fa-door-open fa-3x"></i>
+      <h1>A mystery door, how exciting</h1>
+      <p>
+        Lucky you! Maybe that <b>button does something?</b>
+      </p>
+      <button id="screenOneButton" onclick="toScreenTwo()">Continue</button>
+      <button class="returnButton" onclick="returnHome()">Return</button>
+    </div>
+    <div class="screenTwo" id="screenTwo">
+      <div onclick="squashBug()">
+        <i class="icon fas fa-bug fa-3x" id="bugIcon" title=""></i>
+      </div>
+      <h1>The bugs are coming</h1>
+      <p><b>SQUASH THE BUG!</b> DO IT! DO IT!</b></p>
+      <button id="bugButton" disabled onclick="toScreenThree()"">Continue</button>
+      <button class="returnButton" onclick="returnHome()">Return</button>
+    </div>
+    <div class="screenThree" id="screenThree">
+       <i class="icon fas fa-tree fa-3x" title="Nope, it's a tree"></i>
+       <h1>Is that a dragon?</h1>
+       <p>Take a breath, and this weird <b>piece of gold</b> <span id="key" onclick="takeCoin()">🪙</span></p>
+       <button id="screenThreeButton" onclick="toScreenFour()">Continue</button>
+       <button class="returnButton" onclick="returnHome()">Return</button>
+    </div>
+    <div class="screenFour" id="screenFour">
+      <i onclick="checkForKey()" class="icon fas fa-dragon fa-3x"></i>
+      <h1>That's definitely a dragon</h1>
+      <p id="coinComment">Give him <b>the coin</b> or something!</p>
+      <button id="screenFourButton" disabled onclick="toScreenFive()">Continue</button>
+      <button class="returnButton" onclick="returnHome()">Return</button>
+    </div>
+    <div class="screenFive" id="screenFive">
+      <i class="icon fas fa-running fa-3x"></i>
+      <h1>You did it?</h1>
+      <p><b>Get out</b> while you can.</p>
+      <button class="returnButton" onclick="returnHome()">Return</button>
+    </div>
+  </body>
+</html>
+<script defer src="main.js"></script>

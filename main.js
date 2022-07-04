@@ -2,8 +2,8 @@ console.log(
   "01001001 01101110 00100000 01110000 01110010 01101111 01100111 01110010 01100101 01110011 01110011 00101110 00101110 00101110"
 );
 
-function exit() {
-  window.close();
+function returnHome() {
+  window.location.href = "index.html";
 }
 
 function toScreenTwo() {
@@ -24,20 +24,21 @@ function toScreenFour() {
   document.title = "██████░░░░";
   document.getElementById("screenThree").style.display = "none";
   document.getElementById("screenFour").style.display = "block";
-  localStorage.setItem("hasScreenThree", true);
+  localStorage.setItem("hasScreenFour", true);
 }
 
 function toScreenFive() {
   document.title = "████████░░";
   document.getElementById("screenFour").style.display = "none";
   document.getElementById("screenFive").style.display = "block";
-  localStorage.setItem("hasScreenFour", true);
+  localStorage.setItem("hasScreenFive", true);
 }
 
 function takeCoin() {
   document.getElementById("key").style.display = "none";
   foo();
 }
+
 let hasCoin;
 function foo() {
   hasCoin = true;
@@ -65,5 +66,3 @@ function checkForKey() {
     document.getElementById("coinComment").textContent("Well, you killed us!");
   }
 }
-
-// TODO unlock navbar (achivements)
