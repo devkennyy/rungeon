@@ -6,6 +6,10 @@ function returnHome() {
   window.location.href = "index.html";
 }
 
+function goToDungeon() {
+  window.location.href = "dungeon.html";
+}
+
 function toScreenTwo() {
   document.title = "██░░░░░░░░";
   document.getElementById("screenOne").style.display = "none";
