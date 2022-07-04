@@ -1,3 +1,6 @@
+import Notify from "simple-notify";
+import "simple-notify/dist/simple-notify.min.css";
+
 console.log(
   "01001001 01101110 00100000 01110000 01110010 01101111 01100111 01110010 01100101 01110011 01110011 00101110 00101110 00101110"
 );
@@ -7,7 +10,7 @@ function returnHome() {
 }
 
 function goToDungeon() {
-  window.location.href = "dungeon.html";
+  window.location.href = "rungeon.html";
 }
 
 function toScreenTwo() {
