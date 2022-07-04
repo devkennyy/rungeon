@@ -28,28 +28,21 @@ body {
 
 .sectionWrapper {
   text-align: center;
-  font-size: 2rem;
+  font-size: 4rem;
   height: 100%;
   color: #adacad;
   background-color: #212024;
 }
 
 .sectionWrapper .icon{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #FFFF00;
   cursor: pointer;
-  margin-top: 75px;
-  margin-bottom: 50px;
   animation: blink 1s;
   animation-iteration-count: infinite;
-}
-
-.sectionWrapper .section {
-  margin-top: 30px;
-  font-size: 3rem;
-  cursor: pointer;
-}
-
-.sectionWrapper .locked{
-  cursor: default;
 }
 
 @keyframes blink {
