@@ -19,10 +19,10 @@
     <div class="sectionWrapper">
       <i class="icon fas fa-dungeon fa-3x" onclick="goToDungeon();"></i>
       <div class="section" id="sectionOne">About</div>
-      <div class="section locked" id="sectionTwo">🔒</div>
-      <div class="section locked" id="sectionThree">🔒</div>
-      <div class="section locked" id="sectionFour">🔒</div>
-      <div class="section locked" id="sectionFive">🔒</div>
+      <div class="section" id="sectionTwo">Experience</div>
+      <div class="section" id="sectionThree">Projects</div>
+      <div class="section" id="sectionFour">Technologies</div>
+      <div class="section" id="sectionFive">Contact</div>
     </div>
   </body>
 </html>
@@ -31,36 +31,6 @@
   // TODO unlock popups
   // TODO remember where user was
   // TODO add more levels?
-
-  const hasScreenTwo = localStorage.getItem("hasScreenTwo");
-  const hasScreenThree = localStorage.getItem("hasScreenThree");
-  const hasScreenFour = localStorage.getItem("hasScreenFour");
-  const hasScreenFive = localStorage.getItem("hasScreenFive");
-
-  const sectionTwo = document.getElementById("sectionTwo");
-  const sectionThree = document.getElementById("sectionThree");
-  const sectionFour = document.getElementById("sectionFour");
-  const sectionFive = document.getElementById("sectionFive");
-
-  if (hasScreenTwo) {
-    sectionTwo.textContent = "Experience";
-    sectionTwo.classList.remove("locked");
-  }
-
-  if (hasScreenThree) {
-    sectionThree.textContent = "Projects";
-    sectionThree.classList.remove("locked");
-  }
-
-  if (hasScreenFour) {
-    sectionFour.textContent = "Technologies";
-    sectionFour.classList.remove("locked");
-  }
-
-  if (hasScreenFive) {
-    sectionFive.textContent = "Contact";
-    sectionFive.classList.remove("locked");
-  }
 
   function goToDungeon() {
     window.location.href = "dungeon.html";

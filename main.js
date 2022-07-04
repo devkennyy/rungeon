@@ -10,28 +10,24 @@ function toScreenTwo() {
   document.title = "██░░░░░░░░";
   document.getElementById("screenOne").style.display = "none";
   document.getElementById("screenTwo").style.display = "block";
-  localStorage.setItem("hasScreenTwo", true);
 }
 
 function toScreenThree() {
   document.title = "████░░░░░░";
   document.getElementById("screenTwo").style.display = "none";
   document.getElementById("screenThree").style.display = "block";
-  localStorage.setItem("hasScreenThree", true);
 }
 
 function toScreenFour() {
   document.title = "██████░░░░";
   document.getElementById("screenThree").style.display = "none";
   document.getElementById("screenFour").style.display = "block";
-  localStorage.setItem("hasScreenFour", true);
 }
 
 function toScreenFive() {
   document.title = "████████░░";
   document.getElementById("screenFour").style.display = "none";
   document.getElementById("screenFive").style.display = "block";
-  localStorage.setItem("hasScreenFive", true);
 }
 
 function takeCoin() {
