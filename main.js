@@ -69,3 +69,23 @@ function checkForKey() {
     document.getElementById("coinComment").textContent("Well, you killed us!");
   }
 }
+const finalButton = document.querySelector("#finalButton");
+finalButton.addEventListener("click", () => {
+  new Notify({
+    status: "warning",
+    title: "This isn't the end",
+    text: "Rungeon is a work in progress, stay tuned",
+    effect: "fade",
+    speed: 300,
+    customClass: "",
+    customIcon: "👀",
+    showIcon: true,
+    showCloseButton: true,
+    autoclose: true,
+    autotimeout: 3000,
+    gap: 20,
+    distance: 20,
+    type: 1,
+    position: "right top",
+  });
+});
