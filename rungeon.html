@@ -24,8 +24,8 @@
       <p>
         Lucky you! Maybe that <b>button does something?</b>
       </p>
-      <button id="screenOneButton" onclick="toScreenTwo()">Continue</button>
       <button class="returnButton" onclick="returnHome()">Return</button>
+      <button id="screenOneButton" onclick="toScreenTwo()">Continue</button>
     </div>
     <div class="screenTwo" id="screenTwo">
       <div onclick="squashBug()">
@@ -33,22 +33,22 @@
       </div>
       <h1>The bugs are coming</h1>
       <p><b>SQUASH THE BUG!</b> DO IT! DO IT!</b></p>
-      <button id="bugButton" disabled onclick="toScreenThree()"">Continue</button>
       <button class="returnButton" onclick="returnHome()">Return</button>
+      <button id="bugButton" disabled onclick="toScreenThree()"">Continue</button>
     </div>
     <div class="screenThree" id="screenThree">
        <i class="icon fas fa-tree fa-3x" title="Nope, it's a tree"></i>
        <h1>Is that a dragon?</h1>
        <p>Take a breath, and this weird <b>piece of gold</b> <span id="key" onclick="takeCoin()">🪙</span></p>
-       <button id="screenThreeButton" onclick="toScreenFour()">Continue</button>
        <button class="returnButton" onclick="returnHome()">Return</button>
+       <button id="screenThreeButton" onclick="toScreenFour()">Continue</button>
     </div>
     <div class="screenFour" id="screenFour">
       <i onclick="checkForKey()" class="icon fas fa-dragon fa-3x"></i>
       <h1>That's definitely a dragon</h1>
       <p id="coinComment">Give him <b>the coin</b> or something!</p>
-      <button id="screenFourButton" disabled onclick="toScreenFive()">Continue</button>
       <button class="returnButton" onclick="returnHome()">Return</button>
+      <button id="screenFourButton" disabled onclick="toScreenFive()">Continue</button>
     </div>
     <div class="screenFive" id="screenFive">
       <i class="icon fas fa-running fa-3x"></i>
