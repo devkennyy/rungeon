@@ -59,30 +59,11 @@ function squashBug() {
 
 function checkForKey() {
   if (hasCoin) {
+    document.querySelector(".screenFour .icon").style.cursor =
+      "url('https://cdn.discordapp.com/attachments/961138819111993354/993103064192004226/Untitled_1.png'), auto";
     document.getElementById("screenFourButton").disabled = false;
     document.getElementById("screenFourButton").style.opacity = "1";
   } else {
-    console.log("you dont have a coin");
-    document.getElementById("coinComment").textContent("Well, you killed us!");
+    document.querySelector(".screenFour .icon").style.cursor = "not-allowed";
   }
 }
-const finalButton = document.querySelector("#finalButton");
-finalButton.addEventListener("click", () => {
-  new Notify({
-    status: "warning",
-    title: "This isn't the end",
-    text: "Rungeon is a work in progress, stay tuned",
-    effect: "fade",
-    speed: 300,
-    customClass: "",
-    customIcon: "👀",
-    showIcon: true,
-    showCloseButton: true,
-    autoclose: true,
-    autotimeout: 3000,
-    gap: 20,
-    distance: 20,
-    type: 1,
-    position: "right top",
-  });
-});
