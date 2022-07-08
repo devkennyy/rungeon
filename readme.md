@@ -3,7 +3,7 @@
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 
 # Rungeon 🏃‍♂️
-Rungeon is a minimalistic text adventure game. The design is largely based on Chrome error pages.
+[Rungeon](https://devkennyy.github.io/rungeon/) is a minimalistic text adventure game. The design is largely inspired by Chrome error pages.
 
 ![Animation](https://user-images.githubusercontent.com/105208736/177251107-da55dc8f-79cc-4a82-94a0-2608f743ef99.gif)
 
