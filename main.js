@@ -1,7 +1,3 @@
-console.log(
-  "01001001 01101110 00100000 01110000 01110010 01101111 01100111 01110010 01100101 01110011 01110011 00101110 00101110 00101110"
-);
-
 function returnHome() {
   window.location.href = "index.html";
 }
@@ -11,25 +7,25 @@ function goToDungeon() {
 }
 
 function toScreenTwo() {
-  document.title = "██░░░░░░░░";
+  document.title = "Room Two";
   document.getElementById("screenOne").style.display = "none";
   document.getElementById("screenTwo").style.display = "block";
 }
 
 function toScreenThree() {
-  document.title = "████░░░░░░";
+  document.title = "Room Three";
   document.getElementById("screenTwo").style.display = "none";
   document.getElementById("screenThree").style.display = "block";
 }
 
 function toScreenFour() {
-  document.title = "██████░░░░";
+  document.title = "Room Four";
   document.getElementById("screenThree").style.display = "none";
   document.getElementById("screenFour").style.display = "block";
 }
 
 function toScreenFive() {
-  document.title = "████████░░";
+  document.title = "Room Five";
   document.getElementById("screenFour").style.display = "none";
   document.getElementById("screenFive").style.display = "block";
 }
