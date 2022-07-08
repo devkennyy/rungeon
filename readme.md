@@ -46,7 +46,7 @@ Contributions, issues and feature requests are welcome. Refer to the [contributi
 
 ## 📨 Contact
 
-If you wish to participate in the community, [join our Discord](/). If you wish to contact me directly, [send an email](/).
+If you wish to participate in the community, [join our Discord](https://discord.gg/SFX2KSuzep). If you wish to contact me directly, [send an email](mailto:devkenny@outlook.com).
 
 <!--
 - Email address
