@@ -18,10 +18,11 @@ body {
 
 .dungeonEntrance {
   .icon {
+    font-size: 15rem;
     color: $primary-color;
     position: absolute;
     left: 50%;
-    top: 45%;
+    top: 47%;
     transform: translate(-50%, -50%);
     cursor: pointer;
     animation: blink 1s;

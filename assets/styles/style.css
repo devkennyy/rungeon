@@ -15,10 +15,11 @@ body {
 }
 
 .dungeonEntrance .icon {
+  font-size: 15rem;
   color: #adacad;
   position: absolute;
   left: 50%;
-  top: 45%;
+  top: 47%;
   transform: translate(-50%, -50%);
   cursor: pointer;
   -webkit-animation: blink 1s;

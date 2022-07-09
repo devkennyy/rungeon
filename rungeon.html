@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Room 1</title>
-    <link rel="stylesheet" href="assets\styles.css" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=JetBrains+Mono&family=Roboto&display=swap");
     </style>
@@ -18,43 +18,45 @@
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico?v=2" />
   </head>
   <body>
-    <div class="screenOne" id="screenOne">
-      <i class="icon fas fa-door-open fa-3x"></i>
-      <h1>A mystery door, how exciting</h1>
-      <p>
-        Lucky you! Maybe that <b>button does something?</b>
-      </p>
-      <button class="returnButton" onclick="returnHome()">Return</button>
-      <button id="screenOneButton" onclick="toScreenTwo()">Continue</button>
-    </div>
-    <div class="screenTwo" id="screenTwo">
-      <div onclick="squashBug()">
-        <i class="icon fas fa-bug fa-3x" id="bugIcon" title=""></i>
+    <div class="room-wrapper">
+      <div class="room one">
+        <i class="icon fas fa-door-open fa-3x"></i>
+        <h1>A mystery door, how exciting</h1>
+        <p>
+          Lucky you! Maybe that <b>button does something?</b>
+        </p>
+        <button class="returnBtn" onclick="returnHome()">Return</button>
+        <button class="continueBtn" id="screenOneButton" onclick="toScreenTwo()">Continue</button>
       </div>
-      <h1>The bugs are coming</h1>
-      <p><b>SQUASH THE BUG!</b> DO IT! DO IT!</b></p>
-      <button class="returnButton" onclick="returnHome()">Return</button>
-      <button id="bugButton" disabled onclick="toScreenThree()"">Continue</button>
-    </div>
-    <div class="screenThree" id="screenThree">
-       <i class="icon fas fa-tree fa-3x" title="Nope, it's a tree"></i>
-       <h1>Is that a dragon?</h1>
-       <p>Take a breath, and this weird <b>piece of gold</b> <span id="key" onclick="takeCoin()">🪙</span></p>
-       <button class="returnButton" onclick="returnHome()">Return</button>
-       <button id="screenThreeButton" onclick="toScreenFour()">Continue</button>
-    </div>
-    <div class="screenFour" id="screenFour">
-      <i onmouseover="checkForKey()" id="dragonIcon" class="icon fas fa-dragon fa-3x"></i>
-      <h1>That's definitely a dragon</h1>
-      <p id="coinComment">Give him <b>the coin</b> or something!</p>
-      <button class="returnButton" onclick="returnHome()">Return</button>
-      <button id="screenFourButton" disabled onclick="toScreenFive()">Continue</button>
-    </div>
-    <div class="screenFive" id="screenFive">
-      <i class="icon fas fa-running fa-3x"></i>
-      <h1>You did it?</h1>
-      <p><b>Get out</b> while you can.</p>
-      <button id="finalButton" class="returnButton" onclick="returnHome()">Return</button>
+      <div class="room two">
+        <div onclick="squashBug()">
+          <i class="icon fas fa-bug fa-3x" id="bugIcon" title=""></i>
+        </div>
+        <h1>The bugs are coming</h1>
+        <p><b>SQUASH THE BUG!</b> DO IT! DO IT!</b></p>
+        <button class="returnBtn" onclick="returnHome()">Return</button>
+        <button class="continueBtn" disabled onclick="toScreenThree()"">Continue</button>
+      </div>
+      <div class="room three">
+        <i class="icon fas fa-tree fa-3x" title="Nope, it's a tree"></i>
+        <h1>Is that a dragon?</h1>
+        <p>Take a breath, and this weird <b>piece of gold</b> <span id="key" onclick="takeCoin()">🪙</span></p>
+        <button class="returnBtn" onclick="returnHome()">Return</button>
+        <button class="continueBtn" id="screenThreeButton" onclick="toScreenFour()">Continue</button>
+      </div>
+      <div class="room four">
+        <i onmouseover="checkForKey()" id="dragonIcon" class="icon fas fa-dragon fa-3x"></i>
+        <h1>That's definitely a dragon</h1>
+        <p id="coinComment">Give him <b>the coin</b> or something!</p>
+        <button class="returnBtn" onclick="returnHome()">Return</button>
+        <button class="continueBtn" id="screenFourButton" disabled onclick="toScreenFive()">Continue</button>
+      </div>
+      <div class="room five">
+        <i class="icon fas fa-running fa-3x"></i>
+        <h1>You did it?</h1>
+        <p><b>Get out</b> while you can.</p>
+        <button class="returnBtn" class="returnButton" onclick="returnHome()">Return</button>
+      </div>
     </div>
   </body>
 </html>
