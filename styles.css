@@ -1,0 +1,66 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.stage {
+    color: #adacad;
+    background-color: #212024;
+}
+
+.stage .icon {
+    margin-top: 15%;
+    margin-bottom: 1%;
+}
+  
+.stage h1 {
+    font-size: x-large;
+    text-align: center;
+}
+  
+.stage p {
+    font-size: large;
+    text-align: center;
+}
+
+#stage_1-icon:hover, #stage_2-coin:hover, #stage_3-icon:hover {
+    cursor: pointer;
+}
+
+
+#index {
+    background-color: #212024;
+    text-align: center;
+    height: 100vh;
+}
+
+#index div {
+    margin: 0 auto;
+    height: 100vh;
+    line-height: 100vh;
+    vertical-align: middle;
+
+}
+
+#index div i {
+    
+    color: #adacad;
+    font-size: 12rem;
+    cursor: pointer;
+    animation: blink 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+  
+    50% {
+      opacity: 0;
+    }
+  }
+  
