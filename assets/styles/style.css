@@ -1,34 +1,51 @@
 * {
-  font-family: "Inter", sans-serif;
-  margin: 0px;
-  padding: 0px;
+  font-family: "Roboto", sans-serif;
 }
 
-html,
 body {
-  background-color: #202124;
-  height: 100%;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  margin: 0;
 }
 
-.developmentWrapper {
-  padding-top: 23%;
+.stage {
+  color: #adacad;
+  background-color: #202124;
+}
+
+.stage .icon {
+  margin-top: 15%;
+  margin-bottom: 1%;
+}
+
+.stage h1 {
+  font-size: x-large;
   text-align: center;
 }
-.developmentWrapper .developmentText {
-  color: #adacad;
+
+.stage p {
+  font-size: large;
+  text-align: center;
 }
 
-.dungeonEntrance .icon {
-  font-size: 15rem;
+#stage_1-icon:hover, #stage_2-coin:hover, #stage_3-icon:hover {
+  cursor: pointer;
+}
+
+#index {
+  background-color: #202124;
+  text-align: center;
+  height: 100vh;
+}
+
+#index div {
+  margin: 0 auto;
+  height: 100vh;
+  line-height: 100vh;
+  vertical-align: middle;
+}
+
+#index div i {
   color: #adacad;
-  position: absolute;
-  left: 50%;
-  top: 47%;
-  transform: translate(-50%, -50%);
+  font-size: 12rem;
   cursor: pointer;
   -webkit-animation: blink 1s;
           animation: blink 1s;
@@ -36,76 +53,20 @@ body {
           animation-iteration-count: infinite;
 }
 
-.returnBtn {
-  border: 0;
-  border-radius: 4px;
-  color: #010101;
-  background-color: #90b4fc;
-  cursor: pointer;
-  font-size: 0.875em;
-  padding: 8px 16px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  margin-left: 33%;
-}
-
-.continueBtn {
-  border: 0;
-  border-radius: 4px;
-  color: #010101;
-  background-color: #90b4fc;
-  cursor: pointer;
-  font-size: 0.875em;
-  padding: 8px 16px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.room-wrapper .room {
-  height: 100%;
-  color: #adacad;
-  background-color: #202124;
-}
-.room-wrapper .room .icon {
-  margin-top: 9%;
-  margin-left: 33%;
-  margin-bottom: 50px;
-}
-.room-wrapper .room h1 {
-  margin-left: 33%;
-  margin-bottom: 20px;
-  font-size: x-large;
-}
-.room-wrapper .room p {
-  margin-left: 33%;
-  margin-bottom: 40px;
-  font-size: large;
-}
-
 @-webkit-keyframes blink {
-  0% {
+  0%, 100% {
     opacity: 1;
   }
   50% {
     opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 
 @keyframes blink {
-  0% {
+  0%, 100% {
     opacity: 1;
   }
   50% {
     opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }/*# sourceMappingURL=style.css.map */

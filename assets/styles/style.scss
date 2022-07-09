@@ -1,100 +1,68 @@
 $primary-color: #adacad;
 $background-color: #202124;
-$black: #010101;
-$button-background: #90b4fc;
 
 * {
-  font-family: "Inter", sans-serif;
-  margin: 0px;
-  padding: 0px;
+  font-family: 'Roboto', sans-serif;
 }
 
-html,
 body {
+  margin: 0;
+}
+
+.stage {
+  color: $primary-color;
   background-color: $background-color;
-  height: 100%;
-  user-select: none;
 }
 
-.developmentWrapper {
-  padding-top: 23%;
+.stage .icon {
+  margin-top: 15%;
+  margin-bottom: 1%;
+}
+
+.stage h1 {
+  font-size: x-large;
   text-align: center;
-  .developmentText {
-    color: $primary-color;
-  }
 }
 
-.dungeonEntrance {
-  .icon {
-    font-size: 15rem;
-    color: $primary-color;
-    position: absolute;
-    left: 50%;
-    top: 47%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    animation: blink 1s;
-    animation-iteration-count: infinite;
-  }
+.stage p {
+  font-size: large;
+  text-align: center;
 }
 
-.returnBtn {
-  border: 0;
-  border-radius: 4px;
-  color: $black;
-  background-color: $button-background;
+#stage_1-icon:hover, #stage_2-coin:hover, #stage_3-icon:hover {
   cursor: pointer;
-  font-size: 0.875em;
-  padding: 8px 16px;
-  user-select: none;
-  margin-left: 33%;
 }
 
-.continueBtn {
-  border: 0;
-  border-radius: 4px;
-  color: $black;
-  background-color: $button-background;
+
+#index {
+  background-color: $background-color;
+  text-align: center;
+  height: 100vh;
+}
+
+#index div {
+  margin: 0 auto;
+  height: 100vh;
+  line-height: 100vh;
+  vertical-align: middle;
+
+}
+
+#index div i {
+  
+  color: $primary-color;
+  font-size: 12rem;
   cursor: pointer;
-  font-size: 0.875em;
-  padding: 8px 16px;
-  user-select: none;
-}
-
-.room-wrapper {
-  .room {
-    // display: none;
-    height: 100%;
-    color: $primary-color;
-    background-color: $background-color;
-    .icon {
-      margin-top: 9%;
-      margin-left: 33%;
-      margin-bottom: 50px;
-    }
-    h1 {
-      margin-left: 33%;
-      margin-bottom: 20px;
-      font-size: x-large;
-    }
-    p {
-      margin-left: 33%;
-      margin-bottom: 40px;
-      font-size: large;
-    }
-  }
+  animation: blink 1s;
+  animation-iteration-count: infinite;
 }
 
 @keyframes blink {
-  0% {
+  0%, 100% {
     opacity: 1;
   }
 
   50% {
     opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
   }
 }
