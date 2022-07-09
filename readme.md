@@ -14,12 +14,13 @@
 
 ## 📙 About
 
-Rungeon features a series of puzzles in the form of rooms, in which the user relies on their wits to 'escape'.
+Rungeon features a series of puzzles in the form of rooms, in which the user relies on their wits to 'escape'. 
 
 <!--
 - List noteworthy features.
 - State what problem it solves/the aim.
 - Note its development status.
+- Configurability
 -->
 
 ## 💛 Support
