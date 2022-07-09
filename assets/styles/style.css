@@ -43,6 +43,7 @@ body {
   height: 100vh;
   color: #adacad;
   background-color: #202124;
+  text-align: center;
 }
 .room-wrapper h1 {
   margin-top: 24px;
@@ -50,6 +51,7 @@ body {
 }
 .room-wrapper p {
   margin-bottom: 24px;
+  font-size: 1.4rem;
 }
 .room-wrapper button {
   border: 0;

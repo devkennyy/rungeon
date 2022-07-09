@@ -52,6 +52,7 @@ body {
     height: 100vh;
     color: $primary-color;
     background-color: $background-color;
+    text-align: center;
   }
 
   h1{
@@ -61,6 +62,7 @@ body {
 
   p{
     margin-bottom: 24px;
+    font-size: 1.4rem;
   }
 
   button {
