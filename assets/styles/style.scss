@@ -16,6 +16,14 @@ body {
   user-select: none;
 }
 
+.developmentWrapper {
+  padding-top: 23%;
+  text-align: center;
+  .developmentText {
+    color: $primary-color;
+  }
+}
+
 .dungeonEntrance {
   .icon {
     font-size: 15rem;
