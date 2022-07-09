@@ -1,5 +1,7 @@
 window.onload = Run_Stage_Required_Scripts();
 
+
+//Global vars
 const totalStages = 3;
 var stage = 1;
 
@@ -13,13 +15,11 @@ var stageTwo_hasCoin = false;
 
 // START OF GLOBAL FUNCTIONS
 
-//Some things require initial setup before the stage is loaded. This script is run as soon as the page is loaded.
+//Some stages require an initial setup before the stage is loaded. This script is run as soon as the page is loaded.
 function Run_Stage_Required_Scripts() {
 
   //Stage one
   document.getElementById("stage_1-icon").style.opacity = 1.0;
-
-
 }
 
 /*
@@ -45,9 +45,8 @@ function Reset_Stage(stage)
 }
 
 /*
-We really only need the stage we're in right now. Using template literals (also called "back-ticks" -> ` <-) we can directly grab the ID of the stage we're in, as well as the stage we want to change to. It can be done in even less lines of code, but readability is important too.
+We really only need the stage we're in right now. Using template literals (also called "back-ticks" -> ` <-) we can directly grab the ID of the stage we're in, as well as the stage we want to change to.
 
-As for the function itself, all I'm doing is adding / removing the class "d-none", a bootstrap class that sets the display to 'none'.
 This kind of setup will allow us to add as many stages as we want, as long as we have one stage called "stage_start" and another called "stage_end".
 */
 
@@ -75,6 +74,7 @@ function Previous_Stage(currentStage)
 
   }
   Update_Title_Progress();
+  Reset_Stage(stage);
 }
 
 function Next_Stage(currentStage)
@@ -97,7 +97,10 @@ function Next_Stage(currentStage)
 
   }
   Update_Title_Progress();
+  Reset_Stage(stage);
 }
+
+// These functions allow us to enable/disable the continue button. Should be combined with other logic for a more interactive stage (grabbing a coin / giving it, etc)
 
 function Enable_Continue_Button(currentStage)
 {
@@ -123,7 +126,6 @@ function StartGame()
 function Update_Title_Progress() {
   
   let val = (stage / (totalStages + 2));
-  console.log(val);
   switch(true)
   {
     case (val <= 0.1):
@@ -150,9 +152,7 @@ function Update_Title_Progress() {
     case (val <= 0.8):
       document.title = "██████████";
     break;
-
   }
-
 }
 
 // END OF GLOBAL FUNCTIONS
@@ -190,6 +190,10 @@ function Stage_Two_Coin() {
 function Stage_Three_Coin() {
   if (stageTwo_hasCoin) {
     document.getElementById("stage_3-btn").disabled = false;
+    document.getElementById("stage_3-icon").style.cursor = "auto";
   }
 }
 
+/* STAGE X */
+
+//Add your stage-specific functions here, in order, to keep everything organized
