@@ -14,7 +14,7 @@
 
 ## 📙 About
 
-Rungeon features a series of puzzles in the form of rooms, in which the user relies on their wits to 'escape'. 
+> Rungeon features a series of puzzles in the form of rooms, in which the user relies on their wits to 'escape'. 
 
 <!--
 - List noteworthy features.
@@ -23,13 +23,15 @@ Rungeon features a series of puzzles in the form of rooms, in which the user rel
 - Configurability
 -->
 
+<!--
 ## 💛 Support
 
 You can support the development of this project by giving it a star, it's really encouraging!
+-->
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome. Refer to the [contributing guide](/) for more information.
+> Contributions, issues and feature requests are welcome. Refer to the [contributing guide](/) for more information.
 
 <!--
 - Code Style/Requirements
@@ -47,7 +49,7 @@ Contributions, issues and feature requests are welcome. Refer to the [contributi
 
 ## 📨 Contact
 
-If you wish to participate in the community, [join our Discord](https://discord.gg/SFX2KSuzep). If you wish to contact me directly, [send an email](mailto:devkenny@outlook.com).
+> If you wish to participate in the community, [join our Discord](https://discord.gg/SFX2KSuzep). If you wish to contact me directly, [send an email](mailto:devkenny@outlook.com).
 
 <!--
 - Email address
