@@ -35,7 +35,7 @@ function takeCoin() {
   foo();
 }
 
-let hasCoin;
+let hasCoin = false;
 function foo() {
   hasCoin = true;
   return hasCoin;
@@ -55,11 +55,10 @@ function squashBug() {
 
 function checkForKey() {
   if (hasCoin) {
-    document.querySelector(".screenFour .icon").style.cursor =
-      "url('https://cdn.discordapp.com/attachments/961138819111993354/993103064192004226/Untitled_1.png'), auto";
+    document.getElementById("dragonIcon").style.cursor ="grab";
     document.getElementById("screenFourButton").disabled = false;
     document.getElementById("screenFourButton").style.opacity = "1";
   } else {
-    document.querySelector(".screenFour .icon").style.cursor = "not-allowed";
+    document.getElementById("dragonIcon").style.cursor = "not-allowed";
   }
 }

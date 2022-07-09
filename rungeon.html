@@ -18,44 +18,70 @@
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico?v=2" />
   </head>
   <body>
-    <div class="screenOne" id="screenOne">
+
+    <!-- Screen One Start -->
+    <div class="screen" id="screenOne">
       <i class="icon fas fa-door-open fa-3x"></i>
       <h1>A mystery door, how exciting</h1>
       <p>
         Lucky you! Maybe that <b>button does something?</b>
       </p>
-      <button class="returnButton" onclick="returnHome()">Return</button>
-      <button id="screenOneButton" onclick="toScreenTwo()">Continue</button>
+      <div class="centered">
+        <button class="returnButton" onclick="returnHome()"> Return </button>
+        <button id="screenOneButton" onclick="toScreenTwo()"> Continue </button>
+      </div>
     </div>
-    <div class="screenTwo" id="screenTwo">
+    <!-- Screen One End -->
+    
+    <!-- Screen Two Start -->
+    <div class="screen" id="screenTwo">
       <div onclick="squashBug()">
         <i class="icon fas fa-bug fa-3x" id="bugIcon" title=""></i>
       </div>
-      <h1>The bugs are coming</h1>
-      <p><b>SQUASH THE BUG!</b> DO IT! DO IT!</b></p>
-      <button class="returnButton" onclick="returnHome()">Return</button>
-      <button id="bugButton" disabled onclick="toScreenThree()"">Continue</button>
+        <h1>The bugs are coming</h1>
+        <p><b>SQUASH THE BUG! <br> DO IT! DO IT!</b></p>
+        <div class="centered">
+          <button class="returnButton" onclick="returnHome()">Return</button>
+          <button id="bugButton" disabled onclick="toScreenThree()"">Continue</button>
+      </div>
     </div>
-    <div class="screenThree" id="screenThree">
-       <i class="icon fas fa-tree fa-3x" title="Nope, it's a tree"></i>
-       <h1>Is that a dragon?</h1>
-       <p>Take a breath, and this weird <b>piece of gold</b> <span id="key" onclick="takeCoin()">🪙</span></p>
-       <button class="returnButton" onclick="returnHome()">Return</button>
-       <button id="screenThreeButton" onclick="toScreenFour()">Continue</button>
+    <!-- Screen Two End -->
+
+    <!-- Screen Three Start -->
+    <div class="screen" id="screenThree">
+        <i class="icon fas fa-tree fa-3x" title="Nope, it's a tree"></i>
+        <h1>Is that a dragon?</h1>
+        <p>Take a breath, and this weird <b>piece of gold</b> <span id="key" onclick="takeCoin()">🪙</span></p>
+        <div class="centered">
+          <button class="returnButton" onclick="returnHome()">Return</button>
+          <button id="screenThreeButton" onclick="toScreenFour()">Continue</button>
+        </div>
     </div>
-    <div class="screenFour" id="screenFour">
-      <i onmouseover="checkForKey()" id="dragonIcon" class="icon fas fa-dragon fa-3x"></i>
-      <h1>That's definitely a dragon</h1>
-      <p id="coinComment">Give him <b>the coin</b> or something!</p>
-      <button class="returnButton" onclick="returnHome()">Return</button>
-      <button id="screenFourButton" disabled onclick="toScreenFive()">Continue</button>
+    <!-- Screen ThreeEnd -->
+
+    <!-- Screen Four Start -->
+    <div class="screen" id="screenFour">
+        <i onmouseover="checkForKey()" id="dragonIcon" class="icon fas fa-dragon fa-3x"></i>
+        <h1>That's definitely a dragon</h1>
+        <p id="coinComment">Give him <b>the coin</b> or something!</p>
+        <div class="centered">
+        <button class="returnButton" onclick="returnHome()">Return</button>
+        <button id="screenFourButton" disabled onclick="toScreenFive()">Continue</button>
+      </div>
     </div>
-    <div class="screenFive" id="screenFive">
+    <!-- Screen Four End -->
+
+    <!-- Screen Five Start -->
+    <div class="screen" id="screenFive">
       <i class="icon fas fa-running fa-3x"></i>
       <h1>You did it?</h1>
       <p><b>Get out</b> while you can.</p>
       <button id="finalButton" class="returnButton" onclick="returnHome()">Return</button>
     </div>
+    <!-- Screen Five End -->
+
+
+    <script src="main.js"></script>
   </body>
 </html>
-<script defer src="main.js"></script>
+

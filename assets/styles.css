@@ -1,257 +1,87 @@
 * {
-  font-family: "Inter", sans-serif;
-  margin: 0px;
-  padding: 0px;
+    font-family: "Inter", sans-serif;
+    margin: 0px;
+    padding: 0px;
 }
 
 html,
 body {
-  height: 100%;
-  user-select: none;
-  /* cursor: url("https://cdn.discordapp.com/attachments/961138819111993354/993090951604097075/Untitled2.png"), auto; */
+    height: 100%;
+    user-select: none;
+    /* cursor: url("https://cdn.discordapp.com/attachments/961138819111993354/993090951604097075/Untitled2.png"), auto; */
 }
 
 #key:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
-.returnButton {
-  border: 0;
-  border-radius: 4px;
-  color: #010101;
-  background-color: #90b4fc;
-  cursor: pointer;
-  font-size: .875em;
-  padding: 8px 16px;
-  user-select: none;
-  margin-left: 33%;
+.centered {
+    text-align: center;
 }
 
 .sectionWrapper {
-  text-align: center;
-  font-size: 4rem;
-  height: 100%;
-  color: #adacad;
-  background-color: #212024;
+    text-align: center;
+    font-size: 4rem;
+    height: 100%;
+    color: #adacad;
+    background-color: #212024;
 }
 
-.sectionWrapper .icon{
-  box-shadow: #adacad;
-  position: absolute;
-  left: 50%;
-  top: 45%;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-  animation: blink 1s;
-  animation-iteration-count: infinite;
+.sectionWrapper .icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    animation: blink 1s;
+    animation-iteration-count: infinite;
+}
+
+.screen {
+    height: 100%;
+    color: #adacad;
+    background-color: #212024;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen h1 {
+    margin-top: 24px;
+}
+
+.screen p {
+    margin: 12px 0px 24px 0px;
+}
+
+.screenFour .icon{
+  cursor: auto;
+}
+
+button {
+    border: 0;
+    border-radius: 4px;
+    color: #010101;
+    background-color: #90b4fc;
+    cursor: pointer;
+    font-size: 0.875em;
+    padding: 8px 16px;
+    user-select: none;
+    min-width: 60px
 }
 
 @keyframes blink {
-  0% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 1;
+    }
 
-  50% {
-    opacity: 0;
-  }
+    50% {
+        opacity: 0;
+    }
 
-  100% {
-    opacity: 1;
-  }
-}
-
-/* .locked {
-  filter: brightness(-50%);
-} */
-
-/* Screen One */
-
-.screenOne {
-  height: 100%;
-  color: #adacad;
-  background-color: #212024;
-}
-
-.screenOne .icon {
-  margin-top: 9%;
-  margin-left: 33%;
-  margin-bottom: 50px;
-}
-
-.screenOne h1 {
-  margin-left: 33%;
-  margin-bottom: 20px;
-  font-size: x-large;
-}
-
-.screenOne p {
-  margin-left: 33%;
-  margin-bottom: 40px;
-  font-size: large;
-}
-
-.screenOne #screenOneButton {
-  border: 0;
-  border-radius: 4px;
-  color: #010101;
-  background-color: #90b4fc;
-  cursor: pointer;
-  font-size: .875em;
-  padding: 8px 16px;
-  user-select: none;
-}
-
-/* Screen Two */
-
-.screenTwo {
-  display: none;
-  height: 100%;
-  color: #adacad;
-  background-color: #212024;
-  cursor: url("https://cdn.discordapp.com/attachments/961138819111993354/993081073976213555/hammer.png"), auto;
-}
-
-.screenTwo h1 {
-  margin-left: 33%;
-  margin-bottom: 20px;
-  font-size: x-large;
-}
-
-.screenTwo p {
-  margin-left: 33%;
-  margin-bottom: 40px;
-  font-size: large;
-}
-
-.screenTwo .icon {
-  margin-top: 9%;
-  margin-left: 33%;
-  margin-bottom: 50px;
-}
-
-.screenTwo #bugButton {
-  cursor: pointer;
-  border: 0;
-  border-radius: 4px;
-  color: #010101;
-  background-color: #90b4fc;
-  font-size: .875em;
-  padding: 8px 16px;
-  user-select: none;
-  opacity: 30%;
-}
-
-/* Screen Three */
-
-.screenThree {
-  display: none;
-  height: 100%;
-  color: #adacad;
-  background-color: #212024;
-}
-
-.screenThree h1 {
-  margin-left: 33%;
-  margin-bottom: 20px;
-  font-size: x-large;
-}
-
-.screenThree p {
-  margin-left: 33%;
-  margin-bottom: 40px;
-  font-size: large;
-}
-
-.screenThree .icon {
-  margin-top: 9%;
-  margin-left: 33%;
-  margin-bottom: 50px;
-}
-
-.screenThree #screenThreeButton {
-  cursor: pointer;
-  border: 0;
-  border-radius: 4px;
-  color: #010101;
-  background-color: #90b4fc;
-  font-size: .875em;
-  padding: 8px 16px;
-  user-select: none;
-}
-
-/* Screen Four */
-
-.screenFour {
-  display: none;
-  height: 100%;
-  color: #adacad;
-  background-color: #212024;
-}
-
-.screenFour .icon {
-  margin-top: 9%;
-  margin-left: 33%;
-  margin-bottom: 50px;
-}
-
-.screenFour h1 {
-  margin-left: 33%;
-  margin-bottom: 20px;
-  font-size: x-large;
-}
-
-.screenFour p {
-  margin-left: 33%;
-  margin-bottom: 40px;
-  font-size: large;
-}
-
-.screenFour #screenFourButton {
-  border: 0;
-  border-radius: 4px;
-  color: #010101;
-  background-color: #90b4fc;
-  cursor: pointer;
-  opacity: 30%;
-  font-size: .875em;
-  padding: 8px 16px;
-  user-select: none;
-}
-
-/* Screen Five */
-
-.screenFive {
-  display: none;
-  height: 100%;
-  color: #adacad;
-  background-color: #212024;
-}
-
-.screenFive .icon {
-  margin-top: 9%;
-  margin-left: 33%;
-  margin-bottom: 50px;
-}
-
-.screenFive h1 {
-  margin-left: 33%;
-  margin-bottom: 20px;
-  font-size: x-large;
-}
-
-.screenFive p {
-  margin-left: 33%;
-  margin-bottom: 40px;
-  font-size: large;
-}
-
-.screenFive #finalButton {
-  border: 0;
-  border-radius: 4px;
-  color: #010101;
-  background-color: #90b4fc;
-  cursor: pointer;
-  font-size: .875em;
-  padding: 8px 16px;
-  user-select: none;
+    100% {
+        opacity: 1;
+    }
 }
