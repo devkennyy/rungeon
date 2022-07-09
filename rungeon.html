@@ -19,44 +19,68 @@
   </head>
   <body>
     <div class="room-wrapper">
+
+      <!-- Room One Start -->
       <div class="room one">
         <i class="icon fas fa-door-open fa-3x"></i>
         <h1>A mystery door, how exciting</h1>
         <p>
           Lucky you! Maybe that <b>button does something?</b>
         </p>
-        <button class="returnBtn" onclick="returnHome()">Return</button>
-        <button class="continueBtn" id="screenOneButton" onclick="toScreenTwo()">Continue</button>
+        <div>
+          <button class="returnBtn" onclick="returnHome()">Return</button>
+          <button class="continueBtn" id="screenOneButton" onclick="toScreenTwo()">Continue</button>
+        </div>
       </div>
+      <!-- Room One End -->
+
+      <!-- Room Two Start -->
       <div class="room two">
         <div onclick="squashBug()">
           <i class="icon fas fa-bug fa-3x" id="bugIcon" title=""></i>
+          </div>
+            <h1>The bugs are coming</h1>
+            <p><b>SQUASH THE BUG!<br> DO IT! DO IT!</b></p>
+          <div>
+          <button class="returnBtn" onclick="returnHome()">Return</button>
+          <button id="bugButton" class="continueBtn" disabled onclick="toScreenThree()"">Continue</button>
         </div>
-        <h1>The bugs are coming</h1>
-        <p><b>SQUASH THE BUG!</b> DO IT! DO IT!</b></p>
-        <button class="returnBtn" onclick="returnHome()">Return</button>
-        <button class="continueBtn" disabled onclick="toScreenThree()"">Continue</button>
       </div>
+      <!-- Room Two End -->
+
+      <!-- Room Three Start -->
       <div class="room three">
         <i class="icon fas fa-tree fa-3x" title="Nope, it's a tree"></i>
         <h1>Is that a dragon?</h1>
         <p>Take a breath, and this weird <b>piece of gold</b> <span id="key" onclick="takeCoin()">🪙</span></p>
-        <button class="returnBtn" onclick="returnHome()">Return</button>
-        <button class="continueBtn" id="screenThreeButton" onclick="toScreenFour()">Continue</button>
+        <div>
+          <button class="returnBtn" onclick="returnHome()">Return</button>
+          <button class="continueBtn" id="screenThreeButton" onclick="toScreenFour()">Continue</button>
+        </div>
       </div>
+      <!-- Room Three End -->
+
+      <!-- Room Four Start -->
       <div class="room four">
         <i onmouseover="checkForKey()" id="dragonIcon" class="icon fas fa-dragon fa-3x"></i>
         <h1>That's definitely a dragon</h1>
         <p id="coinComment">Give him <b>the coin</b> or something!</p>
-        <button class="returnBtn" onclick="returnHome()">Return</button>
-        <button class="continueBtn" id="screenFourButton" disabled onclick="toScreenFive()">Continue</button>
+        <div>
+          <button class="returnBtn" onclick="returnHome()">Return</button>
+          <button class="continueBtn" id="screenFourButton" disabled onclick="toScreenFive()">Continue</button>
+        </div>
       </div>
+      <!-- Room Four End -->
+
+      <!-- Room Five Start -->
       <div class="room five">
         <i class="icon fas fa-running fa-3x"></i>
         <h1>You did it?</h1>
         <p><b>Get out</b> while you can.</p>
         <button class="returnBtn" class="returnButton" onclick="returnHome()">Return</button>
       </div>
+      <!-- Room Five End -->
+
     </div>
   </body>
 </html>

@@ -1,3 +1,5 @@
+document.querySelector(".one").style.display = "flex";
+
 function returnHome() {
   window.location.href = "index.html";
 }
@@ -8,26 +10,26 @@ function goToDungeon() {
 
 function toScreenTwo() {
   document.title = "Room Two";
-  document.getElementById("screenOne").style.display = "none";
-  document.getElementById("screenTwo").style.display = "block";
+  document.querySelector(".one").style.display = "none";
+  document.querySelector(".two").style.display = "flex";
 }
 
 function toScreenThree() {
   document.title = "Room Three";
-  document.getElementById("screenTwo").style.display = "none";
-  document.getElementById("screenThree").style.display = "block";
+  document.querySelector(".two").style.display = "none";
+  document.querySelector(".three").style.display = "flex";
 }
 
 function toScreenFour() {
   document.title = "Room Four";
-  document.getElementById("screenThree").style.display = "none";
-  document.getElementById("screenFour").style.display = "block";
+  document.querySelector(".three").style.display = "none";
+  document.querySelector(".four").style.display = "flex";
 }
 
 function toScreenFive() {
   document.title = "Room Five";
-  document.getElementById("screenFour").style.display = "none";
-  document.getElementById("screenFive").style.display = "block";
+  document.querySelector(".four").style.display = "none";
+  document.querySelector(".five").style.display = "flex";
 }
 
 function takeCoin() {
@@ -55,11 +57,10 @@ function squashBug() {
 
 function checkForKey() {
   if (hasCoin) {
-    document.querySelector(".screenFour .icon").style.cursor =
-      "url('https://cdn.discordapp.com/attachments/961138819111993354/993103064192004226/Untitled_1.png'), auto";
+    document.getElementById("dragonIcon").style.cursor = "pointer";
     document.getElementById("screenFourButton").disabled = false;
     document.getElementById("screenFourButton").style.opacity = "1";
   } else {
-    document.querySelector(".screenFour .icon").style.cursor = "not-allowed";
+    document.getElementById("dragonIcon").style.cursor = "not-allowed";
   }
 }
