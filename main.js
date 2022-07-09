@@ -9,25 +9,25 @@ function goToDungeon() {
 function toScreenTwo() {
   document.title = "Room Two";
   document.getElementById("screenOne").style.display = "none";
-  document.getElementById("screenTwo").style.display = "block";
+  document.getElementById("screenTwo").style.display = "flex";
 }
 
 function toScreenThree() {
   document.title = "Room Three";
   document.getElementById("screenTwo").style.display = "none";
-  document.getElementById("screenThree").style.display = "block";
+  document.getElementById("screenThree").style.display = "flex";
 }
 
 function toScreenFour() {
   document.title = "Room Four";
   document.getElementById("screenThree").style.display = "none";
-  document.getElementById("screenFour").style.display = "block";
+  document.getElementById("screenFour").style.display = "flex";
 }
 
 function toScreenFive() {
   document.title = "Room Five";
   document.getElementById("screenFour").style.display = "none";
-  document.getElementById("screenFive").style.display = "block";
+  document.getElementById("screenFive").style.display = "flex";
 }
 
 function takeCoin() {
