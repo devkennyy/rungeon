@@ -44,7 +44,7 @@
 
 ## 💛 Support
 
-The best way to support the development of this project is by starring the repository, it's really encouraging!
+> The best way to support the development of this project is by starring the repository, it's really encouraging!
 
 ## 📨 Contact
 
