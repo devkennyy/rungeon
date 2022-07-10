@@ -2,6 +2,4 @@
 
 <!-- Describe the change/s made in your PR -->
 
-Closes #
-
-<!-- Reference the issue/s related to your change -->
+<!-- Does your pull request solve an issue? Reference it like so: Closes [#1234]  -->
