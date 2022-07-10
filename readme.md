@@ -6,6 +6,7 @@
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 
 🚪 <b>[ENTER THE RUNGEON!](https://devkennyy.github.io/rungeon/)</b>
@@ -14,7 +15,7 @@
 
 ## 📙 About
 
-> Rungeon features a series of puzzles in the form of rooms, in which the user relies on their wits to 'escape'. 
+> Rungeon features a series of puzzles in the form of rooms, in which the user relies on their wits to 'escape'.
 
 <!--
 - List noteworthy features.
@@ -23,15 +24,9 @@
 - Configurability
 -->
 
-<!--
-## 💛 Support
-
-You can support the development of this project by giving it a star, it's really encouraging!
--->
-
 ## 🤝 Contributing
 
-> Contributions, issues and feature requests are welcome. Refer to the [contributing guide](/) for more information.
+> Contributions, issues and feature requests are welcome. Refer to the [contributing guide](contributing.md) for more information.
 
 <!--
 - Code Style/Requirements
@@ -46,6 +41,10 @@ You can support the development of this project by giving it a star, it's really
 - Features planned
 - Known bugs (shortlist)
 -->
+
+## 💛 Support
+
+The best way to support the development of this project is by starring the repository, it's really encouraging!
 
 ## 📨 Contact
 
