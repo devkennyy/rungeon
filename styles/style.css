@@ -11,29 +11,26 @@ body {
   color: #adacad;
   background-color: #202124;
 }
-
 .stage .icon {
   margin-top: 15%;
   margin-bottom: 1%;
 }
-
 .stage h1 {
   font-size: x-large;
   text-align: center;
 }
-
 .stage p {
   font-size: large;
   text-align: center;
 }
 
-#stage_1-icon:hover, #stage_2-coin:hover {
+#stage_1-icon:hover,
+#stage_2-coin:hover {
   cursor: pointer;
 }
 
 #stage_3-icon:hover {
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🟡</text></svg>") 16 0, auto;
-  /*!emojicursor.app*/
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🟡</text></svg>") 16 0, auto; /*!emojicursor.app*/
 }
 
 #index {
@@ -41,14 +38,12 @@ body {
   text-align: center;
   height: 100vh;
 }
-
 #index div {
   margin: 0 auto;
   height: 100vh;
   line-height: 100vh;
   vertical-align: middle;
 }
-
 #index div i {
   color: #adacad;
   font-size: 12rem;
@@ -58,7 +53,6 @@ body {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
-
 @-webkit-keyframes blink {
   0%, 100% {
     opacity: 1;
@@ -67,7 +61,6 @@ body {
     opacity: 0;
   }
 }
-
 @keyframes blink {
   0%, 100% {
     opacity: 1;

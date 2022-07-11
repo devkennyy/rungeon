@@ -2,7 +2,7 @@ $primary-color: #adacad;
 $background-color: #202124;
 
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -12,61 +12,56 @@ body {
 .stage {
   color: $primary-color;
   background-color: $background-color;
+  .icon {
+    margin-top: 15%;
+    margin-bottom: 1%;
+  }
+  h1 {
+    font-size: x-large;
+    text-align: center;
+  }
+  p {
+    font-size: large;
+    text-align: center;
+  }
 }
 
-.stage .icon {
-  margin-top: 15%;
-  margin-bottom: 1%;
-}
-
-.stage h1 {
-  font-size: x-large;
-  text-align: center;
-}
-
-.stage p {
-  font-size: large;
-  text-align: center;
-}
-
-#stage_1-icon:hover, #stage_2-coin:hover {
+#stage_1-icon:hover,
+#stage_2-coin:hover {
   cursor: pointer;
 }
 
 #stage_3-icon:hover {
-  cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🟡</text></svg>") 16 0,auto; /*!emojicursor.app*/
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🟡</text></svg>")
+      16 0,
+    auto; /*!emojicursor.app*/
 }
-
 
 #index {
   background-color: $background-color;
   text-align: center;
   height: 100vh;
-}
+  div {
+    margin: 0 auto;
+    height: 100vh;
+    line-height: 100vh;
+    vertical-align: middle;
+    i {
+      color: $primary-color;
+      font-size: 12rem;
+      cursor: pointer;
+      animation: blink 1s;
+      animation-iteration-count: infinite;
+    }
+    @keyframes blink {
+      0%,
+      100% {
+        opacity: 1;
+      }
 
-#index div {
-  margin: 0 auto;
-  height: 100vh;
-  line-height: 100vh;
-  vertical-align: middle;
-
-}
-
-#index div i {
-  
-  color: $primary-color;
-  font-size: 12rem;
-  cursor: pointer;
-  animation: blink 1s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes blink {
-  0%, 100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
+      50% {
+        opacity: 0;
+      }
+    }
   }
 }
