@@ -1,7 +1,7 @@
 window.onload = Run_Stage_Required_Scripts();
 
 //Global vars
-const totalStages = 3;
+const totalStages = 4;
 var stage = 1;
 
 //Stage one vars
@@ -184,6 +184,9 @@ function Stage_Three_Coin() {
   }
 }
 
-/* STAGE X */
+/* STAGE FOUR */
+function Stage_Four_Unlock() {
+  console.log("⚠️");
+}
 
-//Add your stage-specific functions here, in order, to keep everything organized
+/* STAGE X */
