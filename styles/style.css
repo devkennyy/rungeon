@@ -11,15 +11,20 @@ body {
 .stage {
   color: #adacad;
   background-color: #202124;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .stage .icon {
-  margin-top: 15%;
   margin-bottom: 1%;
 }
+
 .stage h1 {
   font-size: 1.9rem;
   text-align: center;
 }
+
 .stage p {
   font-size: 1.2rem;
   text-align: center;
@@ -31,21 +36,30 @@ body {
 }
 
 #stage_3-icon:hover {
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🟡</text></svg>")
-      16 0,
-    auto; /*!emojicursor.app*/
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🟡</text></svg>") 16 0, auto;
+  /*!emojicursor.app*/
 }
 
 #index {
   z-index: 1;
   background-color: #202124;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100vh;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   row-gap: 1em;
 }
+
 #index .doors {
   text-align: center;
   display: inline-block;
@@ -54,6 +68,7 @@ body {
   line-height: 100vh;
   vertical-align: middle;
 }
+
 #index .doors i {
   color: #adacad;
   font-size: 20rem;
@@ -63,6 +78,7 @@ body {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
+
 @-webkit-keyframes blink {
   0%,
   100% {
@@ -72,6 +88,7 @@ body {
     opacity: 0;
   }
 }
+
 @keyframes blink {
   0%,
   100% {
@@ -81,14 +98,18 @@ body {
     opacity: 0;
   }
 }
+
 #index .links {
   z-index: 2;
   margin-bottom: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   text-decoration: none;
   -moz-column-gap: 20px;
   column-gap: 20px;
 }
+
 #index .links .theme-button {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -96,15 +117,18 @@ body {
   user-select: none;
   opacity: 0.3;
 }
+
 #index .links i {
   color: #adacad;
 }
+
 #index .links div {
   font-size: 1rem;
   font-weight: 500;
   color: #adacad;
   display: inline-block;
 }
+
 #index .links a {
   text-decoration: none;
 }
