@@ -6,6 +6,7 @@ $background-color: #202124;
 }
 
 body {
+  overflow: hidden;
   margin: 0;
 }
 
@@ -38,17 +39,24 @@ body {
 }
 
 #index {
+  z-index: 1;
   background-color: $background-color;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
   height: 100vh;
-  div {
+  align-items: center;
+  justify-content: center;
+  row-gap: 1em;
+  .doors {
+    text-align: center;
+    display: inline-block;
     margin: 0 auto;
-    height: 100vh;
+    height: 60vh;
     line-height: 100vh;
     vertical-align: middle;
     i {
       color: $primary-color;
-      font-size: 12rem;
+      font-size: 20rem;
       cursor: pointer;
       animation: blink 1s;
       animation-iteration-count: infinite;
@@ -62,6 +70,29 @@ body {
       50% {
         opacity: 0;
       }
+    }
+  }
+  .links {
+    z-index: 2;
+    margin-bottom: 200px;
+    display: flex;
+    text-decoration: none;
+    column-gap: 20px;
+    .theme {
+      user-select: none;
+      opacity: 0.3;
+    }
+    i {
+      color: $primary-color;
+    }
+    div {
+      font-size: 1rem;
+      font-weight: 500;
+      color: $primary-color;
+      display: inline-block;
+    }
+    a {
+      text-decoration: none;
     }
   }
 }
