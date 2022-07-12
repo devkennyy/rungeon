@@ -4,6 +4,7 @@
 }
 
 body {
+  overflow: hidden;
   margin: 0;
 }
 
@@ -11,54 +12,55 @@ body {
   color: #adacad;
   background-color: #202124;
 }
-
 .stage .icon {
   margin-top: 15%;
   margin-bottom: 1%;
 }
-
 .stage h1 {
-  font-size: x-large;
+  font-size: 1.9rem;
   text-align: center;
 }
-
 .stage p {
-  font-size: large;
+  font-size: 1.2rem;
   text-align: center;
 }
 
-#stage_1-icon:hover, #stage_2-coin:hover {
+#stage_1-icon:hover,
+#stage_2-coin:hover {
   cursor: pointer;
 }
 
 #stage_3-icon:hover {
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🟡</text></svg>") 16 0, auto;
-  /*!emojicursor.app*/
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🟡</text></svg>") 16 0, auto; /*!emojicursor.app*/
 }
 
 #index {
+  z-index: 1;
   background-color: #202124;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
   height: 100vh;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1em;
 }
-
-#index div {
+#index .doors {
+  text-align: center;
+  display: inline-block;
   margin: 0 auto;
-  height: 100vh;
+  height: 60vh;
   line-height: 100vh;
   vertical-align: middle;
 }
-
-#index div i {
+#index .doors i {
   color: #adacad;
-  font-size: 12rem;
+  font-size: 20rem;
   cursor: pointer;
   -webkit-animation: blink 1s;
           animation: blink 1s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
-
 @-webkit-keyframes blink {
   0%, 100% {
     opacity: 1;
@@ -67,7 +69,6 @@ body {
     opacity: 0;
   }
 }
-
 @keyframes blink {
   0%, 100% {
     opacity: 1;
@@ -75,4 +76,31 @@ body {
   50% {
     opacity: 0;
   }
+}
+#index .links {
+  z-index: 2;
+  margin-bottom: 220px;
+  display: flex;
+  text-decoration: none;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+#index .links .theme-button {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  opacity: 0.3;
+}
+#index .links i {
+  color: #adacad;
+}
+#index .links div {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #adacad;
+  display: inline-block;
+}
+#index .links a {
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */

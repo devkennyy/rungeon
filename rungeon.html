@@ -20,7 +20,7 @@
         <i id="stage_start-icon" class="icon fas fa-door-open fa-3x align-self-center"></i>
         <h1>A mystery door, how exciting</h1>
         <p>
-          Lucky you! Maybe that <b>button does something?</b>
+          Maybe that <b>button does something?</b>
         </p>
         <div class="d-flex justify-content-center">
             <button class="btn btn-primary" onclick="Next_Stage('start')">Continue</button>
@@ -29,7 +29,7 @@
 
     <div id="stage_1" class="stage d-flex flex-column flex-nowrap vh-100 d-none">
 
-        <div id="stage_1-icon" class="icon fas fa-bug fa-3x align-self-center" onclick="Stage_One_Squish()"></div>
+        <div id="stage_1-icon" class="icon fas fa-bugs fa-3x align-self-center" onclick="Stage_One_Squish()"></div>
         
         <h1>The bugs are coming</h1>
         <p><b>SQUASH THE BUG!</b> DO IT! DO IT!</b></p>
@@ -42,8 +42,8 @@
 
     <div id="stage_2" class="stage d-flex flex-column flex-nowrap vh-100 d-none">
 
-      <div id="stage_2-icon" class="icon fas fa-tree fa-3x align-self-center" title="Nope, it's a tree"></div>
-      <h1>Is that a dragon?</h1>
+      <div id="stage_2-icon" class="icon fas fa-circle-question fa-3x align-self-center" title="Nope, it's a tree"></div>
+      <h1>Is that a dragon</h1>
       <p>Take a breath, and this weird <b>piece of gold</b><span> <i id="stage_2-coin" onclick="Stage_Two_Coin(); Enable_Continue_Button(2)">🟡</i></span></p>
       <div class="d-flex justify-content-center">
           <button class="btn btn-danger me-5" onclick="Previous_Stage(2)">Return</button>
@@ -59,6 +59,17 @@
       <div class="d-flex justify-content-center">
         <button class="btn btn-danger me-5" onclick="Previous_Stage(3)">Return</button>
         <button id="stage_3-btn" class="btn btn-primary" disabled onclick="Next_Stage(3)">Continue</button>
+      </div>
+    </div>
+
+    <div id="stage_4" class="stage d-flex flex-column flex-nowrap vh-100 d-none">
+      
+      <div id="stage_4-icon" ondrop="drop(event)" ondragover="allowDrop(event)" class="icon fas fa-lock fa-3x align-self-center"></div>
+      <h1 id="stage_4-h1">The door is locked</h1>
+      <p id="stage_4-p">What's this in your pocket? I doubt it's useful <span id="stage_4-key" draggable="true" ondragstart="drag(event)">🗝️</span></p>
+      <div class="d-flex justify-content-center">
+        <button class="btn btn-danger me-5" onclick="Previous_Stage(4)">Return</button>
+        <button id="stage_4-btn" class="btn btn-primary" disabled onclick="Next_Stage(4)">Continue</button>
       </div>
     </div>
 

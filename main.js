@@ -1,7 +1,7 @@
 window.onload = Run_Stage_Required_Scripts();
 
 //Global vars
-const totalStages = 3;
+const totalStages = 4;
 var stage = 1;
 
 //Stage one vars
@@ -54,6 +54,13 @@ function Reset_Stage(stage) {
       ).style.cursor = `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🟡</text></svg>") 16 0,auto`;
     default:
       break;
+    // This causes the key to not be visible.
+    // case 4:
+    //   Disable_Continue_Button(4);
+    //   document.getElementById("stage_4-h1").textContent = "The door is locked";
+    //   document.getElementById("stage_4-p").textContent =
+    //     "What's this in your pocket? I doubt it's useful";
+    //   document.getElementById("stage_4-key").textContent = "🗝️";
   }
 }
 
@@ -184,6 +191,21 @@ function Stage_Three_Coin() {
   }
 }
 
-/* STAGE X */
+/* STAGE FOUR */
+function allowDrop(ev) {
+  ev.preventDefault();
+}
 
-//Add your stage-specific functions here, in order, to keep everything organized
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+  document.getElementById("stage_4-h1").textContent = "The door is unlocked";
+  document.getElementById("stage_4-p").textContent =
+    "I knew that was useful, good work!";
+  Enable_Continue_Button(4);
+}
