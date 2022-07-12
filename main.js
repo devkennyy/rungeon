@@ -185,8 +185,17 @@ function Stage_Three_Coin() {
 }
 
 /* STAGE FOUR */
-function Stage_Four_Unlock() {
-  console.log("⚠️");
+function allowDrop(ev) {
+  ev.preventDefault();
 }
 
-/* STAGE X */
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+  Enable_Continue_Button(4);
+}
