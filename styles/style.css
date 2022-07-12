@@ -17,11 +17,11 @@ body {
   margin-bottom: 1%;
 }
 .stage h1 {
-  font-size: x-large;
+  font-size: 1.9rem;
   text-align: center;
 }
 .stage p {
-  font-size: large;
+  font-size: 1.2rem;
   text-align: center;
 }
 
@@ -79,13 +79,13 @@ body {
 }
 #index .links {
   z-index: 2;
-  margin-bottom: 200px;
+  margin-bottom: 220px;
   display: flex;
   text-decoration: none;
   -moz-column-gap: 20px;
        column-gap: 20px;
 }
-#index .links .theme {
+#index .links .theme-button {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
