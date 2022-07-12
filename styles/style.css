@@ -74,9 +74,9 @@ body {
   font-size: 20rem;
   cursor: pointer;
   -webkit-animation: blink 1s;
-          animation: blink 1s;
+  animation: blink 1s;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes blink {
@@ -106,15 +106,15 @@ body {
   display: -ms-flexbox;
   display: flex;
   text-decoration: none;
-  -webkit-column-gap: 20px;
-          column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
 }
 
 #index .links .theme-button {
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   opacity: 0.3;
 }
 
@@ -132,4 +132,3 @@ body {
 #index .links a {
   text-decoration: none;
 }
-/*# sourceMappingURL=style.css.map */
