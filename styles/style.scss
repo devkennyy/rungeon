@@ -13,8 +13,8 @@ body {
 .stage {
   color: $primary-color;
   background-color: $background-color;
+  justify-content: center;
   .icon {
-    margin-top: 15%;
     margin-bottom: 1%;
   }
   h1 {
