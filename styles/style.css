@@ -31,7 +31,9 @@ body {
 }
 
 #stage_3-icon:hover {
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🟡</text></svg>") 16 0, auto; /*!emojicursor.app*/
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🟡</text></svg>")
+      16 0,
+    auto; /*!emojicursor.app*/
 }
 
 #index {
@@ -57,12 +59,13 @@ body {
   font-size: 20rem;
   cursor: pointer;
   -webkit-animation: blink 1s;
-          animation: blink 1s;
+  animation: blink 1s;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
 @-webkit-keyframes blink {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
@@ -70,7 +73,8 @@ body {
   }
 }
 @keyframes blink {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
@@ -83,13 +87,13 @@ body {
   display: flex;
   text-decoration: none;
   -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
 }
 #index .links .theme-button {
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   opacity: 0.3;
 }
 #index .links i {
@@ -103,4 +107,4 @@ body {
 }
 #index .links a {
   text-decoration: none;
-}/*# sourceMappingURL=style.css.map */
+}

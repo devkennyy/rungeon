@@ -27,15 +27,6 @@ This function runs everytime the stage changes. Use it to setup any logic you ne
 
 function Reset_Stage(stage) {
   switch (stage) {
-    /*
-    
-    Example:
-
-    case 3:
-     (your changes here);
-     break;
-
-    */
     case 1:
       stageOne_ClickCount = 0;
       stageOne_Opacity = 1.0;
@@ -54,13 +45,6 @@ function Reset_Stage(stage) {
       ).style.cursor = `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🟡</text></svg>") 16 0,auto`;
     default:
       break;
-    // This causes the key to not be visible.
-    // case 4:
-    //   Disable_Continue_Button(4);
-    //   document.getElementById("stage_4-h1").textContent = "The door is locked";
-    //   document.getElementById("stage_4-p").textContent =
-    //     "What's this in your pocket? I doubt it's useful";
-    //   document.getElementById("stage_4-key").textContent = "🗝️";
   }
 }
 
