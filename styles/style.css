@@ -11,55 +11,40 @@ body {
 .stage {
   color: #adacad;
   background-color: #202124;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .stage .icon {
   margin-bottom: 1%;
 }
-
 .stage h1 {
-  font-size: 1.9rem;
+  font-size: 2.2rem;
   text-align: center;
 }
-
 .stage p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 
 #stage_1-icon:hover,
-#stage_2-coin:hover {
+#stage_2-coin:hover,
+#stage_4-key:hover {
   cursor: pointer;
 }
 
 #stage_3-icon:hover {
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🟡</text></svg>") 16 0, auto;
-  /*!emojicursor.app*/
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🟡</text></svg>") 16 0, auto; /*!emojicursor.app*/
 }
 
 #index {
   z-index: 1;
   background-color: #202124;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   height: 100vh;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   row-gap: 1em;
 }
-
 #index .doors {
   text-align: center;
   display: inline-block;
@@ -68,67 +53,61 @@ body {
   line-height: 100vh;
   vertical-align: middle;
 }
-
 #index .doors i {
   color: #adacad;
   font-size: 20rem;
   cursor: pointer;
   -webkit-animation: blink 1s;
-  animation: blink 1s;
+          animation: blink 1s;
   -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
-
+#index .doors :hover {
+  font-size: 22rem;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  opacity: 1 !important;
+}
 @-webkit-keyframes blink {
-  0%,
-  100% {
+  0%, 100% {
     opacity: 1;
   }
   50% {
     opacity: 0;
   }
 }
-
 @keyframes blink {
-  0%,
-  100% {
+  0%, 100% {
     opacity: 1;
   }
   50% {
     opacity: 0;
   }
 }
-
 #index .links {
   z-index: 2;
   margin-bottom: 220px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   text-decoration: none;
-  -moz-column-gap: 20px;
-  column-gap: 20px;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  font-size: 2rem;
 }
-
 #index .links .theme-button {
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   opacity: 0.3;
 }
-
 #index .links i {
   color: #adacad;
 }
-
 #index .links div {
-  font-size: 1rem;
   font-weight: 500;
   color: #adacad;
   display: inline-block;
 }
-
 #index .links a {
   text-decoration: none;
-}
+}/*# sourceMappingURL=style.css.map */
