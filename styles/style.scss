@@ -86,12 +86,9 @@ body {
     margin-bottom: 220px;
     display: flex;
     text-decoration: none;
-    column-gap: 25px;
+    column-gap: 30px;
     font-size: 2rem;
-    .theme-button {
-      user-select: none;
-      opacity: 0.3;
-    }
+    cursor: pointer;
     i {
       color: $text-color;
     }

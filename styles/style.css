@@ -90,16 +90,10 @@ body {
   margin-bottom: 220px;
   display: flex;
   text-decoration: none;
-  -moz-column-gap: 25px;
-       column-gap: 25px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
   font-size: 2rem;
-}
-#index .links .theme-button {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  opacity: 0.3;
+  cursor: pointer;
 }
 #index .links i {
   color: #adacad;
