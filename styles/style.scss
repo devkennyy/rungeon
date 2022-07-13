@@ -1,5 +1,7 @@
-$primary-color: #adacad;
-$background-color: #202124;
+$bg-color: #202124;
+$text-color: #adacad;
+$icon-color: #adacad;
+$sub-color: #adacad;
 
 * {
   font-family: "Roboto", sans-serif;
@@ -11,17 +13,18 @@ body {
 }
 
 .stage {
-  color: $primary-color;
-  background-color: $background-color;
+  background-color: $bg-color;
   justify-content: center;
   .icon {
     margin-bottom: 1%;
   }
   h1 {
+    color: $text-color;
     font-size: 2.2rem;
     text-align: center;
   }
   p {
+    color: $sub-color;
     font-size: 1.5rem;
     text-align: center;
   }
@@ -41,7 +44,7 @@ body {
 
 #index {
   z-index: 1;
-  background-color: $background-color;
+  background-color: $bg-color;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -56,7 +59,7 @@ body {
     line-height: 100vh;
     vertical-align: middle;
     i {
-      color: $primary-color;
+      color: $text-color;
       font-size: 20rem;
       cursor: pointer;
       animation: blink 1s;
@@ -90,11 +93,11 @@ body {
       opacity: 0.3;
     }
     i {
-      color: $primary-color;
+      color: $text-color;
     }
     div {
       font-weight: 500;
-      color: $primary-color;
+      color: $text-color;
       display: inline-block;
     }
     a {
