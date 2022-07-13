@@ -4,7 +4,7 @@
 
 [Rungeon](https://devkennyy.github.io/rungeon/) is a **minimal, open source, text-based adventure game**.
 
-[![My Skills](https://skillicons.dev/icons?i=js,sass,bootstrap,html)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=js,css,bootstrap,html)](https://skillicons.dev)
 
 🚪 <b>[ENTER THE RUNGEON!](https://devkennyy.github.io/rungeon/)</b>
 
