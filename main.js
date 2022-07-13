@@ -110,6 +110,16 @@ function StartGame() {
   window.location.href = "rungeon.html";
 }
 
+function OpenThemePopup() {
+  if (document.getElementById("themePopup").hidden) {
+    document.getElementById("themePopup").hidden = false;
+    document.getElementById("doors_icon").hidden = true;
+  } else {
+    document.getElementById("themePopup").hidden = true;
+    document.getElementById("doors_icon").hidden = false;
+  }
+}
+
 function Update_Title_Progress() {
   let val = stage / (totalStages + 2);
   switch (true) {

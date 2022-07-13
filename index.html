@@ -15,15 +15,23 @@
 </head>
 
 <body id="index">
+  <div id="themePopup" hidden>
+    <div class="title" id="serika">serika</div>
+    <div class="title" id="cobalt">cobalt</div>
+    <div class="title" id="hedge">hedge</div>
+    <div class="title" id="bliss">bliss</div>
+    <div class="title" id="rgb">rgb</div>
+    <div class="title" id="dots">dots</div>
+  </div>
   <div class="doors">
-    <i class="icon fas fa-dungeon fa-5x" onclick="StartGame();"></i>
+    <i id="doors_icon" class="icon fas fa-dungeon fa-5x" onclick="StartGame();"></i>
   </div>
   <div class="links">
     <a href="https://github.com/devkennyy/rungeon" class="textButton" target="_blank">
       <i class="fas fa-fw fa-code"></i>
       <div class="text">GitHub</div>
     </a>
-    <div class="textButton" onclick="" class="textButton">
+    <div class="textButton" onclick="OpenThemePopup()" class="textButton">
       <i class="fas fa-fw fa-palette"></i>
       <div class="text">Theme</div>
     </div>

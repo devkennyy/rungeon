@@ -86,6 +86,7 @@ body {
   }
 }
 #index .links {
+  user-select: none;
   z-index: 2;
   margin-bottom: 220px;
   display: flex;
@@ -107,5 +108,87 @@ body {
   text-decoration: none;
 }
 #index .links :hover {
-  margin-top: -5px;
-}/*# sourceMappingURL=style.css.map */
+  margin-top: -3px;
+}
+
+#themePopup {
+  z-index: 10;
+  height: 384px;
+  width: 20%;
+  margin-bottom: 150px;
+  border-radius: 5px;
+  background-color: #adacad;
+  position: absolute;
+}
+
+#themePopup .title {
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 10px 10px 10px 10px;
+  margin: 5px 5px 5px 5px;
+  text-align: center;
+}
+
+#themePopup .title:hover {
+  opacity: 0.9;
+}
+
+/* THEMES TAKEN FROM MONKEYTYPE */
+
+#themePopup #serika {
+  background-color: #323437;
+  color: #e2b714;
+}
+
+#themePopup #cobalt {
+  background-color: #181818;
+  color: #17b8bd;
+}
+
+#themePopup #hedge {
+  background-color: #415e31;
+  color: #f7f1d6;
+}
+
+#themePopup #bliss {
+  background-color: #262727;
+  color: #f0d3c9;
+}
+
+#themePopup #rgb {
+  animation: rgb 5s linear infinite;
+  background-color: #181818;
+}
+
+#themePopup #dots {
+  background-color: #121520;
+  color: #fff;
+}
+
+@keyframes rgb {
+  0% {
+    color: #4cae4c
+  }
+
+  20% {
+    color: #409eb5
+  }
+
+  40% {
+    color: #8134f4
+  }
+
+  60% {
+    color: #f10e19
+  }
+
+  80% {
+    color: #ffc505
+  }
+
+  to {
+    color: #4cae4c
+  }
+}
+
