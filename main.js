@@ -121,7 +121,11 @@ function OpenThemePopup() {
 }
 
 function SetTheme(event) {
-  console.log(event.target.id);
+  document.getElementById(
+    "themeStylesheet"
+  ).href = `styles/themes/${event.target.id}.css`;
+  console.log(document.getElementById("themeStylesheet").href);
+  CloseThemePopup();
 }
 
 function CloseThemePopup() {
