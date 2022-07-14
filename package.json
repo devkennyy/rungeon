@@ -1,0 +1,42 @@
+{
+    "name": "rungeon-frontend",
+    "version": "0.0.1",
+    "description": "Frontend for Rungeon",
+    "main": "index.html",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "gulp bs",
+        "build": "gulp"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/devkennyy/rungeon.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/devkennyy/rungeon/issues"
+    },
+    "homepage": "https://github.com/devkenny/rungeon#readme",
+    "engines": {
+        "node": "17.0.0"
+    },
+    "dependencies": {
+        "autoprefixer": "^10.4.7",
+        "browser-sync": "^2.27.10",
+        "gulp": "^4.0.2",
+        "gulp-concat": "^2.6.1",
+        "gulp-cssnano": "^2.1.3",
+        "gulp-postcss": "^9.0.1",
+        "gulp-replace": "^1.1.3",
+        "gulp-terser": "^2.1.0",
+        "postcss": "^8.4.14"
+    },
+    "devDependencies": {
+        "gulp-sass": "^5.1.0",
+        "node-sass": "^7.0.1",
+        "nodemon": "^2.0.19",
+        "sass": "^1.53.0",
+        "sass-loader": "^13.0.2"
+    }
+}
