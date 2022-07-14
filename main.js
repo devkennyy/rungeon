@@ -43,7 +43,7 @@ function Reset_Stage(stage) {
     case 3:
       Disable_Continue_Button(3);
       document.getElementById(
-        "stage_3-icon"
+          "stage_3-icon"
       ).style.cursor = `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🟡</text></svg>") 16 0,auto`;
     default:
       break;
@@ -114,17 +114,17 @@ function StartGame() {
 
 function OpenThemePopup() {
   if (document.getElementById("themePopup").hidden) {
-    document.getElementById("themePopup").hidden = false;
-    document.getElementById("doors_icon").hidden = true;
-  } else {
     document.getElementById("themePopup").hidden = true;
     document.getElementById("doors_icon").hidden = false;
+  } else {
+    document.getElementById("themePopup").hidden = false;
+    document.getElementById("doors_icon").hidden = true;
   }
 }
 
 function SetTheme(event) {
   document.getElementById(
-    "themeStylesheet"
+      "themeStylesheet"
   ).href = `styles/themes/${event.target.id}.css`;
   localStorage.setItem("index_theme", `${event.target.id}`);
   localStorage.setItem("theme", `${event.target.id}`);
@@ -135,18 +135,22 @@ function CloseThemePopup() {
   document.getElementById("themePopup").hidden = true;
 }
 
+function ClosePopupOnBodyClick() {
+  document.getElementById("themePopup").hidden = !document.getElementById("themePopup").hidden;
+}
+
 function GetThemes() {
   // index.html theme check
   if (localStorage.getItem("index_theme") == null) {
     console.log("theme was null");
     document.getElementById(
-      "themeStylesheet"
+        "themeStylesheet"
     ).href = `styles/themes/default.css`;
   } else {
     console.log("Getting index themes...");
     let index_theme = localStorage.getItem("index_theme");
     document.getElementById(
-      "themeStylesheet"
+        "themeStylesheet"
     ).href = `styles/themes/${index_theme}.css`;
   }
 
@@ -155,13 +159,13 @@ function GetThemes() {
   if (localStorage.getItem("theme") == null) {
     console.log("theme was null");
     document.getElementById(
-      "themeStylesheet"
+        "themeStylesheet"
     ).href = `styles/themes/default.css`;
   } else {
     console.log("Getting rungeon themes...");
     let theme = localStorage.getItem("theme");
     document.getElementById(
-      "themeStylesheet"
+        "themeStylesheet"
     ).href = `styles/themes/${theme}.css`;
   }
 }
@@ -246,6 +250,6 @@ function drop(ev) {
   ev.target.appendChild(document.getElementById(data));
   document.getElementById("stage_4-h1").textContent = "The door is unlocked";
   document.getElementById("stage_4-p").textContent =
-    "I knew that was useful, good work!";
+      "I knew that was useful, good work!";
   Enable_Continue_Button(4);
 }
