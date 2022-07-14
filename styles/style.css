@@ -9,19 +9,19 @@ body {
 }
 
 .stage {
-  background-color: #202124;
+  background-color: var(--bg-color);
   justify-content: center;
 }
 .stage .icon {
   margin-bottom: 1%;
 }
 .stage h1 {
-  color: #adacad;
+  color: var(--text-color);
   font-size: 2.2rem;
   text-align: center;
 }
 .stage p {
-  color: #adacad;
+  color: var(--text-color);
   font-size: 1.5rem;
   text-align: center;
 }
@@ -38,7 +38,7 @@ body {
 
 #index {
   z-index: 1;
-  background-color: #202124;
+  background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -55,7 +55,7 @@ body {
   vertical-align: middle;
 }
 #index .doors i {
-  color: #adacad;
+  color: var(--text-color);
   font-size: 20rem;
   cursor: pointer;
   -webkit-animation: blink 1s;
@@ -97,11 +97,11 @@ body {
   cursor: pointer;
 }
 #index .links i {
-  color: #adacad;
+  color: var(--text-color);
 }
 #index .links div {
   font-weight: 500;
-  color: #adacad;
+  color: var(--text-color);
   display: inline-block;
 }
 #index .links a {
@@ -117,7 +117,7 @@ body {
   width: 20%;
   margin-bottom: 150px;
   border-radius: 5px;
-  background-color: #adacad;
+  background-color: var(--text-color);
   position: absolute;
 }
 
@@ -139,7 +139,7 @@ body {
   position: absolute;
   margin-left: 355px;
   margin-top: 10px;
-  background-color: #adacad;
+  background-color: var(--text-color);
   border-radius: 50%;
 }
 
