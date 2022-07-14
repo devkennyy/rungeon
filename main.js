@@ -120,6 +120,14 @@ function OpenThemePopup() {
   }
 }
 
+function SetTheme(event) {
+  console.log(event.target.id);
+}
+
+function CloseThemePopup() {
+  document.getElementById("themePopup").hidden = true;
+}
+
 function Update_Title_Progress() {
   let val = stage / (totalStages + 2);
   switch (true) {

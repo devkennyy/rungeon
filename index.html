@@ -16,12 +16,13 @@
 
 <body id="index">
   <div id="themePopup" hidden>
-    <div class="title" id="serika">serika</div>
-    <div class="title" id="cobalt">cobalt</div>
-    <div class="title" id="hedge">hedge</div>
-    <div class="title" id="bliss">bliss</div>
-    <div class="title" id="rgb">rgb</div>
-    <div class="title" id="dots">dots</div>
+    <i class="fas fa-fw fa-close" id="closeButton" onclick="CloseThemePopup()"></i>
+    <div class="title" id="serika" onclick="SetTheme(event)">serika</div>
+    <div class="title" id="cobalt" onclick="SetTheme(event)">cobalt</div>
+    <div class="title" id="hedge" onclick="SetTheme(event)">hedge</div>
+    <div class="title" id="bliss" onclick="SetTheme(event)">bliss</div>
+    <div class="title" id="rgb" onclick="SetTheme(event)">rgb</div>
+    <div class="title" id="dots" onclick="SetTheme(event)">dots</div>
   </div>
   <div class="doors">
     <i id="doors_icon" class="icon fas fa-dungeon fa-5x" onclick="StartGame();"></i>
