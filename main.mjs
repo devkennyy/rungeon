@@ -1,22 +1,64 @@
 import { Run_Stage_Required_Scripts } from "./src/scripts/game.mjs";
-window.onload = Run_Stage_Required_Scripts();
+import { Previous_Stage } from "./src/scripts/stages.mjs";
+import { Next_Stage } from "./src/scripts/stages.mjs";
 
+window.onload = Run_Stage_Required_Scripts();
+const start = document.getElementsByClassName("btn");
+start[0].addEventListener("click", () => {
+  Next_Stage("start");
+});
+const stage1 = document.getElementById("stage_1-btn");
+const stage2 = document.getElementById("stage_2-btn");
+const stage3 = document.getElementById("stage_3-btn");
+const stage4 = document.getElementById("stage_4-btn");
+const prev_stage = document.getElementById("prev_stage");
+
+stage1.addEventListener("click", () => {
+  Next_Stage(1);
+});
+stage2.addEventListener("click", () => {
+  Next_Stage(2);
+});
+stage3.addEventListener("click", () => {
+  Next_Stage(3);
+});
+stage4.addEventListener("click", () => {
+  Next_Stage(4);
+});
+prev_stage.addEventListener("click", () => {
+  Previous_Stage(1);
+});
 //Global vars
-const totalStages = 4;
-var stage = 1;
+export const totalStages = 4;
+export let stage = 1;
 
 //Stage one vars
-var stageOne_ClickCount = 0;
-var stageOne_Opacity = 1.0;
-var stageOne_BtnDisabled = false;
+export var stageOne_ClickCount = 0;
+export var stageOne_Opacity = 1.0;
+export var stageOne_BtnDisabled = false;
 
 //Stage two vars
-var stageTwo_hasCoin = false;
-
+export var stageTwo_hasCoin = false;
+//this function to change the value of the stage
+export function setStageTwo_hasCoin(value) {
+  stage = value;
+}
+export function setStage(value) {
+  stage = value;
+}
+export function setStageOne_ClickCount(value) {
+  stageOne_ClickCount = value;
+}
+export function setStageOne_Opacity(value) {
+  stageOne_Opacity = value;
+}
+export function setStageOne_BtnDisabled(value) {
+  stageOne_BtnDisabled = value;
+}
 // START OF STAGE SPECIFIC FUNCTIONS
 
 /* STAGE ONE */
-function Stage_One_Squish() {
+export function Stage_One_Squish() {
   stageOne_ClickCount++;
   stageOne_Opacity -= 0.4;
 
@@ -33,13 +75,13 @@ function Stage_One_Squish() {
 }
 
 /* STAGE TWO */
-function Stage_Two_Coin() {
+export function Stage_Two_Coin() {
   document.getElementById("stage_2-coin").style.display = "none";
   stageTwo_hasCoin = true;
 }
 
 /* STAGE THREE */
-function Stage_Three_Coin() {
+export function Stage_Three_Coin() {
   if (stageTwo_hasCoin) {
     document.getElementById("stage_3-btn").disabled = false;
     document.getElementById("stage_3-icon").style.cursor = "auto";
@@ -47,15 +89,15 @@ function Stage_Three_Coin() {
 }
 
 /* STAGE FOUR */
-function allowDrop(ev) {
+export function allowDrop(ev) {
   ev.preventDefault();
 }
 
-function drag(ev) {
+export function drag(ev) {
   ev.dataTransfer.setData("text", ev.target.id);
 }
 
-function drop(ev) {
+export function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));

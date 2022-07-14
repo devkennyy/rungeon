@@ -1,4 +1,6 @@
 import { GetThemes } from "./themes.mjs";
+import { stage } from "../../main.mjs";
+import { totalStages } from "../../main.mjs";
 // START OF GLOBAL FUNCTIONS
 
 //Some stages require an initial setup before the stage is loaded. This script is run as soon as the page is loaded.
@@ -6,6 +8,7 @@ export function Run_Stage_Required_Scripts() {
   // Fetch themes from local storage
   GetThemes();
   //Stage one
+  console.log(document.getElementById("stage_1-icon"));
   document.getElementById("stage_1-icon").style.opacity = 1.0;
 }
 

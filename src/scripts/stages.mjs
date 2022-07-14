@@ -1,15 +1,28 @@
 import { Update_Title_Progress } from "./game.mjs";
+import { stage } from "../../main.mjs";
+import { setStage } from "../../main.mjs";
+import { stageOne_ClickCount } from "../../main.mjs";
+import { stageOne_Opacity } from "../../main.mjs";
+import { stageOne_BtnDisabled } from "../../main.mjs";
+import { setStageOne_Opacity } from "../../main.mjs";
+import { setStageOne_ClickCount } from "../../main.mjs";
+import { setStageOne_BtnDisabled } from "../../main.mjs";
+import { Disable_Continue_Button } from "./button-controller.mjs";
+import { stageTwo_hasCoin } from "../../main.mjs";
+import { setStageTwo_hasCoin } from "../../main.mjs";
+import { totalStages } from "../../main.mjs";
+
 export function Reset_Stage(stage) {
   switch (stage) {
     case 1:
-      stageOne_ClickCount = 0;
-      stageOne_Opacity = 1.0;
-      stageOne_BtnDisabled = false;
+      setStageOne_ClickCount(0);
+      setStageOne_Opacity(1.0);
+      setStageOne_BtnDisabled(false);
       document.getElementById("stage_1-icon").style.opacity = 1;
       document.getElementById("stage_1-icon").style.visibility = "visible";
       Disable_Continue_Button(1);
     case 2:
-      stageTwo_hasCoin = false;
+      setStageTwo_hasCoin(false);
       document.getElementById("stage_2-coin").style.display = "initial";
       Disable_Continue_Button(2);
     case 3:
@@ -30,15 +43,15 @@ This kind of setup will allow us to add as many stages as we want, as long as we
 
 export function Previous_Stage(currentStage) {
   if (currentStage == "end") {
-    stage = totalStages;
+    setStage(totalStages);
     document.getElementById(`stage_end`).classList.add("d-none");
     document.getElementById(`stage_${stage}`).classList.remove("d-none");
   } else if (currentStage == 1) {
-    stage = 0;
+    setStage(0);
     document.getElementById(`stage_${currentStage}`).classList.add("d-none");
     document.getElementById(`stage_start`).classList.remove("d-none");
   } else {
-    stage--;
+    setStage(stage - 1);
     document.getElementById(`stage_${currentStage}`).classList.add("d-none");
     document.getElementById(`stage_${stage}`).classList.remove("d-none");
   }
@@ -48,7 +61,7 @@ export function Previous_Stage(currentStage) {
 
 export function Next_Stage(currentStage) {
   if (currentStage == "start") {
-    stage = 1;
+    setStage(1);
     document.getElementById(`stage_start`).classList.add("d-none");
     document.getElementById(`stage_${stage}`).classList.remove("d-none");
   } else if (currentStage == totalStages) {

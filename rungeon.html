@@ -36,7 +36,7 @@
           Maybe that <b>button does something?</b>
         </p>
         <div class="d-flex justify-content-center">
-          <button class="btn btn-primary" onclick="Next_Stage('start')">Continue</button>
+          <button class="btn btn-primary">Continue</button>
         </div>
       </div>
 
@@ -48,8 +48,8 @@
         <p><b>SQUASH THE BUG!</b> DO IT! DO IT!</b></p>
 
         <div class="d-flex justify-content-center">
-          <button class="btn btn-danger me-5" onclick="Previous_Stage(1)">Return</button>
-          <button id="stage_1-btn" class="btn btn-primary" disabled onclick="Next_Stage(1)">Continue</button>
+          <button id="prev_stage" class="btn btn-danger me-5">Return</button>
+          <button id="stage_1-btn" class="btn btn-primary" disabled >Continue</button>
         </div>
       </div>
 
@@ -61,7 +61,7 @@
               onclick="Stage_Two_Coin(); Enable_Continue_Button(2)">🟡</i></span></p>
         <div class="d-flex justify-content-center">
           <button class="btn btn-danger me-5" onclick="Previous_Stage(2)">Return</button>
-          <button id="stage_2-btn" class="btn btn-primary" disabled onclick="Next_Stage(2)">Continue</button>
+          <button id="stage_2-btn" class="btn btn-primary" disabled >Continue</button>
         </div>
       </div>
 
@@ -72,7 +72,7 @@
         <p id="coinComment">Give him <b>the coin</b> or something!</p>
         <div class="d-flex justify-content-center">
           <button class="btn btn-danger me-5" onclick="Previous_Stage(3)">Return</button>
-          <button id="stage_3-btn" class="btn btn-primary" disabled onclick="Next_Stage(3)">Continue</button>
+          <button id="stage_3-btn" class="btn btn-primary" disabled >Continue</button>
         </div>
       </div>
 
@@ -85,7 +85,7 @@
             ondragstart="drag(event)">🗝️</span></p>
         <div class="d-flex justify-content-center">
           <button class="btn btn-danger me-5" onclick="Previous_Stage(4)">Return</button>
-          <button id="stage_4-btn" class="btn btn-primary" disabled onclick="Next_Stage(4)">Continue</button>
+          <button id="stage_4-btn" class="btn btn-primary" disabled >Continue</button>
         </div>
       </div>
 
@@ -99,7 +99,7 @@
       </div>
       </div>
 
-      <script defer src="main.js">
+      <script defer type="module" src="main.mjs">
     </script>
   </body>
 </html>
