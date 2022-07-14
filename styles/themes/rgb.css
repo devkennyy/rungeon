@@ -1,14 +1,13 @@
 :root {
   --bg-color: #111;
-  --text-color: #eee;
-  --sub-color: #eee;
+  --text-color: #444;
+  --sub-color: #9e9e9e;
   --icon-color: #444;
 }
 
-.stage h1, 
+.stage .icon, 
 #index .doors i,
-#index .links div,
-#index .links, 
+#index .links i, 
 #themePopup,
 #themePopup #closeButton {
   animation: rgb 5s linear infinite

@@ -98,7 +98,7 @@ body {
   cursor: pointer;
 }
 #index .links i {
-  color: var(--text-color);
+  color: var(--icon-color);
 }
 #index .links div {
   font-weight: 500;
@@ -165,9 +165,9 @@ body {
   color: #f7f1d6;
 }
 
-#themePopup #bliss {
-  background-color: #262727;
-  color: #f0d3c9;
+#themePopup #passionfruit {
+  background-color: #7c2142;
+  color: #f4a3b4;
 }
 
 #themePopup #rgb {
