@@ -13,6 +13,7 @@ body {
   justify-content: center;
 }
 .stage .icon {
+  color: var(--icon-color);
   margin-bottom: 1%;
 }
 .stage h1 {
