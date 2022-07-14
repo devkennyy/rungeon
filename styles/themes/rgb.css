@@ -1,0 +1,41 @@
+:root {
+  --bg-color: #111;
+  --text-color: #eee;
+  --sub-color: #eee;
+  --icon-color: #444;
+}
+
+.stage h1, 
+#index .doors i,
+#index .links div,
+#index .links, 
+#themePopup,
+#themePopup #closeButton {
+  animation: rgb 5s linear infinite
+}
+
+@keyframes rgb {
+  0% {
+    color: #4cae4c
+  }
+
+  20% {
+    color: #409eb5
+  }
+
+  40% {
+    color: #8134f4
+  }
+
+  60% {
+    color: #f10e19
+  }
+
+  80% {
+    color: #ffc505
+  }
+
+  to {
+    color: #4cae4c
+  }
+}
