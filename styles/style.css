@@ -9,18 +9,20 @@ body {
 }
 
 .stage {
-  color: #adacad;
-  background-color: #202124;
+  background-color: var(--bg-color);
   justify-content: center;
 }
 .stage .icon {
+  color: var(--icon-color);
   margin-bottom: 1%;
 }
 .stage h1 {
+  color: var(--text-color);
   font-size: 2.2rem;
   text-align: center;
 }
 .stage p {
+  color: var(--sub-color);
   font-size: 1.5rem;
   text-align: center;
 }
@@ -37,7 +39,7 @@ body {
 
 #index {
   z-index: 1;
-  background-color: #202124;
+  background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -54,7 +56,7 @@ body {
   vertical-align: middle;
 }
 #index .doors i {
-  color: #adacad;
+  color: var(--text-color);
   font-size: 20rem;
   cursor: pointer;
   -webkit-animation: blink 1s;
@@ -85,29 +87,122 @@ body {
   }
 }
 #index .links {
+  user-select: none;
   z-index: 2;
   margin-bottom: 220px;
   display: flex;
   text-decoration: none;
-  -moz-column-gap: 25px;
-       column-gap: 25px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
   font-size: 2rem;
-}
-#index .links .theme-button {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  opacity: 0.3;
+  cursor: pointer;
 }
 #index .links i {
-  color: #adacad;
+  color: var(--icon-color);
 }
 #index .links div {
   font-weight: 500;
-  color: #adacad;
+  color: var(--text-color);
   display: inline-block;
 }
 #index .links a {
   text-decoration: none;
-}/*# sourceMappingURL=style.css.map */
+}
+#index .links :hover {
+  margin-top: -3px;
+}
+
+#themePopup {
+  z-index: 10;
+  height: 384px;
+  width: 20%;
+  margin-bottom: 150px;
+  border-radius: 5px;
+  background-color: var(--text-color);
+  position: absolute;
+}
+
+#themePopup .title {
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 10px 10px 10px 10px;
+  margin: 5px 5px 5px 5px;
+  text-align: center;
+}
+
+#themePopup #closeButton {
+  cursor: pointer;
+  z-index: 5;
+  text-align: center;
+  height: 18px;
+  width: 19px;
+  position: absolute;
+  margin-left: 355px;
+  margin-top: 10px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+}
+
+#themePopup .title:hover {
+  opacity: 0.9;
+}
+
+/* THEMES TAKEN FROM MONKEYTYPE */
+
+#themePopup #serika {
+  background-color: #323437;
+  color: #e2b714;
+}
+
+#themePopup #cobalt {
+  background-color: #181818;
+  color: #17b8bd;
+}
+
+#themePopup #hedge {
+  background-color: #415e31;
+  color: #f7f1d6;
+}
+
+#themePopup #passionfruit {
+  background-color: #7c2142;
+  color: #f4a3b4;
+}
+
+#themePopup #rgb {
+  animation: rgb 5s linear infinite;
+  background-color: #181818;
+}
+
+#themePopup #dots {
+  background-color: #121520;
+  color: #fff;
+}
+
+@keyframes rgb {
+  0% {
+    color: #4cae4c
+  }
+
+  20% {
+    color: #409eb5
+  }
+
+  40% {
+    color: #8134f4
+  }
+
+  60% {
+    color: #f10e19
+  }
+
+  80% {
+    color: #ffc505
+  }
+
+  to {
+    color: #4cae4c
+  }
+}
+

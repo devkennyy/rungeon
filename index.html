@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>🏃‍♂️Rungeon</title>
   <link rel="stylesheet" href="styles/style.css" />
+  <link id="themeStylesheet" rel="stylesheet" href="/styles/themes/default.css">
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=JetBrains+Mono&family=Roboto&display=swap");
   </style>
@@ -15,17 +16,26 @@
 </head>
 
 <body id="index">
+  <div id="themePopup" hidden>
+    <i class="fas fa-fw fa-close" id="closeButton" onclick="CloseThemePopup()"></i>
+    <div class="title" id="serika" onclick="SetTheme(event)">serika</div>
+    <div class="title" id="cobalt" onclick="SetTheme(event)">cobalt</div>
+    <div class="title" id="hedge" onclick="SetTheme(event)">hedge</div>
+    <div class="title" id="passionfruit" onclick="SetTheme(event)">passionfruit</div>
+    <div class="title" id="rgb" onclick="SetTheme(event)">rgb</div>
+    <div class="title" id="dots" onclick="SetTheme(event)">dots</div>
+  </div>
   <div class="doors">
-    <i class="icon fas fa-dungeon fa-5x" onclick="StartGame();"></i>
+    <i id="doors_icon" class="icon fas fa-dungeon fa-5x" onclick="StartGame();"></i>
   </div>
   <div class="links">
     <a href="https://github.com/devkennyy/rungeon" class="textButton" target="_blank">
       <i class="fas fa-fw fa-code"></i>
       <div class="text">GitHub</div>
     </a>
-    <div class="theme-button" <a onclick="" class="textButton">
+    <div class="textButton" onclick="OpenThemePopup()" class="textButton">
       <i class="fas fa-fw fa-palette"></i>
-      <div class="text">Theme</div></a>
+      <div class="text">Theme</div>
     </div>
     <a href="https://discord.gg/SFX2KSuzep" class="textButton" target="_blank">
       <i class="fa-brands fa-fw fa-discord"></i>
@@ -34,4 +44,4 @@
 </body>
 
 </html>
-<script src="main.js"></script>
+<script src="main.js"></script> 
