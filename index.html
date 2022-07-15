@@ -17,7 +17,7 @@
 
 <body id="index">
   <div id="themePopup" hidden>
-    <i class="fas fa-fw fa-close" id="closeButton" onclick="CloseThemePopup()"></i>
+    <i class="fas fa-fw fa-close" id="closeButton" onclick="ToggleThemePopup()"></i>
     <div class="title" id="serika" onclick="SetTheme(event)">serika</div>
     <div class="title" id="cobalt" onclick="SetTheme(event)">cobalt</div>
     <div class="title" id="hedge" onclick="SetTheme(event)">hedge</div>
@@ -33,7 +33,7 @@
       <i class="fas fa-fw fa-code"></i>
       <div class="text">GitHub</div>
     </a>
-    <div class="textButton" onclick="OpenThemePopup()" class="textButton">
+    <div class="textButton" onclick="ToggleThemePopup()" class="textButton">
       <i class="fas fa-fw fa-palette"></i>
       <div class="text">Theme</div>
     </div>

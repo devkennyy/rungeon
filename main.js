@@ -112,13 +112,13 @@ function StartGame() {
   window.location.href = "rungeon.html";
 }
 
-function OpenThemePopup() {
+function ToggleThemePopup() {
   if (document.getElementById("themePopup").hidden) {
     document.getElementById("themePopup").hidden = false;
-    document.getElementById("doors_icon").hidden = true;
+    document.getElementById("doors_icon").style.visibility = "hidden";
   } else {
     document.getElementById("themePopup").hidden = true;
-    document.getElementById("doors_icon").hidden = false;
+    document.getElementById("doors_icon").style.visibility = "visible";
   }
 }
 
@@ -128,12 +128,9 @@ function SetTheme(event) {
   ).href = `styles/themes/${event.target.id}.css`;
   localStorage.setItem("index_theme", `${event.target.id}`);
   localStorage.setItem("theme", `${event.target.id}`);
-  CloseThemePopup();
+  ToggleThemePopup();
 }
 
-function CloseThemePopup() {
-  document.getElementById("themePopup").hidden = true;
-}
 
 function GetThemes() {
   // index.html theme check
