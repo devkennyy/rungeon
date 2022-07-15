@@ -3,6 +3,10 @@
   --text-color: #444;
   --sub-color: #9e9e9e;
   --icon-color: #444;
+  --nav-color: #9e9e9e;
+  --nav_icon-color: #444;
+  --continue_btn-color: #01ff34;
+  --return_btn-color: #e41f1f;
 }
 
 .stage .icon, 

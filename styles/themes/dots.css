@@ -3,10 +3,14 @@
   --text-color: #fff;
   --sub-color: #fff;
   --icon-color: #fff;
+  --nav-color: #676e8a;
+  --nav_icon-color: #fff;
+  --continue_btn-color: #4acb8a;
+  --return_btn-color: #f94348;
 }
 
 .stage .icon {
-  background-color: #4acb8a !important;
+  background-color: #3cc5f8 !important;
   padding: 15px 15px 15px 15px;
   border-radius: 10rem;
 }
