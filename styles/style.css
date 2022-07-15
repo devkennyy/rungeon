@@ -206,6 +206,14 @@ body {
   }
 }
 
+.nav-link {
+  color: var(--nav_icon-color) !important;
+}
+
+.navbar {
+  background-color: var(--nav-color) !important;
+}
+
 #navbarNavDropdown {
   text-align: center;
   justify-content: center;
