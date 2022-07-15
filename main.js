@@ -114,11 +114,11 @@ function StartGame() {
 
 function OpenThemePopup() {
   if (document.getElementById("themePopup").hidden) {
-    document.getElementById("themePopup").hidden = true;
-    document.getElementById("doors_icon").hidden = false;
-  } else {
     document.getElementById("themePopup").hidden = false;
     document.getElementById("doors_icon").hidden = true;
+  } else {
+    document.getElementById("themePopup").hidden = true;
+    document.getElementById("doors_icon").hidden = false;
   }
 }
 
@@ -141,11 +141,6 @@ function SetTheme(event) {
 
 function CloseThemePopup() {
   document.getElementById("themePopup").hidden = true;
-}
-
-function ClosePopupOnBodyClick() {
-  document.getElementById("themePopup").hidden =
-    !document.getElementById("themePopup").hidden;
 }
 
 function GetThemes() {
@@ -171,7 +166,6 @@ function GetThemes() {
   } else {
     console.log("Getting rungeon themes...");
     let theme = localStorage.getItem("theme");
-    //apply checkmark to found theme
     document.getElementById(
       "themeStylesheet"
     ).href = `styles/themes/${theme}.css`;
