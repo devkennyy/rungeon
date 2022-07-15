@@ -123,12 +123,20 @@ function ToggleThemePopup() {
 }
 
 function SetTheme(event) {
+  document.getElementById("serika").innerHTML = "serika  ";
+  document.getElementById("cobalt").innerHTML = "cobalt  ";
+  document.getElementById("hedge").innerHTML = "hedge  ";
+  document.getElementById("passionfruit").innerHTML = "passionfriut  ";
+  document.getElementById("rgb").innerHTML = "rgb  ";
+  document.getElementById("dots").innerHTML = "dots  ";
   document.getElementById(
     "themeStylesheet"
   ).href = `styles/themes/${event.target.id}.css`;
   localStorage.setItem("index_theme", `${event.target.id}`);
   localStorage.setItem("theme", `${event.target.id}`);
-  ToggleThemePopup();
+  document.getElementById(event.target.id).innerHTML +=
+    '<i class="fa-solid fa-check"></i>';
+    ToggleThemePopup();
 }
 
 
@@ -140,7 +148,6 @@ function GetThemes() {
       "themeStylesheet"
     ).href = `styles/themes/default.css`;
   } else {
-    console.log("Getting index themes...");
     let index_theme = localStorage.getItem("index_theme");
     document.getElementById(
       "themeStylesheet"
@@ -148,7 +155,6 @@ function GetThemes() {
   }
 
   // rungeon.html theme check
-  console.log(document.getElementById("themeStylesheet"));
   if (localStorage.getItem("theme") == null) {
     console.log("theme was null");
     document.getElementById(
@@ -160,6 +166,8 @@ function GetThemes() {
     document.getElementById(
       "themeStylesheet"
     ).href = `styles/themes/${theme}.css`;
+    document.getElementById(theme).innerHTML +=
+      '<i class="fa-solid fa-check"></i>';
   }
 }
 
@@ -236,6 +244,7 @@ function allowDrop(ev) {
 function drag(ev) {
   ev.dataTransfer.setData("text", ev.target.id);
 }
+
 
 function drop(ev) {
   ev.preventDefault();
