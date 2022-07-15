@@ -128,7 +128,7 @@ function SetTheme(event) {
   ).href = `styles/themes/${event.target.id}.css`;
   localStorage.setItem("index_theme", `${event.target.id}`);
   localStorage.setItem("theme", `${event.target.id}`);
-  CloseThemePopup();
+  ToggleThemePopup();
 }
 
 
