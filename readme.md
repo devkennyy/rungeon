@@ -4,7 +4,7 @@
 
 [Rungeon](https://devkennyy.github.io/rungeon/) is a **minimal, open source, text-based adventure game**.
 
-[![My Skills](https://skillicons.dev/icons?i=js,css,bootstrap,html)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=js,css,html)](https://skillicons.dev)
 
 🚪 <b>[ENTER THE RUNGEON!](https://devkennyy.github.io/rungeon/)</b>
 
@@ -12,7 +12,7 @@
 
 ## 📙 About
 
-> Rungeon features a series of puzzles in the form of stages, in which the user relies on their wits to 'escape'. A theme system allows users to configure the page to their liking. Rungeon is a work in progress and is actively maintained by devkennyy and other lovely contributors. 
+Rungeon features a series of puzzles in the form of stages, in which the user relies on their wits to 'escape'. A theme system allows users to configure the page to their liking. Rungeon is a work in progress and is actively maintained by devkennyy and other lovely contributors. 
 
 <!--
 - List noteworthy features.
@@ -21,7 +21,7 @@
 
 ## 🤝 Contributing
 
-> Contributions, issues and feature requests are welcome. Refer to the [contributing guide](contributing.md) for more information.
+Contributions, issues and feature requests are welcome. Refer to the [contributing guide](contributing.md) for more information.
 
 <!--
 - Code Style/Requirements
@@ -39,11 +39,11 @@
 
 ## 💛 Support
 
-> The best way to support the development of this project is by starring the repository, it's really encouraging!
+The best way to support the development of this project is by starring the repository, it's really encouraging!
 
 ## 📨 Contact
 
-> If you wish to participate in the community, [join our Discord](https://discord.gg/SFX2KSuzep). If you wish to contact me directly, [send an email](mailto:devkenny@outlook.com).
+If you wish to participate in the community, [join our Discord](https://discord.gg/SFX2KSuzep). If you wish to contact me directly, [send an email](mailto:devkenny@outlook.com).
 
 <!--
 - Email address
