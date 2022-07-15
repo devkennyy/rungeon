@@ -12,7 +12,7 @@
 
 ## 📙 About
 
-Rungeon features a series of puzzles in the form of stages, in which the user relies on their wits to 'escape'. A theme system allows users to configure the page to their liking. Rungeon is a work in progress and is actively maintained by devkennyy and other lovely contributors. 
+Rungeon features a series of puzzles in the form of stages, in which the user relies on their wits to 'escape'. 
 
 <!--
 - List noteworthy features.
