@@ -5,8 +5,8 @@
   --icon-color: #fff;
   --nav-color: #676e8a;
   --nav_icon-color: #fff;
-  --continue_btn-color: #4acb8a;
-  --return_btn-color: #f94348;
+  --primary_btn-color: #4acb8a;
+  --danger_btn-color: #f94348;
 }
 
 .stage .icon {
@@ -31,4 +31,12 @@
 
 #index .textButton:nth-child(3) {
   background: #3cc5f8
+}
+
+.btn-primary {
+  border-radius: 10rem !important;
+}
+
+.btn-danger {
+  border-radius: 10rem !important;
 }

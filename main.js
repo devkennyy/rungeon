@@ -126,7 +126,7 @@ function SetTheme(event) {
   document.getElementById("serika").innerHTML = "serika  ";
   document.getElementById("cobalt").innerHTML = "cobalt  ";
   document.getElementById("hedge").innerHTML = "hedge  ";
-  document.getElementById("passionfruit").innerHTML = "passionfriut  ";
+  document.getElementById("passionfruit").innerHTML = "passionfruit  ";
   document.getElementById("rgb").innerHTML = "rgb  ";
   document.getElementById("dots").innerHTML = "dots  ";
   document.getElementById(
