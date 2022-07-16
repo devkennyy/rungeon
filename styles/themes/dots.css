@@ -22,15 +22,15 @@
 }
 
 #index .textButton:first-child {
-  background: #f94348
+  background: #f94348;
 }
 
 #index .textButton:nth-child(2) {
-  background: #9261ff
+  background: #9261ff;
 }
 
 #index .textButton:nth-child(3) {
-  background: #3cc5f8
+  background: #3cc5f8;
 }
 
 .btn-primary {
