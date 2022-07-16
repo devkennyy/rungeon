@@ -10,9 +10,9 @@
 }
 
 .nav-link,
-.stage .icon, 
+.stage .icon,
 #index .doors i,
-#index .links i, 
+#index .links i,
 #themePopup,
 #themePopup #closeButton {
   animation: rgb 5s linear infinite !important;
@@ -20,26 +20,26 @@
 
 @keyframes rgb {
   0% {
-    color: #4cae4c
+    color: #4cae4c;
   }
 
   20% {
-    color: #409eb5
+    color: #409eb5;
   }
 
   40% {
-    color: #8134f4
+    color: #8134f4;
   }
 
   60% {
-    color: #f10e19
+    color: #f10e19;
   }
 
   80% {
-    color: #ffc505
+    color: #ffc505;
   }
 
   to {
-    color: #4cae4c
+    color: #4cae4c;
   }
 }
