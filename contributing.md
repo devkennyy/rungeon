@@ -1,8 +1,8 @@
 # 🤗 Contributing
 
 ## Getting Started
-When contributing, we suggest you develop an understanding of the languages used within the project. Rungeon is written in JavaScript, Sass, Bootstrap and HTML. 
-If you plan on making visual changes familiarize yourself with Sass & Bootstrap, we assume you are already competent with JavaScript & HTML. 
+When contributing, we suggest you develop an understanding of the languages used within the project. Rungeon is written in JavaScript, CSS, Bootstrap and HTML. 
+If you plan on making visual changes familiarize yourself with CSS & Bootstrap, we assume you are already competent with JavaScript & HTML. 
 
 ## We Develop with Github
 We use github to host code, to track issues and feature requests, as well as accept pull requests.
@@ -15,7 +15,7 @@ Here are the simplified steps for an issue/feature related pull request:
 - Clone the repo to your local machine via `git clone https://github.com/devkennyy/rungeon.git`
 - Create a new branch for your fix by running `git checkout -b branch-name`
 - Modify the code for your issue/feature. 
-- Add and commit the changes `git add .`, `git commit -m "changes made"`
+- Add and commit the changes `git commit -am "changes made"`
 - Submit your pull request.
 
 ## Stage Pull Request
