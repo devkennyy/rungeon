@@ -3,11 +3,15 @@
   --text-color: #fff;
   --sub-color: #fff;
   --icon-color: #fff;
+  --nav-color: #676e8a;
+  --nav_icon-color: #fff;
+  --primary_btn-color: #4acb8a;
+  --danger_btn-color: #f94348;
 }
 
 .stage .icon {
   background-color: #4acb8a !important;
-  padding: 15px 15px 15px 15px;
+  padding: 15px;
   border-radius: 10rem;
 }
 
@@ -18,13 +22,21 @@
 }
 
 #index .textButton:first-child {
-  background: #f94348
+  background: #f94348;
 }
 
 #index .textButton:nth-child(2) {
-  background: #9261ff
+  background: #9261ff;
 }
 
 #index .textButton:nth-child(3) {
-  background: #3cc5f8
+  background: #3cc5f8;
+}
+
+.btn-primary {
+  border-radius: 10rem !important;
+}
+
+.btn-danger {
+  border-radius: 10rem !important;
 }

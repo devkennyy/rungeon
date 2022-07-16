@@ -96,6 +96,7 @@ function Next_Stage(currentStage) {
 
 function Enable_Continue_Button(currentStage) {
   document.getElementById(`stage_${currentStage}-btn`).disabled = false;
+  document.getElementById(`stage_${currentStage}-btn`).innerHTML = "Continue";
 }
 
 function Disable_Continue_Button(currentStage) {
@@ -126,7 +127,7 @@ function SetTheme(event) {
   document.getElementById("serika").innerHTML = "serika  ";
   document.getElementById("cobalt").innerHTML = "cobalt  ";
   document.getElementById("hedge").innerHTML = "hedge  ";
-  document.getElementById("passionfruit").innerHTML = "passionfriut  ";
+  document.getElementById("passionfruit").innerHTML = "passionfruit  ";
   document.getElementById("rgb").innerHTML = "rgb  ";
   document.getElementById("dots").innerHTML = "dots  ";
   document.getElementById(
@@ -231,6 +232,7 @@ function Stage_Two_Coin() {
 /* STAGE THREE */
 function Stage_Three_Coin() {
   if (stageTwo_hasCoin) {
+    Enable_Continue_Button(3);
     document.getElementById("stage_3-btn").disabled = false;
     document.getElementById("stage_3-icon").style.cursor = "auto";
   }
