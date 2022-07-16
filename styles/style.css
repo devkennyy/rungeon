@@ -205,3 +205,8 @@ body {
   }
 }
 
+#navbarNavDropdown {
+  text-align: center;
+  justify-content: center;
+}
+
