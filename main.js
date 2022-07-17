@@ -24,8 +24,6 @@ function runStageRequiredScripts() {
     //Add listener to close theme popup when clicked outside
     addPopupListener();
   }
-  //Stage one
-  document.getElementById("stage_1-icon").style.opacity = 1.0;
 }
 
 /*
@@ -143,51 +141,47 @@ function addPopupListener() {
 }
 
 function setTheme(event) {
-  document.getElementById("serika").innerHTML = "serika  ";
-  document.getElementById("cobalt").innerHTML = "cobalt  ";
-  document.getElementById("hedge").innerHTML = "hedge  ";
-  document.getElementById("passionfruit").innerHTML = "passionfruit  ";
-  document.getElementById("rgb").innerHTML = "rgb  ";
-  document.getElementById("dots").innerHTML = "dots  ";
+  var previousTheme = localStorage.getItem("theme");
+  document.getElementById(previousTheme).innerHTML = previousTheme; 
+  
   document.getElementById(
     "themeStylesheet"
   ).href = `styles/themes/${event.target.id}.css`;
   localStorage.setItem("index_theme", `${event.target.id}`);
   localStorage.setItem("theme", `${event.target.id}`);
   document.getElementById(event.target.id).innerHTML +=
-    '<i class="fa-solid fa-check"></i>';
+    ' <i class="fa-solid fa-check"></i>';
     toggleThemePopup();
 }
 
 
 function getThemes() {
   // index.html theme check
-  if (localStorage.getItem("index_theme") == null) {
-    console.log("theme was null");
+  var indexTheme = localStorage.getItem("index_theme");
+  if ((indexTheme) === null) {
     document.getElementById(
       "themeStylesheet"
     ).href = `styles/themes/default.css`;
   } else {
-    let index_theme = localStorage.getItem("index_theme");
     document.getElementById(
       "themeStylesheet"
-    ).href = `styles/themes/${index_theme}.css`;
+    ).href = `styles/themes/${indexTheme}.css`;
   }
 
   // rungeon.html theme check
-  if (localStorage.getItem("theme") == null) {
-    console.log("theme was null");
+  var storageTheme = localStorage.getItem("theme");
+  if (storageTheme === null) {
     document.getElementById(
       "themeStylesheet"
     ).href = `styles/themes/default.css`;
   } else {
     console.log("Getting rungeon themes...");
-    let theme = localStorage.getItem("theme");
+    let theme = storageTheme;
     document.getElementById(
       "themeStylesheet"
     ).href = `styles/themes/${theme}.css`;
     document.getElementById(theme).innerHTML +=
-      '<i class="fa-solid fa-check"></i>';
+      ' <i class="fa-solid fa-check"></i>';
   }
 }
 
