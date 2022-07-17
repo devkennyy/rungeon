@@ -54,5 +54,17 @@ Here are the simplified steps for an issue/feature related pull request:
   - Test your stage multiple times to ensure it works as it shoild. 
   - Make sure to make to revert hidden elements within the `Reset_Stage` function. 
 
+## Codebase Folder Structure
+
+```sh
+.
+├── .github
+├── public          # static files
+    ├── assets      # Photos, videos, fonts, etc.
+    ├── scripts     # JS files (websites only)
+    └── styles      # CSS files
+        └── themes  # Themes for the game
+```
+
 ## Questions
 If you had trouble understanding this guide or have a general question, [join the Discord](https://discord.gg/SFX2KSuzep) and I'll be happy to assist you. 
