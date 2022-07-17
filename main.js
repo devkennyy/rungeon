@@ -20,7 +20,7 @@ function runStageRequiredScripts() {
   getThemes();
 
   //Check if user is on index page
-  if(window.location.pathname == '/'){
+  if(window.location.pathname == '/' || window.location.pathname == '/index.html'){
     //Add listener to close theme popup when clicked outside
     addPopupListener();
   }
