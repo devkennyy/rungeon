@@ -1,4 +1,5 @@
-:root {
+:root
+{
   --bg-color: #121520;
   --text-color: #fff;
   --sub-color: #fff;
@@ -9,34 +10,41 @@
   --danger_btn-color: #f94348;
 }
 
-.stage .icon {
+.stage .icon
+{
   background-color: #4acb8a !important;
   padding: 15px;
   border-radius: 10rem;
 }
 
-#index .textButton {
+#index .textButton
+{
   padding: 7px 12px 7px 8px;
   border-radius: 10rem;
   color: #121520;
 }
 
-#index .textButton:first-child {
+#index .textButton:first-child
+{
   background: #f94348;
 }
 
-#index .textButton:nth-child(2) {
+#index .textButton:nth-child(2)
+{
   background: #9261ff;
 }
 
-#index .textButton:nth-child(3) {
+#index .textButton:nth-child(3)
+{
   background: #3cc5f8;
 }
 
-.btn-primary {
+.btn-primary
+{
   border-radius: 10rem !important;
 }
 
-.btn-danger {
+.btn-danger
+{
   border-radius: 10rem !important;
 }
