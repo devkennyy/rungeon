@@ -18,6 +18,8 @@ var stageTwo_hasCoin = false;
 function Run_Stage_Required_Scripts() {
   // Fetch themes from local storage
   GetThemes();
+  //Add listener to close theme popup when clicked outside
+  addPopupListener();
   //Stage one
   document.getElementById("stage_1-icon").style.opacity = 1.0;
 }
@@ -121,6 +123,19 @@ function ToggleThemePopup() {
     document.getElementById("themePopup").hidden = true;
     document.getElementById("doors_icon").style.visibility = "visible";
   }
+}
+
+//when user clicks outside of theme popup, close it
+function addPopupListener() {
+
+  window.addEventListener('click', function (e) {
+
+    if (document.getElementById("themePopup").hidden) {return;}
+
+    if (e.target == document.body) {
+      ToggleThemePopup();
+    }
+  })
 }
 
 function SetTheme(event) {
