@@ -134,19 +134,6 @@ body {
   text-align: center;
 }
 
-#themePopup #closeButton {
-  cursor: pointer;
-  z-index: 5;
-  text-align: center;
-  height: 18px;
-  width: 19px;
-  position: absolute;
-  margin-left: 355px;
-  margin-top: 10px;
-  background-color: var(--text-color);
-  border-radius: 50%;
-}
-
 #themePopup .title:hover {
   opacity: 0.9;
 }
