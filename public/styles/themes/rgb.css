@@ -1,4 +1,5 @@
-:root {
+:root
+{
   --bg-color: #111;
   --text-color: #444;
   --sub-color: #9e9e9e;
@@ -14,32 +15,40 @@
 #index .doors i,
 #index .links i,
 #themePopup,
-#themePopup #closeButton {
+#themePopup #closeButton
+{
   animation: rgb 5s linear infinite !important;
 }
 
-@keyframes rgb {
-  0% {
+@keyframes rgb
+{
+  0%
+  {
     color: #4cae4c;
   }
 
-  20% {
+  20%
+  {
     color: #409eb5;
   }
 
-  40% {
+  40%
+  {
     color: #8134f4;
   }
 
-  60% {
+  60%
+  {
     color: #f10e19;
   }
 
-  80% {
+  80%
+  {
     color: #ffc505;
   }
 
-  to {
+  to
+  {
     color: #4cae4c;
   }
 }
