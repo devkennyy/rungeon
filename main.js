@@ -1,4 +1,4 @@
-window.onload = Run_Stage_Required_Scripts();
+window.onload = runStageRequiredScripts();
 
 //Global vars
 const totalStages = 4;
@@ -15,9 +15,9 @@ var stageTwo_hasCoin = false;
 // START OF GLOBAL FUNCTIONS
 
 //Some stages require an initial setup before the stage is loaded. This script is run as soon as the page is loaded.
-function Run_Stage_Required_Scripts() {
+function runStageRequiredScripts() {
   // Fetch themes from local storage
-  GetThemes();
+  getThemes();
 
   //Check if user is on index page
   if(window.location.pathname == '/'){
@@ -33,7 +33,7 @@ Some stages might require resetting certain elements to their original value, or
 This function runs everytime the stage changes. Use it to setup any logic you need applied in case the user comes back to the stage.
 */
 
-function Reset_Stage(stage) {
+function resetStage(stage) {
   switch (stage) {
     case 1:
       stageOne_ClickCount = 0;
@@ -41,13 +41,13 @@ function Reset_Stage(stage) {
       stageOne_BtnDisabled = false;
       document.getElementById("stage_1-icon").style.opacity = 1;
       document.getElementById("stage_1-icon").style.visibility = "visible";
-      Disable_Continue_Button(1);
+      disableContinueButton(1);
     case 2:
       stageTwo_hasCoin = false;
       document.getElementById("stage_2-coin").style.display = "initial";
-      Disable_Continue_Button(2);
+      disableContinueButton(2);
     case 3:
-      Disable_Continue_Button(3);
+      disableContinueButton(3);
       document.getElementById(
         "stage_3-icon"
       ).style.cursor = `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🟡</text></svg>") 16 0,auto`;
@@ -62,7 +62,7 @@ We really only need the stage we're in right now. Using template literals (also 
 This kind of setup will allow us to add as many stages as we want, as long as we have one stage called "stage_start" and another called "stage_end".
 */
 
-function Previous_Stage(currentStage) {
+function previousStage(currentStage) {
   if (currentStage == "end") {
     stage = totalStages;
     document.getElementById(`stage_end`).classList.add("d-none");
@@ -76,11 +76,11 @@ function Previous_Stage(currentStage) {
     document.getElementById(`stage_${currentStage}`).classList.add("d-none");
     document.getElementById(`stage_${stage}`).classList.remove("d-none");
   }
-  Update_Title_Progress();
-  Reset_Stage(stage);
+  updateTitleProgress();
+  resetStage(stage);
 }
 
-function Next_Stage(currentStage) {
+function nextStage(currentStage) {
   if (currentStage == "start") {
     stage = 1;
     document.getElementById(`stage_start`).classList.add("d-none");
@@ -94,32 +94,32 @@ function Next_Stage(currentStage) {
     document.getElementById(`stage_${currentStage}`).classList.add("d-none");
     document.getElementById(`stage_${stage}`).classList.remove("d-none");
   }
-  Update_Title_Progress();
-  Reset_Stage(stage);
+  updateTitleProgress();
+  resetStage(stage);
 }
 
 // These functions allow us to enable/disable the continue button. Should be combined with other logic for a more interactive stage (grabbing a coin / giving it, etc)
 
-function Enable_Continue_Button(currentStage) {
+function enableContinueButton(currentStage) {
   document.getElementById(`stage_${currentStage}-btn`).disabled = false;
   document.getElementById(`stage_${currentStage}-btn`).innerHTML = "Continue";
 }
 
-function Disable_Continue_Button(currentStage) {
+function disableContinueButton(currentStage) {
   document.getElementById(`stage_${currentStage}-btn`).disabled = true;
 }
 
-function Restart() {
+function restart() {
   stage = 0;
   window.location.href = "index.html";
 }
 
-function StartGame() {
+function startGame() {
   stage = 0;
   window.location.href = "rungeon.html";
 }
 
-function ToggleThemePopup() {
+function toggleThemePopup() {
   if (document.getElementById("themePopup").hidden) {
     document.getElementById("themePopup").hidden = false;
     document.getElementById("doors_icon").style.visibility = "hidden";
@@ -137,12 +137,12 @@ function addPopupListener() {
     if (document.getElementById("themePopup").hidden) {return;}
 
     if (e.target == document.body) {
-      ToggleThemePopup();
+      toggleThemePopup();
     }
   })
 }
 
-function SetTheme(event) {
+function setTheme(event) {
   document.getElementById("serika").innerHTML = "serika  ";
   document.getElementById("cobalt").innerHTML = "cobalt  ";
   document.getElementById("hedge").innerHTML = "hedge  ";
@@ -156,11 +156,11 @@ function SetTheme(event) {
   localStorage.setItem("theme", `${event.target.id}`);
   document.getElementById(event.target.id).innerHTML +=
     '<i class="fa-solid fa-check"></i>';
-    ToggleThemePopup();
+    toggleThemePopup();
 }
 
 
-function GetThemes() {
+function getThemes() {
   // index.html theme check
   if (localStorage.getItem("index_theme") == null) {
     console.log("theme was null");
@@ -191,7 +191,7 @@ function GetThemes() {
   }
 }
 
-function Update_Title_Progress() {
+function updateTitleProgress() {
   let val = stage / (totalStages + 2);
   switch (true) {
     case val <= 0.1:
@@ -226,7 +226,7 @@ function Update_Title_Progress() {
 // START OF STAGE SPECIFIC FUNCTIONS
 
 /* STAGE ONE */
-function Stage_One_Squish() {
+function stageOneSquish() {
   stageOne_ClickCount++;
   stageOne_Opacity -= 0.4;
 
@@ -235,7 +235,7 @@ function Stage_One_Squish() {
   }
 
   if (stageOne_ClickCount >= 3) {
-    Enable_Continue_Button(1);
+    enableContinueButton(1);
     stageOne_BtnDisabled = true;
     document.getElementById("stage_1-icon").style.opacity = 0;
     document.getElementById("stage_1-icon").style.visibility = "hidden";
@@ -243,15 +243,15 @@ function Stage_One_Squish() {
 }
 
 /* STAGE TWO */
-function Stage_Two_Coin() {
+function stageTwoCoin() {
   document.getElementById("stage_2-coin").style.display = "none";
   stageTwo_hasCoin = true;
 }
 
 /* STAGE THREE */
-function Stage_Three_Coin() {
+function stageThreeCoin() {
   if (stageTwo_hasCoin) {
-    Enable_Continue_Button(3);
+    enableContinueButton(3);
     document.getElementById("stage_3-btn").disabled = false;
     document.getElementById("stage_3-icon").style.cursor = "auto";
   }
@@ -274,5 +274,5 @@ function drop(ev) {
   document.getElementById("stage_4-h1").textContent = "The door is unlocked";
   document.getElementById("stage_4-p").textContent =
     "I knew that was useful, good work!";
-  Enable_Continue_Button(4);
+  enableContinueButton(4);
 }
