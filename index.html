@@ -24,18 +24,18 @@
   <body id="index">
     <div id="themePopup" hidden>
       <!-- prettier-ignore -->
-      <div class="title" id="serika" onclick="SetTheme(event)">serika </div>
-      <div class="title" id="cobalt" onclick="SetTheme(event)">cobalt </div>
-      <div class="title" id="hedge" onclick="SetTheme(event)">hedge </div>
-      <div class="title" id="passionfruit" onclick="SetTheme(event)">passionfruit </div>
-      <div class="title" id="rgb" onclick="SetTheme(event)">rgb </div>
-      <div class="title" id="dots" onclick="SetTheme(event)">dots </div>
+      <div class="title" id="serika" onclick="setTheme(event)">serika </div>
+      <div class="title" id="cobalt" onclick="setTheme(event)">cobalt </div>
+      <div class="title" id="hedge" onclick="setTheme(event)">hedge </div>
+      <div class="title" id="passionfruit" onclick="setTheme(event)">passionfruit </div>
+      <div class="title" id="rgb" onclick="setTheme(event)">rgb </div>
+      <div class="title" id="dots" onclick="setTheme(event)">dots </div>
     </div>
     <div class="doors">
       <i
         id="doors_icon"
         class="icon fas fa-dungeon fa-5x"
-        onclick="StartGame();"
+        onclick="startGame();"
       ></i>
     </div>
     <div class="links">
@@ -47,7 +47,7 @@
         <i class="fas fa-fw fa-code"></i>
         <div class="text">GitHub</div>
       </a>
-      <div class="textButton" onclick="ToggleThemePopup()" class="textButton">
+      <div class="textButton" onclick="toggleThemePopup()" class="textButton">
         <i class="fas fa-fw fa-palette"></i>
         <div class="text">Theme</div>
       </div>
