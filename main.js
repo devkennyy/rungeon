@@ -18,8 +18,12 @@ var stageTwo_hasCoin = false;
 function Run_Stage_Required_Scripts() {
   // Fetch themes from local storage
   GetThemes();
-  //Add listener to close theme popup when clicked outside
-  addPopupListener();
+
+  //Check if user is on index page
+  if(window.location.pathname == '/'){
+    //Add listener to close theme popup when clicked outside
+    addPopupListener();
+  }
   //Stage one
   document.getElementById("stage_1-icon").style.opacity = 1.0;
 }
