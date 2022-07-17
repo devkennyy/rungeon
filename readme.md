@@ -6,22 +6,29 @@
 
 [![My Skills](https://skillicons.dev/icons?i=js,css,html)](https://skillicons.dev)
 
-🚪 <b>[ENTER THE RUNGEON!](https://devkennyy.github.io/rungeon/)</b>
-
 </div>
 
 ## 📙 About
 
 Rungeon features a series of puzzles in the form of stages, in which the user relies on their wits to 'escape'. 
+The site offers a sense of customizability with a variety of themes sure to fit a users preference. 
+We're in an active state of development, always building, and preparing the next rungeon stage as you read!
+
 
 <!--
+- Rungeon achieves all these things while maintaing a minimal feel
 - List noteworthy features.
 - State what problem it solves/the aim.
 -->
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome. Refer to the [contributing guide](contributing.md) for more information.
+Refer to the [contributing file](contributing.md) for a begginer friendly guide on how you can contribute.
+- Suggest changes to existing code
+- Improve upon the site
+- Add new stages
+- Create and solve issues
+- Share the rpo
 
 <!--
 - Code Style/Requirements
@@ -39,20 +46,23 @@ Contributions, issues and feature requests are welcome. Refer to the [contributi
 
 ## 💛 Support
 
-The best way to support the development of this project is by starring the repository, it's really encouraging!
+You can support the development of this project is by starring the repository, it makes us feel special.
 
-## 📨 Contact
+## 🤔 FAQ
 
-If you wish to participate in the community, [join our Discord](https://discord.gg/SFX2KSuzep). If you wish to contact me directly, [send an email](mailto:devkenny@outlook.com).
+> What's stopping me from checking the code for answers?
 
-<!--
-- Email address
-- Google Group/mailing list (if applicable)
-- IRC or Slack (if applicable)
--->
+That's half the fun! If you can understand the solution from the code, I congratulate you (it's a mess)
 
-<!--
+> The game side isn't my thing, can I still contribute code?
+
+Rungeon is not just a game, it's an environment for developers to improve and enhance their developing skills!
+
+> How can I reach out or join the community?
+
+You can participate in the [discussions](https://github.com/devkennyy/rungeon/discussions), [send me an email](mailto:devkenny@outlook.com) or [join our Discord](https://discord.gg/SFX2KSuzep).
+
+
 ## 📜 License
 
-This content is licensed under the GNU Public GPL-3.0 license
--->
+This content is licensed under the [GNU Public GPL-3.0](/license) license
