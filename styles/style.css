@@ -1,27 +1,33 @@
 @charset "UTF-8";
-* {
+*
+{
   font-family: "Roboto", sans-serif;
 }
 
-body {
+body
+{
   overflow: hidden;
   margin: 0;
 }
 
-.stage {
+.stage
+{
   background-color: var(--bg-color);
   justify-content: center;
 }
-.stage .icon {
+.stage .icon
+{
   color: var(--icon-color);
   margin-bottom: 1%;
 }
-.stage h1 {
+.stage h1
+{
   color: var(--text-color);
   font-size: 2.2rem;
   text-align: center;
 }
-.stage p {
+.stage p
+{
   color: var(--sub-color);
   font-size: 1.5rem;
   text-align: center;
@@ -29,17 +35,20 @@ body {
 
 #stage_1-icon:hover,
 #stage_2-coin:hover,
-#stage_4-key:hover {
+#stage_4-key:hover
+{
   cursor: pointer;
 }
 
-#stage_3-icon:hover {
+#stage_3-icon:hover
+{
   cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🟡</text></svg>")
       16 0,
     auto; /*!emojicursor.app*/
 }
 
-#index {
+#index
+{
   z-index: 1;
   background-color: var(--bg-color);
   display: flex;
@@ -49,7 +58,8 @@ body {
   justify-content: center;
   row-gap: 1em;
 }
-#index .doors {
+#index .doors
+{
   text-align: center;
   display: inline-block;
   margin: 0 auto;
@@ -57,7 +67,8 @@ body {
   line-height: 100vh;
   vertical-align: middle;
 }
-#index .doors i {
+#index .doors i
+{
   color: var(--text-color);
   font-size: 20rem;
   cursor: pointer;
@@ -66,31 +77,39 @@ body {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-#index .doors :hover {
+#index .doors :hover
+{
   font-size: 22rem;
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
   opacity: 1 !important;
 }
-@-webkit-keyframes blink {
+@-webkit-keyframes blink
+{
   0%,
-  100% {
+  100%
+  {
     opacity: 1;
   }
-  50% {
+  50%
+  {
     opacity: 0;
   }
 }
-@keyframes blink {
+@keyframes blink
+{
   0%,
-  100% {
+  100%
+  {
     opacity: 1;
   }
-  50% {
+  50%
+  {
     opacity: 0;
   }
 }
-#index .links {
+#index .links
+{
   user-select: none;
   z-index: 2;
   margin-bottom: 220px;
@@ -101,22 +120,27 @@ body {
   font-size: 2rem;
   cursor: pointer;
 }
-#index .links i {
+#index .links i
+{
   color: var(--icon-color);
 }
-#index .links div {
+#index .links div
+{
   font-weight: 500;
   color: var(--text-color);
   display: inline-block;
 }
-#index .links a {
+#index .links a
+{
   text-decoration: none;
 }
-#index .links :hover {
+#index .links :hover
+{
   margin-top: -3px;
 }
 
-#themePopup {
+#themePopup
+{
   z-index: 10;
   height: 384px;
   margin-bottom: 150px;
@@ -125,7 +149,8 @@ body {
   position: absolute;
 }
 
-#themePopup .title {
+#themePopup .title
+{
   font-size: 2rem;
   cursor: pointer;
   border-radius: 3px;
@@ -134,88 +159,107 @@ body {
   text-align: center;
 }
 
-#themePopup .title:hover {
+#themePopup .title:hover
+{
   opacity: 0.9;
 }
 
 /* THEMES TAKEN FROM MONKEYTYPE */
 
-#themePopup #serika {
+#themePopup #serika
+{
   background-color: #323437;
   color: #e2b714;
 }
 
-#themePopup #cobalt {
+#themePopup #cobalt
+{
   background-color: #181818;
   color: #17b8bd;
 }
 
-#themePopup #hedge {
+#themePopup #hedge
+{
   background-color: #415e31;
   color: #f7f1d6;
 }
 
-#themePopup #passionfruit {
+#themePopup #passionfruit
+{
   background-color: #7c2142;
   color: #f4a3b4;
 }
 
-#themePopup #rgb {
+#themePopup #rgb
+{
   animation: rgb 5s linear infinite;
   background-color: #181818;
 }
 
-#themePopup #dots {
+#themePopup #dots
+{
   background-color: #121520;
   color: #fff;
 }
 
 
-@keyframes rgb {
-  0% {
+@keyframes rgb
+{
+  0%
+  {
     color: #4cae4c;
   }
 
-  20% {
+  20%
+  {
     color: #409eb5;
   }
 
-  40% {
+  40%
+  {
     color: #8134f4;
   }
 
-  60% {
+  60%
+  {
     color: #f10e19;
   }
 
-  80% {
+  80%
+  {
     color: #ffc505;
   }
 
-  to {
+  to
+  {
     color: #4cae4c;
   }
 }
 
-.nav-link {
+.nav-link
+{
   color: var(--nav_icon-color) !important;
 }
 
-.navbar {
+.navbar
+{
   background-color: var(--nav-color) !important;
 }
 
-#navbarNavDropdown {
+#navbarNavDropdown
+{
   text-align: center;
   justify-content: center;
 }
 
-.btn-primary {
+.btn-primary
+{
   background-color: var(--primary_btn-color) !important;
   border: none !important;
 }
 
-.btn-danger {
+.btn-danger
+{
   background-color: var(--danger_btn-color) !important;
   border: none !important;
 }
