@@ -143,7 +143,7 @@ function addPopupListener() {
 function setTheme(event) {
   var previousTheme = localStorage.getItem("theme");
   document.getElementById(previousTheme).innerHTML = previousTheme; 
-  
+
   document.getElementById(
     "themeStylesheet"
   ).href = `styles/themes/${event.target.id}.css`;
