@@ -2,6 +2,8 @@
 /node_modules/
 /shelf/
 /workspace.xml
+/.vscode/
+*.code-workspace
 # Editor-based HTTP Client requests
 /httpRequests/
 # intellij configs
