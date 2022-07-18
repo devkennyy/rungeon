@@ -11,24 +11,24 @@
 ## 📙 About
 
 Rungeon features a series of puzzles in the form of stages, in which the user relies on their wits to 'escape'. 
-The site offers a sense of customizability with a variety of themes sure to fit a users preference. 
-We're in an active state of development, always building, and preparing the next rungeon stage as you read!
+The site offers a sense of customizability with a variety of themes sure to fit a user's preference. 
+We're in an active state of development, always building, and preparing for the next rungeon stage as you read!
 
 
 <!--
-- Rungeon achieves all these things while maintaing a minimal feel
+- Rungeon achieves all these things while maintaining a minimal feel
 - List noteworthy features.
 - State what problem it solves/the aim.
 -->
 
 ## 🤝 Contributing
 
-Refer to the [contributing file](contributing.md) for a begginer friendly guide on how you can contribute.
+Refer to the [contributing file](contributing.md) for a beginner-friendly guide on how you can contribute.
 - Suggest changes to existing code
 - Improve upon the site
 - Add new stages
 - Create and solve issues
-- Share the rpo
+- Share the repo
 
 <!--
 - Code Style/Requirements
@@ -46,7 +46,7 @@ Refer to the [contributing file](contributing.md) for a begginer friendly guide 
 
 ## 💛 Support
 
-You can support the development of this project is by starring the repository, it makes us feel special.
+You can support the development of this project by starring the repository, it makes us feel special.
 
 ## 🤔 FAQ
 
