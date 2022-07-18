@@ -2,7 +2,13 @@
 /node_modules/
 /shelf/
 /workspace.xml
+/node_modules
 # Editor-based HTTP Client requests
 /httpRequests/
 # intellij configs
 .idea/
+#firebase
+.firebase
+.firebaserc
+firebase.json
+firebase-debug.log
