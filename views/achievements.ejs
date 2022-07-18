@@ -25,7 +25,10 @@
     <h1>Achievements</h1>
     <div class="card-container">
       <% for(let i = 0; i < (Math.random() * 100) + 1; i++) { %>
-      <div class="achievement" id="achievement-<%= i %>"></div>
+      <div class="achievement-container">
+        <div class="achievement" id="achievement-<%= i %>"></div>
+        <h3 class="achievement-txt">Achievement</h3>
+      </div>
       <% } %>
     </div>
   </body>

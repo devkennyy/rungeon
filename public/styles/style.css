@@ -276,18 +276,34 @@ body
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 650px;
-  /* border: 2px solid #e2b714; */
+  width: 780px;
   align-items: center;
+}
+
+.achievement-container
+{
+  padding: 20px;
+  border: 2px solid #e2b714;
+  border-radius: 10px;
+  text-align: center;
+  margin: 10px;
+}
+.achievement-container:hover
+{
+  box-shadow: 10px 10px 15px #00000090;
 }
 
 .achievement
 {
-  background-color: #17b8bd;
   border-radius: 50%;
   height: 100px;
   width: 100px;
   text-align: center;
   margin: 10px;
   border: 5px solid #ffffff;
+}
+
+.achievement-txt
+{
+  color: #ffffff;
 }
