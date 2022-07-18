@@ -243,10 +243,17 @@ body
 
 .navbar
 {
-  background-color: var(--nav-color) !important;
+  background-color: var(--bg-color) !important;
 }
 
-#navbarNavDropdown
+
+/* This id is important to override Bootstrap */
+#navbar {
+  position: absolute;
+  width: 100%;
+}
+
+#navbarNavDropdown 
 {
   text-align: center;
   justify-content: center;
