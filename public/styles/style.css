@@ -2,11 +2,11 @@
 *
 {
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 
 body
 {
-  overflow: hidden;
   margin: 0;
 }
 
