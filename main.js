@@ -143,7 +143,8 @@ function addPopupListener() {
 function setTheme(event) {
   try {
     let previousTheme = localStorage.getItem("theme");
-    document.getElementById(previousTheme).innerHTML = previousTheme; 
+    document.getElementById(previousTheme).innerHTML = previousTheme;
+    toggleThemePopup();
   } catch (error) {
     getThemes();
   }
