@@ -141,8 +141,12 @@ function addPopupListener() {
 }
 
 function setTheme(event) {
-  var previousTheme = localStorage.getItem("theme");
-  document.getElementById(previousTheme).innerHTML = previousTheme; 
+  try {
+    let previousTheme = localStorage.getItem("theme");
+    document.getElementById(previousTheme).innerHTML = previousTheme; 
+  } catch (error) {
+    getThemes();
+  }
   
   document.getElementById(
     "themeStylesheet"
