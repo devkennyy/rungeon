@@ -53,7 +53,7 @@ body
   background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  /* height: 100vh; */
   align-items: center;
   justify-content: center;
   row-gap: 1em;
