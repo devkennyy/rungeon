@@ -2,12 +2,13 @@
 *
 {
   font-family: "Roboto", sans-serif;
-  overflow-x: hidden;
 }
 
 body
 {
   margin: 0;
+  height: 100vh;
+  width: 100vw;
 }
 
 .stage
@@ -53,7 +54,7 @@ body
   background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
-  /* height: 100vh; */
+  height: 100%;
   align-items: center;
   justify-content: center;
   row-gap: 1em;
@@ -269,41 +270,4 @@ body
 {
   background-color: var(--danger_btn-color) !important;
   border: none !important;
-}
-
-.card-container
-{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 780px;
-  align-items: center;
-}
-
-.achievement-container
-{
-  padding: 20px;
-  border: 2px solid #e2b714;
-  border-radius: 10px;
-  text-align: center;
-  margin: 10px;
-}
-.achievement-container:hover
-{
-  box-shadow: 10px 10px 15px #00000090;
-}
-
-.achievement
-{
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  text-align: center;
-  margin: 10px;
-  border: 5px solid #ffffff;
-}
-
-.achievement-txt
-{
-  color: #ffffff;
 }
