@@ -141,9 +141,13 @@ function addPopupListener() {
 }
 
 function setTheme(event) {
-  var previousTheme = localStorage.getItem("theme");
-  document.getElementById(previousTheme).innerHTML = previousTheme; 
-
+  try {
+    let previousTheme = localStorage.getItem("theme");
+    document.getElementById(previousTheme).innerHTML = previousTheme; 
+  } catch (error) {
+    getThemes();
+  }
+  
   document.getElementById(
     "themeStylesheet"
   ).href = `styles/themes/${event.target.id}.css`;
@@ -151,7 +155,11 @@ function setTheme(event) {
   localStorage.setItem("theme", `${event.target.id}`);
   document.getElementById(event.target.id).innerHTML +=
     ' <i class="fa-solid fa-check"></i>';
+  
+  //Only toggle the main theme popup when on index.html (the navbar dropdown has a close of its own)
+  if(window.location.pathname == '/' || window.location.pathname == '/index.html'){
     toggleThemePopup();
+  }
 }
 
 
