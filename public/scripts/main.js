@@ -143,24 +143,6 @@ function toggleThemePopup(target) {
   }
 }
 
-/*
-
-
-  if (document.getElementById("themePopup").hidden) {
-    document.getElementById("themePopup").hidden = false;
-    document.getElementById("doors_icon").style.visibility = "hidden";
-  } else {
-    document.getElementById("themePopup").hidden = true;
-    document.getElementById("doors_icon").style.visibility = "visible";
-  }
- */
-function ClosePopupOnBodyClick() {
-  if(document.getElementById("themePopup").style.display !== "none") {
-    document.getElementById("themePopup").style.display = "none";
-    document.getElementById("doors_icon").style.visibility = "visible";
-  }
-}
-
 //when user clicks outside of theme popup, close it
 function addPopupListener() {
 
