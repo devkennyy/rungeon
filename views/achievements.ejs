@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico?" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🏃Rungeon</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      id="themeStylesheet"
+      rel="stylesheet"
+      href="styles/themes/default.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=JetBrains+Mono&family=Roboto&display=swap");
+    </style>
+    <script
+      src="https://kit.fontawesome.com/384a80988d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body id="index">
+    <h1>Achievements</h1>
+    <div class="card-container">
+      <% for(let i = 0; i < (Math.random() * 100) + 1; i++) { %>
+      <div class="achievement-container">
+        <div class="achievement" id="achievement-<%= i %>"></div>
+        <h3 class="achievement-txt">Achievement</h3>
+      </div>
+      <% } %>
+    </div>
+  </body>
+</html>
+<script src="scripts/main.js"></script>

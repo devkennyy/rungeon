@@ -2,6 +2,8 @@
 /node_modules/
 /shelf/
 /workspace.xml
+/.vscode/
+*.code-workspace
 /node_modules
 # Editor-based HTTP Client requests
 /httpRequests/
