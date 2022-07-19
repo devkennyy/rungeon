@@ -8,6 +8,7 @@ document.addEventListener('click', function (event) {
     document.getElementById("themePopup").style.display = "none";
     document.getElementById("doors_icon").style.visibility = "visible";
   }
+
 });
 
 //Global vars
@@ -128,6 +129,7 @@ function startGame() {
 }
 
 function toggleThemePopup() {
+  themeToggler = 2;
   if(document.getElementById("themePopup").style.display === "none") {
     document.getElementById("themePopup").style.display = "block";
     document.getElementById("doors_icon").style.visibility = "hidden";
