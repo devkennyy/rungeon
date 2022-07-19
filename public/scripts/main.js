@@ -10,9 +10,6 @@ document.addEventListener('click', function (event) {
   }
 });
 
-document.getElementById("themePopup").style.display = "none";
-document.getElementById("doors_icon").style.visibility = "visible";
-
 //Global vars
 const totalStages = 4;
 var stage = 1;
@@ -130,16 +127,13 @@ function startGame() {
   window.location.href = "rungeon.html";
 }
 
-function toggleThemePopup(target) {
-  if(target === "t") {
-    console.log("t")
-    if(document.getElementById("themePopup").style.display === "none") {
-      document.getElementById("themePopup").style.display = "block";
-      document.getElementById("doors_icon").style.visibility = "hidden";
-    } else {
-      document.getElementById("themePopup").style.display = "none";
-      document.getElementById("doors_icon").style.visibility = "visible";
-    }
+function toggleThemePopup() {
+  if(document.getElementById("themePopup").style.display === "none") {
+    document.getElementById("themePopup").style.display = "block";
+    document.getElementById("doors_icon").style.visibility = "hidden";
+  } else {
+    document.getElementById("themePopup").style.display = "none";
+    document.getElementById("doors_icon").style.visibility = "visible";
   }
 }
 
