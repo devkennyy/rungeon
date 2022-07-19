@@ -21,14 +21,12 @@
     ></script>
   </head>
 
-  <body id="index">
-    <div id="themePopup" hidden>
+  <body id="index" onclick="toggleThemePopup()">
+    <div id="themePopup" style="display: none">
       <div class="title" id="serika" onclick="setTheme(event)">serika</div>
       <div class="title" id="cobalt" onclick="setTheme(event)">cobalt</div>
       <div class="title" id="hedge" onclick="setTheme(event)">hedge</div>
-      <div class="title" id="passionfruit" onclick="setTheme(event)">
-        passionfruit
-      </div>
+      <div class="title" id="passionfruit" onclick="setTheme(event)">passionfruit</div>
       <div class="title" id="rgb" onclick="setTheme(event)">rgb</div>
       <div class="title" id="dots" onclick="setTheme(event)">dots</div>
     </div>
@@ -48,7 +46,7 @@
         <i class="fas fa-fw fa-code"></i>
         <div class="text">GitHub</div>
       </a>
-      <div class="textButton" onclick="toggleThemePopup()" class="textButton">
+      <div class="textButton" onclick="toggleThemePopup('t')" class="textButton">
         <i class="fas fa-fw fa-palette"></i>
         <div class="text">Theme</div>
       </div>
