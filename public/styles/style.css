@@ -54,7 +54,7 @@ button
   color: var(--text-color);
   width: fit-content;
   cursor: pointer;
-  transition: .2s ease-in-out;
+  transition: .1s ease-in-out;
 }
 button:hover
 {
@@ -64,17 +64,21 @@ button:hover
 button:focus
 {
   border: 2px solid var(--primary_btn-color);
-  transition: .2s ease-in-out;
+  transition: .1s ease-in-out;
 }
 button:active
 {
   border: 2px solid var(--bad);
   transition: .2s ease-in-out;
 }
-
 button, .banner
 {
   border-radius: 5px;
+}
+
+a:active
+{
+  color: var(--active);
 }
 
 .stage
