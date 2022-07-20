@@ -2,7 +2,47 @@
 
 ## Getting Started
 When contributing, we suggest you develop an understanding of the languages used within the project. Rungeon is written in JavaScript, CSS, Bootstrap and HTML. 
-If you plan on making visual changes familiarize yourself with CSS & Bootstrap, we assume you are already competent with JavaScript & HTML. 
+If you plan on making visual changes familiarize yourself with CSS & Bootstrap, we assume you are already competent with JavaScript & HTML.
+
+### Prerequisites
+Rungeon makes use of the following programs for development:
+
+- [NodeJS](https://nodejs.org) (and npm)
+
+### Running Rungeon
+Rungeon can be ran with the following terminal commands given that [the prerequisites](#prerequisites) have been met:
+
+```sh
+npm install   # installs any new npm dependencies
+npm start     # actually starts the localhost server
+```
+
+On a successful run, a message similar to the following will be printed to the terminal. It will specify the port that the server is using to host the website on.
+
+```sh
+~/p/rungeon docs *2 !2 ?1 ❯ npm start
+
+> rungeon@1.1.0 start
+> nodemon .
+
+[nodemon] 2.0.19
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node .`
+Listening on port 3000
+```
+
+Afterwards, direct a browser tab to point to `localhost:<port>` (e.g. localhost:3000).
+
+### Running Rungeon on Other Devices
+In order to connect on your phone or another device,
+
+- start the server from your computer with the instructions above.
+- Determine your computer's IP address with `ipconfig` (Windows), `ifconfig` (MacOS), or `ip` (Linux).
+- Under the `en0` section, look for a `10.X.X.X` number and remember it.
+- Make sure that your device is connected to the same network as the computer that's running the server
+- Type `http://<10.X.X.X>:<port>/[route]` (e.g. http://10.0.0.4:3000/) in a browser tab on the device.
 
 ## We Develop with Github
 We use github to host code, to track issues and feature requests, as well as accept pull requests.

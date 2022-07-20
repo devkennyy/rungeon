@@ -2,7 +2,7 @@
 
 # 🏃‍♂️ Rungeon
 
-[Rungeon](https://rungeon.live/) is a **minimal, open source, text-based adventure game**.
+[Rungeon](https://rungeon.live/) is an **open source, puzzle based adventure game**.
 
 [![My Skills](https://skillicons.dev/icons?i=js,css,html)](https://skillicons.dev)
 

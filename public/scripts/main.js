@@ -1,5 +1,16 @@
 window.onload = runStageRequiredScripts();
 
+//themeToggler ensures that it needs two clicks on body to close the themePopup, given that a click on the button that opens the popup counts as a click on body as well
+var themeToggler = 0;
+document.addEventListener('click', function (event) {
+  themeToggler = themeToggler += 1;
+  if(themeToggler%2 === 0) {
+    document.getElementById("themePopup").style.display = "none";
+    document.getElementById("doors_icon").style.visibility = "visible";
+  }
+
+});
+
 //Global vars
 const totalStages = 4;
 var stage = 1;
@@ -118,11 +129,12 @@ function startGame() {
 }
 
 function toggleThemePopup() {
-  if (document.getElementById("themePopup").hidden) {
-    document.getElementById("themePopup").hidden = false;
+  themeToggler = 2;
+  if(document.getElementById("themePopup").style.display === "none") {
+    document.getElementById("themePopup").style.display = "block";
     document.getElementById("doors_icon").style.visibility = "hidden";
   } else {
-    document.getElementById("themePopup").hidden = true;
+    document.getElementById("themePopup").style.display = "none";
     document.getElementById("doors_icon").style.visibility = "visible";
   }
 }
