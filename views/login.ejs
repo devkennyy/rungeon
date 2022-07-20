@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/themes/default.css" />
+  </head>
+  <body>
+    <div id="index" class="container">
+      <div class="panel login-panel">
+        <h1 class="form-title">Login</h1>
+        <form action="POST">
+          <div class="input-field">
+            <label for="username">Username</label>
+            <input
+              value=""
+              required=""
+              id="username"
+              name="username"
+              type="text"
+            />
+          </div>
+          <div class="input-field">
+            <label for="password">Password</label>
+            <input required="" id="password" name="password" type="password" />
+          </div>
+        </form>
+        <div class="form-banner banner">
+          <p class="banner-text">
+            New to Rungeon? <a href="#" class="link">Register an Account</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
