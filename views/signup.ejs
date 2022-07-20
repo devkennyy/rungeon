@@ -10,8 +10,8 @@
   </head>
   <body>
     <div id="index" class="container">
-      <div class="panel login-panel">
-        <h1 class="form-title">Login</h1>
+      <div class="panel signup-panel">
+        <h1 class="form-title">SignUp</h1>
         <form action="POST">
           <div class="input-field">
             <label for="username">Username</label>
@@ -27,11 +27,20 @@
             <label for="password">Password</label>
             <input required="" id="password" name="password" type="password" />
           </div>
+          <div class="input-field">
+            <label for="retype-password">Retype Password</label>
+            <input
+              required=""
+              id="retype-password"
+              name="retype-password"
+              type="password"
+            />
+          </div>
         </form>
+        <button class="button" id="create-account-btn">Create Account</button>
         <div class="form-banner banner">
           <p class="banner-text">
-            New to Rungeon?
-            <a href="/signup" class="link">Register an Account</a>
+            Already have an account? <a href="/login" class="link">Login.</a>
           </p>
         </div>
       </div>

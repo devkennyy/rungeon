@@ -12,6 +12,12 @@ rungeon.get("/login", (req, res) => {
     });
 });
 
+rungeon.get("/signup", (req, res) => {
+    res.render("signup", {
+        title: "Rungeon - SignUp"
+    });
+});
+
 rungeon.listen(port, () => {
     console.log(`Listening on port ${port}`);
 });
