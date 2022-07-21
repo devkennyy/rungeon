@@ -1,0 +1,200 @@
+:root
+{
+    /* --disabled: #323232;
+    --active: #3232ff;
+    --error: #ff3232;
+    --success: #32ff32;
+    --warning: #ffad32; */
+    --blue1: #121520;
+    --blue2: #202124;
+    --blue3: #323437;   
+    --blue4: #2a2f34;
+    --blue5: #127d81;
+    --blue6: #17b8bd;
+    --blue7: #3cc5f8;
+    --blue8: #1fdde4;
+    --blue9: #befafa;
+    --blue10: #baf3f3;
+    --blue11: #e5f4f4;
+    --gray1: #111111;
+    --gray2: #181818;
+    --gray3: #444444;
+    --gray4: #888888;
+    --gray5: #96999b;
+    --gray6: #9e9e9e;
+    --gray7: #acacac;
+    --gray8: #adacad;
+    --green1: #2c4b1b;
+    --green2: #415e31;
+    --green3: #00871b;
+    --green4: #74c24b;
+    --green5: #4acb8a;
+    --yellow1: #78610c;
+    --yellow2: #daaa1d;
+    --yellow3: #e2b714;
+    --yellow4: #e5ba1e;
+    --yellow5: #f2efbb;
+    --yellow7: #d1d0c5;
+    --yellow6: #f7f1d6;
+    --purple1: #7c2043;
+    --purple2: #a2305b;
+    --purple3: #fcacbc;
+    --purple4: #f5dcdf;
+    --purple5: #9261ff;
+    --red1: #e41f1f;
+    --red2: #f94348;
+}
+
+.theme-default
+{
+    --bg-color: var(--blue2);
+    --text-color: var(--gray5);
+    --sub-color: var(--gray5);
+    --icon-color: var(--gray5);
+    --nav_icon-color: var(--gray3);
+    /* --primary_btn-color: #0d6ffc;
+    --danger_btn-color: #dd3445;
+    --nav-color: #2a2f34; */
+}
+
+.theme-cobalt
+{
+    --bg-color: var(--gray2);
+    --text-color: var(--blue10);
+    --sub-color: var(--blue9);
+    --icon-color: var(--blue5);
+    --nav_icon-color: var(--blue8);
+    /* --nav-color: #17b8bd;
+    --primary_btn-color: #1fdde4;
+    --danger_btn-color: #127d81; */
+}
+
+.theme-hedge
+{
+    --bg-color: var(--green2);
+    --text-color: var(--yellow7);
+    --sub-color: var(--yellow7);
+    --icon-color: var(--yellow2);
+    --nav_icon-color: var(--yellow7);
+    /* --nav-color: #60814f;
+    --primary_btn-color: #74c24b;
+    --danger_btn-color: #2c4b1b; */
+}
+
+.theme-passionfruit
+{
+    --bg-color: var(--purple1);
+    --text-color: var(--purple3);
+    --sub-color: var(--purple4);
+    --icon-color: var(--yellow1);
+    --nav_icon-color: var(--yellow1);
+    --primary_btn-color: var(--purple3);
+    --danger_btn-color: var(--purple2);
+    /* --nav-color: #873f5b; */
+}
+
+.theme-serika
+{
+    --bg-color: var(--gray3);
+    --text-color: var(--gray4);
+    --sub-color: var(--yellow7);
+    --icon-color: var(--yellow3);
+    --nav_icon-color: var(--yellow3);
+    --primary_btn-color: var(--yellow5);
+    --danger_btn-color: var(--yellow1);
+    /* --nav-color: #606366; */
+}
+
+.theme-dots
+{
+    --bg-color: var(--blue1);
+    --text-color: #ffffff;
+    --sub-color: #ffffff;
+    --icon-color: #ffffff;
+    --nav_icon-color: #ffffff;
+    --primary_btn-color: var(--green4);
+    --danger_btn-color: var(--red1);
+    /* --nav-color: #676e8a; */
+}
+#index.theme-dots .stage.icon
+{
+    background-color: var(--green4) !important;
+    padding: 15px;
+    border-radius: 10rem;
+}
+#index.theme-dots .textButton
+{
+    padding: 7px 12px 7px 8px;
+    border-radius: 10rem;
+    color: var(--blue1);
+}
+#index.theme-dots .textButton:first-child
+{
+    background: var(--red1);
+}
+#index.theme-dots .textButton:nth-child(2)
+{
+    background: var(--purple5);
+}
+#index.theme-dots .textButton:nth-child(3)
+{
+    background: var(--blue7);
+}
+#index.theme-dots .btn-primary, #index.theme-dots .btn-danger
+{
+    border-radius: 10rem !important;
+}
+
+.theme-rgb
+{
+    --bg-color: var(--gray1);
+    --text-color: var(--gray3);
+    --sub-color: var(--gray6);
+    --icon-color: var(--gray3);
+    --nav_icon-color: var(--gray4);
+    --primary_btn-color: var(--green3);
+    --danger_btn-color: var(--red1);
+    /* --nav-color: #2e2e2e; */
+}
+#index.theme-rgb .nav-link,
+#index.theme-rgb .stage .icon,
+#index.theme-rgb .doors i,
+#index.theme-rgb .links i,
+#index.theme-rgb #themePopup,
+#index.theme-rgb #themePopup #closeButton
+{
+  animation: rgb 5s linear infinite !important;
+}
+
+@keyframes rgb
+{
+  0%
+  {
+    color: #4cae4c;
+  }
+
+  20%
+  {
+    color: #409eb5;
+  }
+
+  40%
+  {
+    color: #8134f4;
+  }
+
+  60%
+  {
+    color: #f10e19;
+  }
+
+  80%
+  {
+    color: #ffc505;
+  }
+
+  to
+  {
+    color: #4cae4c;
+  }
+}
