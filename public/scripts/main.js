@@ -153,23 +153,40 @@ function addPopupListener() {
 }
 
 function setTheme(event) {
+  // declare previousTheme in a higher scope so we can access it outside of try/catch block
+
+  let previousTheme;
+  let newTheme;
+
   try {
-    let previousTheme = localStorage.getItem("theme");
-    document.getElementById(previousTheme).innerHTML = previousTheme; 
+    previousTheme = localStorage.getItem("theme");
+    newTheme = event.target.id;
+    document.getElementById(previousTheme).innerHTML = previousTheme;
   } catch (error) {
     getThemes();
   }
-  
+
   document.getElementById(
     "themeStylesheet"
-  ).href = `styles/themes/${event.target.id}.css`;
-  localStorage.setItem("index_theme", `${event.target.id}`);
-  localStorage.setItem("theme", `${event.target.id}`);
-  document.getElementById(event.target.id).innerHTML +=
+  ).href = `styles/themes/${newTheme}.css`;
+  localStorage.setItem("index_theme", `${newTheme}`);
+  localStorage.setItem("theme", `${newTheme}`);
+
+  if (previousTheme == newTheme) {
+    console.log("same theme");
+    document.getElementById(
+      "themeStylesheet"
+    ).href = `styles/themes/default.css`;
+  } else {
+    document.getElementById(newTheme).innerHTML +=
     ' <i class="fa-solid fa-check"></i>';
-  
+  }
+
   //Only toggle the main theme popup when on index.html (the navbar dropdown has a close of its own)
-  if(window.location.pathname == '/' || window.location.pathname == '/index.html'){
+  if (
+    window.location.pathname == "/" ||
+    window.location.pathname == "/index.html"
+  ) {
     toggleThemePopup();
   }
 }
