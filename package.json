@@ -4,8 +4,9 @@
   "description": "Rungeon is a minimal, open source, text-based adventure game.",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ."
+    "start": "nodemon .",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
     "express": "^4.18.1"
   },
   "devDependencies": {
+    "eslint": "^8.20.0",
     "nodemon": "^2.0.19"
   }
 }
