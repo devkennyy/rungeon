@@ -31,7 +31,7 @@ function runStageRequiredScripts() {
   getThemes();
 
   //Check if user is on index page
-  if(window.location.pathname == '/' || window.location.pathname == '/index.html'){
+  if(window.location.pathname == '/') {
     //Add listener to close theme popup when clicked outside
     addPopupListener();
   }
@@ -120,12 +120,12 @@ function disableContinueButton(currentStage) {
 
 function restart() {
   stage = 0;
-  window.location.href = "index.html";
+  window.location.href = "/";
 }
 
 function startGame() {
   stage = 0;
-  window.location.href = "rungeon.html";
+  window.location.href = "rungeon";
 }
 
 function toggleThemePopup() {
@@ -169,7 +169,7 @@ function setTheme(event) {
     ' <i class="fa-solid fa-check"></i>';
   
   //Only toggle the main theme popup when on index.html (the navbar dropdown has a close of its own)
-  if(window.location.pathname == '/' || window.location.pathname == '/index.html'){
+  if(window.location.pathname == '/'){
     toggleThemePopup();
   }
 }
