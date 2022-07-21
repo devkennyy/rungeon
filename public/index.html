@@ -6,8 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>🏃Rungeon</title>
-    <link rel="stylesheet" href="styles/themes.css" />
     <link rel="stylesheet" href="styles/style.css" />
+    <link
+      id="themeStylesheet"
+      rel="stylesheet"
+      href="styles/themes/default.css"
+    />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=JetBrains+Mono&family=Roboto&display=swap");
     </style>
@@ -15,22 +19,16 @@
       src="https://kit.fontawesome.com/384a80988d.js"
       crossorigin="anonymous"
     ></script>
-    <script src="scripts/themes.js"></script>
   </head>
 
-  <body id="index" class="theme-default">
+  <body id="index">
     <div id="themePopup" style="display: none">
-      <div class="title theme-serika" onclick="setTheme('serika')">serika</div>
-      <div class="title theme-cobalt" onclick="setTheme('cobalt')">cobalt</div>
-      <div class="title theme-hedge" onclick="setTheme('hedge')">hedge</div>
-      <div class="title theme-passionfruit" onclick="setTheme('passionfruit')">
-        passionfruit
-      </div>
-      <div class="title theme-rgb" onclick="setTheme('rgb')">rgb</div>
-      <div class="title theme-dots" onclick="setTheme('dots')">dots</div>
-      <div class="title theme-default" onclick="setTheme('default')">
-        default
-      </div>
+      <div class="title" id="serika" onclick="setTheme(event)">serika</div>
+      <div class="title" id="cobalt" onclick="setTheme(event)">cobalt</div>
+      <div class="title" id="hedge" onclick="setTheme(event)">hedge</div>
+      <div class="title" id="passionfruit" onclick="setTheme(event)">passionfruit</div>
+      <div class="title" id="rgb" onclick="setTheme(event)">rgb</div>
+      <div class="title" id="dots" onclick="setTheme(event)">dots</div>
     </div>
     <div class="doors">
       <i
@@ -61,6 +59,6 @@
         <div class="text">Discord</div>
       </a>
     </div>
-    <script src="scripts/main.js"></script>
   </body>
 </html>
+<script src="scripts/main.js"></script>

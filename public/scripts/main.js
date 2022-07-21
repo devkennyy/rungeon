@@ -3,17 +3,17 @@ window.onload = runStageRequiredScripts();
 //themeToggler ensures that it needs two clicks on body to close the themePopup, given that a click on the button that opens the popup counts as a click on body as well
 var themeToggler = 0;
 document.addEventListener('click', function (event) {
-  themeToggler++;
-  if((themeToggler & 2) === 0) {
+  themeToggler = themeToggler += 1;
+  if(themeToggler%2 === 0) {
     document.getElementById("themePopup").style.display = "none";
     document.getElementById("doors_icon").style.visibility = "visible";
   }
+
 });
 
 //Global vars
 const totalStages = 4;
 var stage = 1;
-var theme;
 
 //Stage one vars
 var stageOne_ClickCount = 0;
@@ -22,12 +22,13 @@ var stageOne_BtnDisabled = false;
 
 //Stage two vars
 var stageTwo_hasCoin = false;
+
 // START OF GLOBAL FUNCTIONS
 
 //Some stages require an initial setup before the stage is loaded. This script is run as soon as the page is loaded.
 function runStageRequiredScripts() {
   // Fetch themes from local storage
-  theme = localStorage.getItem("theme");
+  getThemes();
 
   //Check if user is on index page
   if(window.location.pathname == '/' || window.location.pathname == '/index.html'){
@@ -149,6 +150,59 @@ function addPopupListener() {
       toggleThemePopup();
     }
   })
+}
+
+function setTheme(event) {
+  try {
+    let previousTheme = localStorage.getItem("theme");
+    document.getElementById(previousTheme).innerHTML = previousTheme; 
+  } catch (error) {
+    getThemes();
+  }
+  
+  document.getElementById(
+    "themeStylesheet"
+  ).href = `styles/themes/${event.target.id}.css`;
+  localStorage.setItem("index_theme", `${event.target.id}`);
+  localStorage.setItem("theme", `${event.target.id}`);
+  document.getElementById(event.target.id).innerHTML +=
+    ' <i class="fa-solid fa-check"></i>';
+  
+  //Only toggle the main theme popup when on index.html (the navbar dropdown has a close of its own)
+  if(window.location.pathname == '/' || window.location.pathname == '/index.html'){
+    toggleThemePopup();
+  }
+}
+
+
+function getThemes() {
+  // index.html theme check
+  var indexTheme = localStorage.getItem("index_theme");
+  if ((indexTheme) === null) {
+    document.getElementById(
+      "themeStylesheet"
+    ).href = `styles/themes/default.css`;
+  } else {
+    document.getElementById(
+      "themeStylesheet"
+    ).href = `styles/themes/${indexTheme}.css`;
+  }
+
+  // rungeon.html theme check
+  var storageTheme = localStorage.getItem("theme");
+  if (storageTheme === null) {
+    document.getElementById(
+      "themeStylesheet"
+    ).href = `styles/themes/default.css`;
+  } else {
+    console.log("Getting rungeon themes...");
+    let theme = storageTheme;
+    document.getElementById(
+      "themeStylesheet"
+    ).href = `styles/themes/${theme}.css`;
+    document.getElementById(theme).innerHTML +=
+      ' <i class="fa-solid fa-check"></i>';
+  }
 }
 
 function updateTitleProgress() {
