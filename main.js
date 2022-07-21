@@ -26,17 +26,16 @@ rungeon.get("/signup", (req, res) => {
 });
 
 rungeon.get("/rungeon", (req, res) => {
-    res.render("signup", {
+    res.render("rungeon", {
         title: "Rungeon - Game"
     });
 });
 
-rungeon.use(function(req, res) {
+rungeon.get("*", (req, res) => {
     res.status(404);
-    if(req.accepts("html")) {
-      res.render("404", { url: req.url });
-      return;
-    }
+    res.render("404", {
+        title: "Rungeon - Page Not Found"
+    });
 });
 
 rungeon.listen(port, () => {
