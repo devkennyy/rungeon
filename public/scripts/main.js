@@ -3,17 +3,17 @@ window.onload = runStageRequiredScripts();
 //themeToggler ensures that it needs two clicks on body to close the themePopup, given that a click on the button that opens the popup counts as a click on body as well
 var themeToggler = 0;
 document.addEventListener('click', function (event) {
-  themeToggler = themeToggler += 1;
-  if(themeToggler%2 === 0) {
+  themeToggler++;
+  if((themeToggler & 2) === 0) {
     document.getElementById("themePopup").style.display = "none";
     document.getElementById("doors_icon").style.visibility = "visible";
   }
-
 });
 
 //Global vars
 const totalStages = 4;
 var stage = 1;
+var theme;
 
 //Stage one vars
 var stageOne_ClickCount = 0;
@@ -22,13 +22,12 @@ var stageOne_BtnDisabled = false;
 
 //Stage two vars
 var stageTwo_hasCoin = false;
-
 // START OF GLOBAL FUNCTIONS
 
 //Some stages require an initial setup before the stage is loaded. This script is run as soon as the page is loaded.
 function runStageRequiredScripts() {
   // Fetch themes from local storage
-  getThemes();
+  theme = localStorage.getItem("theme");
 
   //Check if user is on index page
   if(window.location.pathname == '/' || window.location.pathname == '/index.html'){

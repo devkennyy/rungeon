@@ -142,7 +142,7 @@ body
 #themePopup
 {
   z-index: 10;
-  height: 384px;
+  /* height: 384px; */
   margin-bottom: 150px;
   border-radius: 5px;
   background-color: var(--text-color);
@@ -165,6 +165,12 @@ body
 }
 
 /* THEMES TAKEN FROM MONKEYTYPE */
+
+#themePopup #default
+{
+  background-color: #202124;
+  color: #adacad;
+}
 
 #themePopup #serika
 {
@@ -200,40 +206,6 @@ body
 {
   background-color: #121520;
   color: #fff;
-}
-
-
-@keyframes rgb
-{
-  0%
-  {
-    color: #4cae4c;
-  }
-
-  20%
-  {
-    color: #409eb5;
-  }
-
-  40%
-  {
-    color: #8134f4;
-  }
-
-  60%
-  {
-    color: #f10e19;
-  }
-
-  80%
-  {
-    color: #ffc505;
-  }
-
-  to
-  {
-    color: #4cae4c;
-  }
 }
 
 .nav-link
