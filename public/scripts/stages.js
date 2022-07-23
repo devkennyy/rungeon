@@ -1,38 +1,3 @@
-const setStageText = (stageData) => {
-  document.getElementById('stage-title').innerText = stageData.title;
-  document.getElementById('stage-body').innerText = stageData.body;
-};
-
-const setStageButtons = (stageData) => {
-  if (stageData.next != -1) {
-    let next = document.createElement('button');
-    next.classList.add('btn', 'btn-primary');
-    next.innerText = 'continue';
-    document.getElementById('stage-button-container').append(next);
-  } else {
-    let restart = document.createElement('button');
-    restart.classList.add('btn', 'btn-primary');
-    restart.innerText = 'restart';
-    document.getElementById('stage-button-container').append(restart);
-  }
-
-  if (stageData.back != -1) {
-    let back = document.createElement('button');
-    back.classList.add('btn', 'btn-danger', 'me-5');
-    back.innerText = 'back';
-    document.getElementById('stage-button-container').append(back);
-  }
-};
-
-const setStage = (stageData) => {
-  setStageText(stageData);
-  setStageButtons(stageData);
-};
-
-const setStageButtonsWithIdx = (index) => {
-  setStageButtons(stages[index]);
-};
-
 // todo: put this in a database somewhere
 // contains the text for all stages
 const stages = [
@@ -79,3 +44,30 @@ const stages = [
     next: -1,
   },
 ];
+
+
+const setStageText = (stageData) => {
+  document.getElementById('stage-title').innerText = stageData.title;
+  document.getElementById('stage-body').innerText = stageData.body;
+};
+
+const setStageButtons = (stageData) => {
+  if (stageData.next == -1) {
+    document.getElementById('stage-btn-restart').classList.remove('hide-button');
+    document.getElementById('stage-btn-back').classList.add('hide-button');
+    document.getElementById('stage-btn-next').classList.add('hide-button');
+  } else {
+    document.getElementById('stage-btn-restart').classList.add('hide-button');
+    document.getElementById('stage-btn-back').classList.remove('hide-button');
+    document.getElementById('stage-btn-next').classList.remove('hide-button');
+  }
+
+  if (stageData.back == -1) {
+    document.getElementById('stage-btn-back').classList.add('hide-button');
+  }
+};
+
+const setStage = (stageData) => {
+  setStageText(stageData);
+  setStageButtons(stageData);
+};
