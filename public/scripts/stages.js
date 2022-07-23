@@ -7,7 +7,7 @@ const setStageButtons = (stageData) => {
   if (stageData.next != -1) {
     let next = document.createElement('button');
     next.classList.add('btn', 'btn-primary');
-    next.innerText = 'next';
+    next.innerText = 'continue';
     document.getElementById('stage-button-container').append(next);
   } else {
     let restart = document.createElement('button');
@@ -79,4 +79,3 @@ const stages = [
     next: -1,
   },
 ];
-
