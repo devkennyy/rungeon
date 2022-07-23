@@ -46,7 +46,11 @@ const setTheme = (theme) => {
     default:        localStorage.setItem('theme', themes[6]); break;
   }
 
+  getTheme(currTheme);
+};
+
+const getTheme = (oldTheme) => {
   const newTheme = localStorage.getItem('theme');
-  document.body.classList.replace(`theme-${currTheme}`, `theme-${newTheme}`);
+  document.body.classList.replace(`theme-${oldTheme}`, `theme-${newTheme}`);
   console.log(`theme: ${newTheme}`);
 };
