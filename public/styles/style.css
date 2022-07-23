@@ -47,6 +47,11 @@ body
     auto; /*!emojicursor.app*/
 }
 
+.hide-button
+{
+  display: none;
+}
+
 #index
 {
   z-index: 1;

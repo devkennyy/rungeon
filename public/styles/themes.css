@@ -52,9 +52,9 @@
     --sub-color: var(--gray5);
     --icon-color: var(--gray5);
     --nav_icon-color: var(--gray3);
-    /* --primary_btn-color: #0d6ffc;
+    --primary_btn-color: #0d6ffc;
     --danger_btn-color: #dd3445;
-    --nav-color: #2a2f34; */
+    /* --nav-color: #2a2f34; */
 }
 
 .theme-cobalt
@@ -64,9 +64,9 @@
     --sub-color: var(--blue9);
     --icon-color: var(--blue5);
     --nav_icon-color: var(--blue8);
-    /* --nav-color: #17b8bd;
     --primary_btn-color: #1fdde4;
-    --danger_btn-color: #127d81; */
+    --danger_btn-color: #127d81;
+    /* --nav-color: #17b8bd; */
 }
 
 .theme-hedge
@@ -76,9 +76,9 @@
     --sub-color: var(--yellow7);
     --icon-color: var(--yellow2);
     --nav_icon-color: var(--yellow7);
-    /* --nav-color: #60814f;
     --primary_btn-color: #74c24b;
-    --danger_btn-color: #2c4b1b; */
+    --danger_btn-color: #2c4b1b;
+    /* --nav-color: #60814f; */
 }
 
 .theme-passionfruit
