@@ -39,5 +39,5 @@ rungeon.get("*", (req, res) => {
 });
 
 rungeon.listen(port, () => {
-    console.log(`Listening on port ${port}`);
+    console.log(`Listening on port ${port} \nctrl + click: http://localhost:3000/`);
 });
