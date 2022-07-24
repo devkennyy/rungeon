@@ -21,7 +21,7 @@ rungeon.get('/login', (req, res) => {
 
 rungeon.get('/signup', (req, res) => {
   res.render('signup', {
-    title: 'Rungeon - SignUp'
+    title: 'Rungeon - Sign Up'
   });
 });
 
@@ -39,5 +39,5 @@ rungeon.get('*', (req, res) => {
 });
 
 rungeon.listen(port, () => {
-  console.log(`Listening on port ${port} \nctrl + click: http://localhost:3000/`);
+  console.log(`Listening on port ${port} \n(ctrl + click: http://localhost:3000/)`);
 });
