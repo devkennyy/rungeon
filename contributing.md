@@ -8,6 +8,7 @@ If you plan on making visual changes familiarize yourself with CSS & Bootstrap, 
 Rungeon makes use of the following programs for development:
 
 - [NodeJS](https://nodejs.org) (and npm)
+- [Express](https://expressjs.com/)
 
 ### Running Rungeon
 Rungeon can be ran with the following terminal commands given that [the prerequisites](#prerequisites) have been met:
@@ -38,7 +39,7 @@ Afterwards, direct a browser tab to point to `localhost:<port>` (e.g. localhost:
 ### Running Rungeon on Other Devices
 In order to connect on your phone or another device,
 
-- start the server from your computer with the instructions above.
+- Start the server from your computer with the instructions above.
 - Determine your computer's IP address with `ipconfig` (Windows), `ifconfig` (MacOS), or `ip` (Linux).
 - Under the `en0` section, look for a `10.X.X.X` number and remember it.
 - Make sure that your device is connected to the same network as the computer that's running the server
@@ -80,19 +81,28 @@ Here are the simplified steps for an issue/feature related pull request:
 ```
   - Replace instances of `z` with your stage number (previous stage + 1)
   - Edit the h1, paragraph, and icon text as you see fit. (e.g fa-egg, fa-monkey). 
-  - If your stage requires a unique function create one in `main.js` and make sure the name matches the onclick of any element. 
+  - Be sure to increment the `totalStages` variable (previous count plus 1). 
+  - If your stage requires a unique function create one in `main.js`.
+  - Revert hidden elements within the `Reset_Stage` function.
   - Test thoroughly and ensure the stage guidelines below.
-  - Add and commit the changes `git add .`, `git commit -m "changes made"`
+  - Add and commit the changes `git commit -am "describe changes"`
   - Submit your pull request with screenshots.
 
-## Stage Guidelines
-  - Format your code with Prettier before submitting. 
+## Guidelines
+  - Format your code with ESLint before submitting. 
   - Ensure your contributions are safe for work. 
-  - Make sure your stage follows the template and isn't completely different. 
-  - Be sure to increment the `totalStages` variable (previous count plus 1). 
-  - Check that your stage isn't similar to any other level. 
-  - Test your stage multiple times to ensure it works as it shoild. 
-  - Make sure to make to revert hidden elements within the `Reset_Stage` function. 
+  - Test your changes and ensure it works after clearing cache. 
+
+## ESLint
+  - Run the linter for a list of issues
+```
+npm run lint
+```
+
+  - Run linter to automatically fix issues
+```
+npm run lint-fix
+```
 
 ## Questions
 If you had trouble understanding this guide or have a general question, [join the Discord](https://discord.gg/SFX2KSuzep) and I'll be happy to assist you. 
