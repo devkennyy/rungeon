@@ -10,8 +10,8 @@
     "ecmaVersion": "latest"
   },
   "rules": {
-    // "indent": ["error", 2, {"SwitchCase": 1}],
-    "indent": ["error", 2, "tab"],
+    "indent": ["error", 2, {"SwitchCase": 1}],
+    // "indent": ["error", 2, "tab"],
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single"],
     "semi": ["error", "always"]
