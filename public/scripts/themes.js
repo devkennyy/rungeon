@@ -47,6 +47,8 @@ const setTheme = (theme) => {
   }
 
   getTheme(currTheme);
+
+  toggleThemePopup()
 };
 
 const getTheme = (oldTheme) => {
