@@ -9,8 +9,13 @@ If you plan on making visual changes familiarize yourself with CSS & Bootstrap, 
 
 Rungeon makes use of the following programs for development:
 
-- [NodeJS](https://nodejs.org) (and npm)
+- [NodeJS](https://nodejs.org) 
 - [Express](https://expressjs.com/)
+<!-- - [MongoDB](https://www.mongodb.com/) -->
+- [Git](https://git-scm.com/)
+- [npm](https://www.npmjs.com/)
+
+
 
 ### Running Rungeon
 
