@@ -203,3 +203,58 @@ body {
   background-color: var(--danger_btn-color) !important;
   border: none !important;
 }
+
+.four-zero-four-container {
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+}
+
+.four-zero-four {
+  max-width: 350px;
+}
+
+.four-zero-four .row {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  color: var(--icon-color);
+}
+
+.four-zero-four .title {
+  font-size: 2.2rem;
+  color: var(--text-color);
+}
+
+.four-zero-four .sub {
+  font-size: 2rem;
+}
+
+.four-zero-four .desc {
+  font-size: 1rem;
+  color: var(--sub-color);
+  line-height: 1.8rem;
+}
+
+.four-zero-four .link {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  border-radius: 5px;
+  margin-top: 1rem;
+  display: inline-block;
+  text-underline-offset: 8px;
+}
+
+.four-zero-four .link:hover {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 638px) {
+  .four-zero-four {
+    max-width: 550px;
+  }
+}
