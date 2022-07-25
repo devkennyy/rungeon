@@ -22,6 +22,8 @@ We're in an active state of development, always building, and preparing for the 
 
 ## 🤝 Contributing
 
+### Please make your changes on the `stage-remake` branch until further notice
+
 Refer to the [contributing file](contributing.md) for a beginner-friendly guide on how you can contribute.
 
 - Suggest changes to existing code
