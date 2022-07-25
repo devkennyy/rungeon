@@ -73,8 +73,7 @@ const setStageButtons = (stageData) => {
 };
 
 const setStageIcon = (stageData) => {
-  document.querySelector("#stage-icon").innerHTML = `<i "id=stage-icon" class="fas fa-${stageData.icon}"></i>`;
-}
+};
 
 const setStage = (stageData) => {
   setStageIcon(stageData);
