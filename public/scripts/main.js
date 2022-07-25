@@ -1,14 +1,5 @@
 window.onload = runStageRequiredScripts();
 
-//themeToggler ensures that it needs two clicks on body to close the themePopup, given that a click on the button that opens the popup counts as a click on body as well
-var themeToggler = 0;
-document.addEventListener('click', function (event) {
-  themeToggler++;
-  if((themeToggler & 2) === 0) {
-    document.getElementById('themePopup').style.display = 'none';
-    document.getElementById('doors_icon').style.visibility = 'visible';
-  }
-});
 
 //Global vars
 const totalStages = 4;
@@ -143,7 +134,7 @@ function addPopupListener() {
 
   window.addEventListener('click', function (e) {
 
-    if (document.getElementById('themePopup').hidden) {return;}
+    if (document.getElementById('themePopup').style.display == 'none') {return;}
 
     if (e.target == document.body) {
       toggleThemePopup();
