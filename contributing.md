@@ -11,11 +11,9 @@ Rungeon makes use of the following programs for development:
 
 - [NodeJS](https://nodejs.org) 
 - [Express](https://expressjs.com/)
-<!-- - [MongoDB](https://www.mongodb.com/) -->
 - [Git](https://git-scm.com/)
 - [npm](https://www.npmjs.com/)
-
-
+<!-- - [MongoDB](https://www.mongodb.com/) -->
 
 ### Running Rungeon
 
