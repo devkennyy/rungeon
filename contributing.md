@@ -139,6 +139,10 @@ npm run lint-fix
 npm run format
 ```
 
+> **Note**
+> You can check the [style guide](/style.md) for specific formatting. 
+
+
 ## Questions
 
 If you had trouble understanding this guide or have a general question, [join the Discord](https://discord.gg/SFX2KSuzep) and I'll be happy to assist you.
