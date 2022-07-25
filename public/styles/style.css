@@ -236,6 +236,7 @@ body
   justify-content: center;
 }
 
+/* TODO: add gap between buttons (maybe grid layout) */
 .btn-primary
 {
   background-color: var(--primary_btn-color) !important;
