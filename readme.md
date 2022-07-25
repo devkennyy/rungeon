@@ -52,7 +52,7 @@ You can support the development of this project by starring the repository, it m
 
 > What's stopping me from checking the code for answers?
 
-That's half the fun! If you can understand the solution from the code, I congratulate you (it's a mess)
+As long as you are having fun. If you can understand the solution from the code, you deserve it. 
 
 > The game side isn't my thing, can I still contribute code?
 
