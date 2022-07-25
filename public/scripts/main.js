@@ -102,11 +102,11 @@ function nextStage(currentStage) {
 
 function enableContinueButton(currentStage) {
   document.getElementById(`stage_${currentStage}-btn`).disabled = false;
-  document.getElementById(`stage_${currentStage}-btn`).innerHTML = 'Continue';
 }
 
 function disableContinueButton(currentStage) {
   document.getElementById(`stage_${currentStage}-btn`).disabled = true;
+  document.getElementById(`stage_${currentStage}-btn`).innerHTML = "Locked";
 }
 
 function restart() {

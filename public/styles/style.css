@@ -8,6 +8,10 @@ body {
   margin: 0;
 }
 
+button:disabled { 
+  filter: brightness(0.6) !important;
+}
+
 .stage {
   background-color: var(--bg-color);
   justify-content: center;
