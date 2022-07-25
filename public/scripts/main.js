@@ -17,12 +17,12 @@ var stageTwo_hasCoin = false;
 //Some stages require an initial setup before the stage is loaded. This script is run as soon as the page is loaded.
 function runStageRequiredScripts() {
   // Fetch themes from local storage
-  theme = localStorage.getItem("theme");
+  theme = localStorage.getItem('theme');
 
   //Check if user is on index page
   if (
-    window.location.pathname == "/" ||
-    window.location.pathname == "/index.html"
+    window.location.pathname == '/' ||
+    window.location.pathname == '/index.html'
   ) {
     //Add listener to close theme popup when clicked outside
     addPopupListener();
@@ -40,17 +40,17 @@ function resetStage(stage) {
       stageOne_ClickCount = 0;
       stageOne_Opacity = 1.0;
       stageOne_BtnDisabled = false;
-      document.getElementById("stage_1-icon").style.opacity = 1;
-      document.getElementById("stage_1-icon").style.visibility = "visible";
+      document.getElementById('stage_1-icon').style.opacity = 1;
+      document.getElementById('stage_1-icon').style.visibility = 'visible';
       disableContinueButton(1);
     case 2:
       stageTwo_hasCoin = false;
-      document.getElementById("stage_2-coin").style.display = "initial";
+      document.getElementById('stage_2-coin').style.display = 'initial';
       disableContinueButton(2);
     case 3:
       disableContinueButton(3);
-      document.getElementById("stage_3-icon").style.cursor =
-        "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🟡</text></svg>\") 16 0,auto";
+      document.getElementById('stage_3-icon').style.cursor =
+        'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'  width=\'32\' height=\'38\' viewport=\'0 0 100 100\' style=\'fill:black;font-size:19px;\'><text y=\'50%\'>🟡</text></svg>") 16 0,auto';
     default:
       break;
   }
@@ -63,36 +63,36 @@ This kind of setup will allow us to add as many stages as we want, as long as we
 */
 
 function previousStage(currentStage) {
-  if (currentStage == "end") {
+  if (currentStage == 'end') {
     stage = totalStages;
-    document.getElementById("stage_end").classList.add("d-none");
-    document.getElementById(`stage_${stage}`).classList.remove("d-none");
+    document.getElementById('stage_end').classList.add('d-none');
+    document.getElementById(`stage_${stage}`).classList.remove('d-none');
   } else if (currentStage == 1) {
     stage = 0;
-    document.getElementById(`stage_${currentStage}`).classList.add("d-none");
-    document.getElementById("stage_start").classList.remove("d-none");
+    document.getElementById(`stage_${currentStage}`).classList.add('d-none');
+    document.getElementById('stage_start').classList.remove('d-none');
   } else {
     stage--;
-    document.getElementById(`stage_${currentStage}`).classList.add("d-none");
-    document.getElementById(`stage_${stage}`).classList.remove("d-none");
+    document.getElementById(`stage_${currentStage}`).classList.add('d-none');
+    document.getElementById(`stage_${stage}`).classList.remove('d-none');
   }
   updateTitleProgress();
   resetStage(stage);
 }
 
 function nextStage(currentStage) {
-  if (currentStage == "start") {
+  if (currentStage == 'start') {
     stage = 1;
-    document.getElementById("stage_start").classList.add("d-none");
-    document.getElementById(`stage_${stage}`).classList.remove("d-none");
+    document.getElementById('stage_start').classList.add('d-none');
+    document.getElementById(`stage_${stage}`).classList.remove('d-none');
   } else if (currentStage == totalStages) {
     stage = totalStages + 1;
-    document.getElementById(`stage_${currentStage}`).classList.add("d-none");
-    document.getElementById("stage_end").classList.remove("d-none");
+    document.getElementById(`stage_${currentStage}`).classList.add('d-none');
+    document.getElementById('stage_end').classList.remove('d-none');
   } else {
     stage++;
-    document.getElementById(`stage_${currentStage}`).classList.add("d-none");
-    document.getElementById(`stage_${stage}`).classList.remove("d-none");
+    document.getElementById(`stage_${currentStage}`).classList.add('d-none');
+    document.getElementById(`stage_${stage}`).classList.remove('d-none');
   }
   updateTitleProgress();
   resetStage(stage);
@@ -102,7 +102,7 @@ function nextStage(currentStage) {
 
 function enableContinueButton(currentStage) {
   document.getElementById(`stage_${currentStage}-btn`).disabled = false;
-  document.getElementById(`stage_${currentStage}-btn`).innerHTML = "Continue";
+  document.getElementById(`stage_${currentStage}-btn`).innerHTML = 'Continue';
 }
 
 function disableContinueButton(currentStage) {
@@ -111,29 +111,29 @@ function disableContinueButton(currentStage) {
 
 function restart() {
   stage = 0;
-  window.location.href = "index.html";
+  window.location.href = 'index.html';
 }
 
 function startGame() {
   stage = 0;
-  window.location.href = "rungeon.html";
+  window.location.href = 'rungeon.html';
 }
 
 function toggleThemePopup() {
   themeToggler = 2;
-  if (document.getElementById("themePopup").style.display === "none") {
-    document.getElementById("themePopup").style.display = "block";
-    document.getElementById("doors_icon").style.visibility = "hidden";
+  if (document.getElementById('themePopup').style.display === 'none') {
+    document.getElementById('themePopup').style.display = 'block';
+    document.getElementById('doors_icon').style.visibility = 'hidden';
   } else {
-    document.getElementById("themePopup").style.display = "none";
-    document.getElementById("doors_icon").style.visibility = "visible";
+    document.getElementById('themePopup').style.display = 'none';
+    document.getElementById('doors_icon').style.visibility = 'visible';
   }
 }
 
 //when user clicks outside of theme popup, close it
 function addPopupListener() {
-  window.addEventListener("click", function (e) {
-    if (document.getElementById("themePopup").style.display == "none") {
+  window.addEventListener('click', function (e) {
+    if (document.getElementById('themePopup').style.display == 'none') {
       return;
     }
 
@@ -147,28 +147,28 @@ function updateTitleProgress() {
   let val = stage / (totalStages + 2);
   switch (true) {
     case val <= 0.1:
-      document.title = "██░░░░░░░░";
+      document.title = '██░░░░░░░░';
       break;
     case val <= 0.2:
-      document.title = "███░░░░░░░";
+      document.title = '███░░░░░░░';
       break;
     case val <= 0.3:
-      document.title = "████░░░░░░";
+      document.title = '████░░░░░░';
       break;
     case val <= 0.4:
-      document.title = "█████░░░░░";
+      document.title = '█████░░░░░';
       break;
     case val <= 0.5:
-      document.title = "██████░░░░";
+      document.title = '██████░░░░';
       break;
     case val <= 0.6:
-      document.title = "███████░░░";
+      document.title = '███████░░░';
       break;
     case val <= 0.7:
-      document.title = "████████░░";
+      document.title = '████████░░';
       break;
     case val <= 0.8:
-      document.title = "██████████";
+      document.title = '██████████';
       break;
   }
 }
@@ -183,20 +183,20 @@ function stageOneSquish() {
   stageOne_Opacity -= 0.4;
 
   if (stageOne_BtnDisabled == false) {
-    document.getElementById("stage_1-icon").style.opacity -= stageOne_Opacity;
+    document.getElementById('stage_1-icon').style.opacity -= stageOne_Opacity;
   }
 
   if (stageOne_ClickCount >= 3) {
     enableContinueButton(1);
     stageOne_BtnDisabled = true;
-    document.getElementById("stage_1-icon").style.opacity = 0;
-    document.getElementById("stage_1-icon").style.visibility = "hidden";
+    document.getElementById('stage_1-icon').style.opacity = 0;
+    document.getElementById('stage_1-icon').style.visibility = 'hidden';
   }
 }
 
 /* STAGE TWO */
 function stageTwoCoin() {
-  document.getElementById("stage_2-coin").style.display = "none";
+  document.getElementById('stage_2-coin').style.display = 'none';
   stageTwo_hasCoin = true;
 }
 
@@ -204,8 +204,8 @@ function stageTwoCoin() {
 function stageThreeCoin() {
   if (stageTwo_hasCoin) {
     enableContinueButton(3);
-    document.getElementById("stage_3-btn").disabled = false;
-    document.getElementById("stage_3-icon").style.cursor = "auto";
+    document.getElementById('stage_3-btn').disabled = false;
+    document.getElementById('stage_3-icon').style.cursor = 'auto';
   }
 }
 
@@ -215,15 +215,15 @@ function allowDrop(ev) {
 }
 
 function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
+  ev.dataTransfer.setData('text', ev.target.id);
 }
 
 function drop(ev) {
   ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
+  var data = ev.dataTransfer.getData('text');
   ev.target.appendChild(document.getElementById(data));
-  document.getElementById("stage_4-h1").textContent = "The door is unlocked";
-  document.getElementById("stage_4-p").textContent =
-    "I knew that was useful, good work!";
+  document.getElementById('stage_4-h1').textContent = 'The door is unlocked';
+  document.getElementById('stage_4-p').textContent =
+    'I knew that was useful, good work!';
   enableContinueButton(4);
 }
