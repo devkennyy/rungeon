@@ -1,10 +1,6 @@
 var stageCounter = 0;
 
 
-window.onload = () => {
-  setStage(stages[stageCounter]);
-}
-
 document.getElementById("stage-btn-next").addEventListener("click", () => {
   if(stageCounter == stages.length - 1) {
     return;

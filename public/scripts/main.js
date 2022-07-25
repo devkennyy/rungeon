@@ -25,9 +25,6 @@ var stageTwo_hasCoin = false;
 
 //Some stages require an initial setup before the stage is loaded. This script is run as soon as the page is loaded.
 function runStageRequiredScripts() {
-  // Fetch themes from local storage
-  theme = localStorage.getItem("theme");
-
   //Check if user is on index page
   if (window.location.pathname == "/" || window.location.pathname == "/index.html") {
     //Add listener to close theme popup when clicked outside

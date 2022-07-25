@@ -16,9 +16,16 @@
       crossorigin="anonymous"
     ></script>
     <script src="scripts/themes.js"></script>
+    <script src="scripts/main.js" defer></script>
+    <script>
+      window.onload = () => {
+        console.log(localStorage.getItem("theme"));
+        document.body.classList.add(`theme-${localStorage.getItem("theme")}`);
+      }
+    </script>
   </head>
 
-  <body id="index" class="theme-default">
+  <body id="index">
     <div id="themePopup" style="display: none">
       <div class="title theme-serika" onclick="setTheme('serika')">serika</div>
       <div class="title theme-cobalt" onclick="setTheme('cobalt')">cobalt</div>
@@ -61,6 +68,5 @@
         <div class="text">Discord</div>
       </a>
     </div>
-    <script src="scripts/main.js"></script>
   </body>
 </html>

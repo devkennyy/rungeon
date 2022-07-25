@@ -53,12 +53,11 @@ const setTheme = (theme) => {
 
 const getTheme = (oldTheme) => {
   const newTheme = localStorage.getItem("theme");
-  if (newTheme !== undefined) {
-    document.body.classList.add(`theme-${newTheme}`);
-    console.log(`theme: ${newTheme}`);
-    return;
-  }
-
   document.body.classList.replace(`theme-${oldTheme}`, `theme-${newTheme}`);
-  console.log(`theme: ${newTheme}`);
+  // if (newTheme !== undefined) {
+  //   document.body.classList.add(`theme-${newTheme}`);
+  //   console.log(`theme: ${newTheme}`);
+  //   return;
+  // }
+
 };

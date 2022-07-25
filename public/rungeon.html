@@ -32,6 +32,13 @@
     <script src="scripts/themes.js"></script>
     <script src="scripts/stages.js" defer></script>
     <script src="scripts/game.js" defer></script>
+    <script>
+      window.onload = () => {
+        console.log(localStorage.getItem("theme"));
+        document.body.classList.add(`theme-${localStorage.getItem("theme")}`);
+        setStage(stages[stageCounter]);
+      }
+    </script>
   </head>
 
   <body>
