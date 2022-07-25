@@ -131,6 +131,14 @@ npm run lint
 npm run lint-fix
 ```
 
+## Prettier Formatting
+
+- Run the Prettier formatter to format all files
+
+```
+npm run format
+```
+
 ## Questions
 
 If you had trouble understanding this guide or have a general question, [join the Discord](https://discord.gg/SFX2KSuzep) and I'll be happy to assist you.
