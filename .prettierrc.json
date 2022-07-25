@@ -11,7 +11,7 @@
     {
       "files": ["*.html", "**/*.html", "legacy/**/*.js"],
       "options": {
-        "tabWidth": 4
+        "tabWidth": 2
       }
     }
   ]

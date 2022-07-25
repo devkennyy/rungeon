@@ -140,8 +140,7 @@ npm run format
 ```
 
 > **Note**
-> You can check the [style guide](/style.md) for specific formatting. 
-
+> You can check the [style guide](/style.md) for specific formatting.
 
 ## Questions
 

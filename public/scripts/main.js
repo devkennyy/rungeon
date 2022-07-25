@@ -132,11 +132,10 @@ function toggleThemePopup() {
 
 //when user clicks outside of theme popup, close it
 function addPopupListener() {
-
-
-  window.addEventListener('click', function (e) {
-
-    if (document.getElementById('themePopup').style.display == 'none') {return;}
+  window.addEventListener("click", function (e) {
+    if (document.getElementById("themePopup").style.display == "none") {
+      return;
+    }
 
     if (e.target == document.body) {
       toggleThemePopup();
