@@ -1,18 +1,9 @@
 {
   "semi": true,
   "singleQuote": false,
-  "overrides": [
-    {
-      "files": "*.test.js",
-      "options": {
-        "semi": true
-      }
-    },
-    {
-      "files": ["*.html", "**/*.html", "legacy/**/*.js"],
-      "options": {
-        "tabWidth": 2
-      }
-    }
-  ]
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "useTabs": false,
+  "bracketSameLine": true,
+  "arrowParens": "avoid"
 }
