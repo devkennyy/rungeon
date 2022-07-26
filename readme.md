@@ -6,13 +6,17 @@
 
 [![My Skills](https://skillicons.dev/icons?i=js,css,html)](https://skillicons.dev)
 
+![Repository version](https://img.shields.io/github/v/release/devkennyy/rungeon?color=fc7c34&style=for-the-badge)
+![Repository contributors](https://img.shields.io/github/contributors-anon/devkennyy/rungeon?color=fc7c34&style=for-the-badge)
+![Repository license](https://img.shields.io/github/license/devkennyy/rungeon?style=for-the-badge)
+
 </div>
 
 ## 📙 About
 
 Rungeon features a series of puzzles in the form of stages, in which the user relies on their wits to 'escape'.
 The site offers a sense of customizability with a variety of themes sure to fit a user's preference.
-We're in an active state of development, always building, and preparing for the next rungeon stage as you read!
+We're in an active state of development, always building, and preparing the next rungeon stage as you read!
 
 <!--
 - Rungeon achieves all these things while maintaining a minimal feel
@@ -21,12 +25,6 @@ We're in an active state of development, always building, and preparing for the 
 -->
 
 ## 🤝 Contributing
-  
-  <div  align="center">
-
-  [![Repository contributors](https://img.shields.io/github/contributors-anon/devkennyy/rungeon?color=fc7c34&style=for-the-badge/) [![Repository version](https://img.shields.io/github/v/release/devkennyy/rungeon?color=fc7c34&style=for-the-badge)] [![Repository license](https://img.shields.io/github/license/devkennyy/rungeon?style=for-the-badge)]
-
-  </div>
 
 Refer to the [contributing file](contributing.md) for a beginner-friendly guide on how you can contribute.
 
