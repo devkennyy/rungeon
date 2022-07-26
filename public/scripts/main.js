@@ -42,7 +42,7 @@ function toggleThemePopup() {
   if (document.getElementById("themePopup").style.display === "none") {
     document.getElementById("themePopup").style.display = "block";
     document.getElementById("doors_icon").style.visibility = "hidden";
-   } else {
+  } else {
     document.getElementById("themePopup").style.display = "none";
     document.getElementById("doors_icon").style.visibility = "visible";
   }
