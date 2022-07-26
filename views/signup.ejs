@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/themes/default.css" />
+  </head>
+  <body>
+    <div id="index" class="container">
+      <div class="panel signup-panel">
+        <h1 class="form-title">Sign Up</h1>
+        <form action="POST">
+          <div class="input-field">
+            <label for="username">Username</label>
+            <input
+              value=""
+              required=""
+              id="username"
+              name="username"
+              type="text"
+            />
+          </div>
+          <div class="input-field">
+            <label for="email">Email</label>
+            <input
+              required=""
+              id="email"
+              name="email"
+              type="text"
+            />
+          </div>
+          <div class="input-field">
+            <label for="password">Password</label>
+            <input required="" id="password" name="password" type="password" />
+          </div>
+          <div class="input-field">
+            <label for="retype-password">Confirm Password</label>
+            <input
+              required=""
+              id="retype-password"
+              name="retype-password"
+              type="password"
+            />
+          </div>
+        </form>
+        <button class="button" id="create-account-btn">Create Account</button>
+        <div class="form-banner banner">
+          <p class="banner-text">
+            Already have an account? <a href="/login" class="link">Login.</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

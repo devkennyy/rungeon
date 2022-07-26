@@ -1,4 +1,12 @@
 @charset "UTF-8";
+
+:root {
+  --bad: #ff3232;
+  --good: #32ff32;
+  --active: #3232ff;
+  --locked: #ffffff05;
+}
+
 *
 {
   font-family: "Roboto", sans-serif;
@@ -8,6 +16,69 @@ body
 {
   overflow: hidden;
   margin: 0;
+}
+
+input[type=text], input[type=password]
+{
+  line-height: normal;
+  height: 40px;
+  outline: none;
+  background: none;
+  border: none;
+  border-bottom: 2px solid var(--bg-color);
+  width: 100%;
+  font-size: 14pt;
+  color: var(--text-color);
+  transition: .2s ease-in-out;
+}
+input[type=text]:focus, input[type=password]:focus
+{
+  border-bottom: 2px solid var(--primary_btn-color);
+  transition: .1s ease-in-out;
+}
+
+
+label
+{
+  font-size: 11pt;
+}
+
+button
+{
+  border: 2px solid var(--locked);
+  text-align: center;
+  outline: none;
+  padding: 15px 40px;
+  font-size: 12pt;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  width: fit-content;
+  cursor: pointer;
+  transition: .1s ease-in-out;
+}
+button:hover
+{
+  border: 2px solid var(--primary_btn-color);
+  transition: .2s ease-in-out;
+}
+button:focus
+{
+  border: 2px solid var(--primary_btn-color);
+  transition: .1s ease-in-out;
+}
+button:active
+{
+  border: 2px solid var(--bad);
+  transition: .2s ease-in-out;
+}
+button, .banner
+{
+  border-radius: 5px;
+}
+
+a:active
+{
+  color: var(--active);
 }
 
 .stage
@@ -135,7 +206,7 @@ body
   color: var(--text-color);
   display: inline-block;
 }
-#index .links a
+#index .links a, .link
 {
   text-decoration: none;
 }
@@ -247,4 +318,50 @@ body
 {
   background-color: var(--danger_btn-color) !important;
   border: none !important;
+}
+
+.panel
+{
+  width: 420px;
+  background-color: #1e1e1e;
+  border-radius: 30px;
+  /* box-shadow: 0 10px 10px #00000040; */
+  box-shadow: 0 0px 15px 15px #0d6ffc40;
+  display: flex;
+  flex-direction: column;
+}
+.login-panel, .signup-panel
+{
+  margin: auto;
+  color: var(--text-color);
+  padding: 40px;
+}
+
+.banner
+{
+  text-align: center;
+  padding: 5px;
+  background-color: var(--locked);
+}
+.banner-text
+{
+  font-size: 12pt;
+}
+
+.form-title
+{
+  color: var(--primary_btn-color);
+  margin-top: 0;
+}
+
+.input-field
+{
+  position: relative;
+  margin: 20px 0;
+}
+
+#create-account-btn
+{
+  margin: auto;
+  margin-bottom: 20px;
 }

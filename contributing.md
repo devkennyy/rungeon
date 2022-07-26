@@ -20,8 +20,6 @@ npm start     # actually starts the localhost server
 On a successful run, a message similar to the following will be printed to the terminal. It will specify the port that the server is using to host the website on.
 
 ```sh
-~/p/rungeon docs *2 !2 ?1 ❯ npm start
-
 > rungeon@1.1.0 start
 > nodemon .
 
@@ -30,7 +28,8 @@ On a successful run, a message similar to the following will be printed to the t
 [nodemon] watching path(s): *.*
 [nodemon] watching extensions: js,mjs,json
 [nodemon] starting `node .`
-Listening on port 3000
+Listening on port 3000 
+(ctrl + click: http://localhost:3000/)
 ```
 
 Afterwards, direct a browser tab to point to `localhost:<port>` (e.g. localhost:3000).
