@@ -30,12 +30,18 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
     <script src="scripts/themes.js"></script>
+    <script src="scripts/stages.js" defer></script>
+    <script src="scripts/game.js" defer></script>
     <script>
-      setTheme(localStorage.getItem("theme"));
+      window.onload = () => {
+        console.log(localStorage.getItem("theme"));
+        document.body.classList.add(`theme-${localStorage.getItem("theme")}`);
+        setStage(stages[stageCounter]);
+      }
     </script>
   </head>
 
-  <body class="theme-default">
+  <body>
     <!--Navigation bar-->
     <nav class="navbar navbar-expand-lg" id="navbar">
       <div class="container-fluid">
@@ -162,10 +168,7 @@
       id="stage_container"
       class="stage d-flex flex-column flex-nowrap vh-100"
     >
-      <i
-        id="stage-icon"
-        class="icon fa-3x align-self-center"
-      ></i>
+      <div id="stage-icon-container" class="icon fa-3x align-self-center"></div>
       <h1 id="stage-title"></h1>
       <p id="stage-body"></p>
       <div id="stage-button-container" class="d-flex justify-content-center">
@@ -174,8 +177,5 @@
         <button id="stage-btn-next" class="btn btn-primary">continue</button>
       </div>
     </div>
-    <script src="scripts/stages.js"></script>
-    <script src="scripts/game.js"></script>
-    <!-- <script defer src="scripts/main.js"> -->
   </body>
 </html>
