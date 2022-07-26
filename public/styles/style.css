@@ -1,5 +1,14 @@
 @charset "UTF-8";
-* {
+
+:root {
+  --bad: #ff3232;
+  --good: #32ff32;
+  --active: #3232ff;
+  --locked: #ffffff05;
+}
+
+*
+{
   font-family: "Roboto", sans-serif;
 }
 
@@ -8,7 +17,71 @@ body {
   margin: 0;
 }
 
-.stage {
+input[type=text], input[type=password]
+{
+  line-height: normal;
+  height: 40px;
+  outline: none;
+  background: none;
+  border: none;
+  border-bottom: 2px solid var(--bg-color);
+  width: 100%;
+  font-size: 14pt;
+  color: var(--text-color);
+  transition: .2s ease-in-out;
+}
+input[type=text]:focus, input[type=password]:focus
+{
+  border-bottom: 2px solid var(--primary_btn-color);
+  transition: .1s ease-in-out;
+}
+
+
+label
+{
+  font-size: 11pt;
+}
+
+button
+{
+  border: 2px solid var(--locked);
+  text-align: center;
+  outline: none;
+  padding: 15px 40px;
+  font-size: 12pt;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  width: fit-content;
+  cursor: pointer;
+  transition: .1s ease-in-out;
+}
+button:hover
+{
+  border: 2px solid var(--primary_btn-color);
+  transition: .2s ease-in-out;
+}
+button:focus
+{
+  border: 2px solid var(--primary_btn-color);
+  transition: .1s ease-in-out;
+}
+button:active
+{
+  border: 2px solid var(--bad);
+  transition: .2s ease-in-out;
+}
+button, .banner
+{
+  border-radius: 5px;
+}
+
+a:active
+{
+  color: var(--active);
+}
+
+.stage
+{
   background-color: var(--bg-color);
   justify-content: center;
 }
@@ -39,7 +112,13 @@ body {
     auto; /*!emojicursor.app*/
 }
 
-#index {
+.hide-button
+{
+  display: none;
+}
+
+#index
+{
   z-index: 1;
   background-color: var(--bg-color);
   display: flex;
@@ -109,7 +188,8 @@ body {
   color: var(--text-color);
   display: inline-block;
 }
-#index .links a {
+#index .links a, .link
+{
   text-decoration: none;
 }
 #index .links :hover {
@@ -194,7 +274,9 @@ body {
   justify-content: center;
 }
 
-.btn-primary {
+/* TODO: add gap between buttons (maybe grid layout) */
+.btn-primary
+{
   background-color: var(--primary_btn-color) !important;
   border: none !important;
 }
@@ -204,57 +286,48 @@ body {
   border: none !important;
 }
 
-.four-zero-four-container {
+.panel
+{
+  width: 420px;
+  background-color: #1e1e1e;
+  border-radius: 30px;
+  /* box-shadow: 0 10px 10px #00000040; */
+  box-shadow: 0 0px 15px 15px #0d6ffc40;
   display: flex;
-  min-height: 100vh;
-  min-width: 100vw;
-  overflow: hidden;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--bg-color);
+  flex-direction: column;
 }
-
-.four-zero-four {
-  max-width: 350px;
-}
-
-.four-zero-four .row {
-  display: flex;
-  align-items: baseline;
-  gap: 1rem;
-  color: var(--icon-color);
-}
-
-.four-zero-four .title {
-  font-size: 2.2rem;
+.login-panel, .signup-panel
+{
+  margin: auto;
   color: var(--text-color);
+  padding: 40px;
 }
 
-.four-zero-four .sub {
-  font-size: 2rem;
+.banner
+{
+  text-align: center;
+  padding: 5px;
+  background-color: var(--locked);
+}
+.banner-text
+{
+  font-size: 12pt;
 }
 
-.four-zero-four .desc {
-  font-size: 1rem;
-  color: var(--sub-color);
-  line-height: 1.8rem;
+.form-title
+{
+  color: var(--primary_btn-color);
+  margin-top: 0;
 }
 
-.four-zero-four .link {
-  font-size: 1.2rem;
-  color: var(--text-color);
-  border-radius: 5px;
-  margin-top: 1rem;
-  display: inline-block;
-  text-underline-offset: 8px;
+.input-field
+{
+  position: relative;
+  margin: 20px 0;
 }
 
-.four-zero-four .link:hover {
-  text-decoration: none;
-}
-
-@media screen and (min-width: 638px) {
-  .four-zero-four {
-    max-width: 550px;
-  }
+#create-account-btn
+{
+  margin: auto;
+  margin-bottom: 20px;
 }
