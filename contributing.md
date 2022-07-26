@@ -38,6 +38,7 @@ On a successful run, a message similar to the following will be printed to the t
 [nodemon] watching extensions: js,mjs,json
 [nodemon] starting `node .`
 Listening on port 3000
+(ctrl + click: http://localhost:3000/)
 ```
 
 Afterwards, direct a browser tab to point to `localhost:<port>` (e.g. localhost:3000).
