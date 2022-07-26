@@ -3,8 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Page Not Found</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Rungeon - Page Not Found</title>
+    <link rel="stylesheet" href="styles/themes.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="scripts/themes.js" defer></script>
+    <script>
+      window.addEventListener("load", function() {
+        console.log(localStorage.getItem("theme"));
+        document.body.classList.add(
+          "theme-" + localStorage.getItem("theme")
+        );
+      });
+    </script>
   </head>
   <style>
     @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
@@ -17,7 +27,7 @@
     }
     body {
       height: 100vh;
-      background: var( --bg-color);
+      background: var(--bg-color);
       background-size: 400%;
     }
     #error-page {
@@ -29,7 +39,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: var( --bg-color);
+      background: var(--bg-color);
       box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
     }
     #error-page .content {
@@ -45,7 +55,7 @@
       font-size: 1.5em;
       margin-bottom: 20px;
       text-transform: uppercase;
-      color: var( --text-color);
+      color: var(--text-color);
       font-size: 2em;
       max-width: 600px;
       position: relative;
@@ -76,6 +86,7 @@
     }
     a {
       text-decoration: none;
+      color: var(--icon-color);
     }
   </style>
   <body>
@@ -85,10 +96,10 @@
         <h4 data-text="Oops! Page not found">Oops! Page not found</h4>
         <p>
           Sorry, the page you're looking for doesn't exist. <br/> Check the URL for
-          mistakes or <a href="discord.gg/SFX2KSuzep">report a problem.</a>
+          mistakes or <a href="https://discord.gg/SFX2KSuzep">report a problem.</a>
         </p>
         <div class="btns">
-          <a href="index.html">return home</a>
+          <a href="/">return home</a>
         </div>
       </div>
     </div>

@@ -15,13 +15,15 @@
       src="https://kit.fontawesome.com/384a80988d.js"
       crossorigin="anonymous"
     ></script>
-    <script src="scripts/themes.js"></script>
+    <script src="scripts/themes.js" defer></script>
     <script src="scripts/main.js" defer></script>
     <script>
-      window.onload = () => {
+      window.addEventListener("load", function() {
         console.log(localStorage.getItem("theme"));
-        document.body.classList.add(`theme-${localStorage.getItem("theme")}`);
-      }
+        document.body.classList.add(
+          "theme-" + localStorage.getItem("theme")
+        );
+      });
     </script>
   </head>
 
@@ -43,7 +45,7 @@
       <i
         id="doors_icon"
         class="icon fas fa-dungeon fa-5x"
-        onclick="window.location.href='rungeon.html'"
+        onclick="window.location.href='/rungeon'"
       ></i>
     </div>
     <div class="links">
