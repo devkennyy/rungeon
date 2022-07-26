@@ -18,10 +18,12 @@
     <script src="scripts/themes.js" defer></script>
     <script src="scripts/main.js" defer></script>
     <script>
-      window.onload = () => {
+      window.addEventListener("load", function() {
         console.log(localStorage.getItem("theme"));
-        document.body.classList.add(`theme-${localStorage.getItem("theme")}`);
-      }
+        document.body.classList.add(
+          "theme-" + localStorage.getItem("theme")
+        );
+      });
     </script>
   </head>
 

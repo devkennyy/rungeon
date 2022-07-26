@@ -240,50 +240,6 @@ a:active
   opacity: 0.9;
 }
 
-/* THEMES TAKEN FROM MONKEYTYPE */
-
-#themePopup #default
-{
-  background-color: #202124;
-  color: #adacad;
-}
-
-#themePopup #serika
-{
-  background-color: #323437;
-  color: #e2b714;
-}
-
-#themePopup #cobalt
-{
-  background-color: #181818;
-  color: #17b8bd;
-}
-
-#themePopup #hedge
-{
-  background-color: #415e31;
-  color: #f7f1d6;
-}
-
-#themePopup #passionfruit
-{
-  background-color: #7c2142;
-  color: #f4a3b4;
-}
-
-#themePopup #rgb
-{
-  animation: rgb 5s linear infinite;
-  background-color: #181818;
-}
-
-#themePopup #dots
-{
-  background-color: #121520;
-  color: #fff;
-}
-
 .nav-link
 {
   color: var(--nav_icon-color) !important;
