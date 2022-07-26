@@ -21,8 +21,12 @@ We're in an active state of development, always building, and preparing for the 
 -->
 
 ## 🤝 Contributing
+  
+  <div  align="center">
 
-### Please make your changes on the `stage-remake` branch until further notice
+  [![Repository contributors](https://img.shields.io/github/contributors-anon/devkennyy/rungeon?color=fc7c34&style=for-the-badge/) [![Repository version](https://img.shields.io/github/v/release/devkennyy/rungeon?color=fc7c34&style=for-the-badge)] [![Repository license](https://img.shields.io/github/license/devkennyy/rungeon?style=for-the-badge)]
+
+  </div>
 
 Refer to the [contributing file](contributing.md) for a beginner-friendly guide on how you can contribute.
 

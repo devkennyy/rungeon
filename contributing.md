@@ -11,11 +11,9 @@ Rungeon makes use of the following programs for development:
 
 - [NodeJS](https://nodejs.org) 
 - [Express](https://expressjs.com/)
-<!-- - [MongoDB](https://www.mongodb.com/) -->
 - [Git](https://git-scm.com/)
 - [npm](https://www.npmjs.com/)
-
-
+<!-- - [MongoDB](https://www.mongodb.com/) -->
 
 ### Running Rungeon
 
@@ -40,6 +38,7 @@ On a successful run, a message similar to the following will be printed to the t
 [nodemon] watching extensions: js,mjs,json
 [nodemon] starting `node .`
 Listening on port 3000
+(ctrl + click: http://localhost:3000/)
 ```
 
 Afterwards, direct a browser tab to point to `localhost:<port>` (e.g. localhost:3000).
