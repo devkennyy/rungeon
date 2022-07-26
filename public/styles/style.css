@@ -76,6 +76,10 @@ button, .banner
   border-radius: 5px;
 }
 
+.link-inline {
+  color: var(--primary_btn-color);
+}
+
 a:active
 {
   color: var(--active);
