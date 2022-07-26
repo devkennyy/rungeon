@@ -8,7 +8,6 @@ document.addEventListener("click", function (event) {
     document.getElementById("themePopup").style.display = "none";
     document.getElementById("doors_icon").style.visibility = "visible";
   }
-
 });
 
 //Global vars
@@ -31,7 +30,7 @@ function runStageRequiredScripts() {
   // getThemes();
 
   //Check if user is on index page
-  if(window.location.pathname == "/") {
+  if (window.location.pathname == "/") {
     //Add listener to close theme popup when clicked outside
     addPopupListener();
   }
@@ -50,10 +49,10 @@ function toggleThemePopup() {
 
 //when user clicks outside of theme popup, close it
 function addPopupListener() {
-
   window.addEventListener("click", function (e) {
-
-    if (document.getElementById("themePopup").hidden) { return; }
+    if (document.getElementById("themePopup").hidden) {
+      return;
+    }
 
     if (e.target == document.body) {
       toggleThemePopup();
@@ -64,33 +63,31 @@ function addPopupListener() {
 function setTheme(event) {
   try {
     let previousTheme = localStorage.getItem("theme");
-    document.getElementById(previousTheme).innerHTML = previousTheme; 
+    document.getElementById(previousTheme).innerHTML = previousTheme;
   } catch (error) {
     getThemes();
   }
-  
+
   document.getElementById(
     "themeStylesheet"
   ).href = `styles/themes/${event.target.id}.css`;
   localStorage.setItem("index_theme", `${event.target.id}`);
   localStorage.setItem("theme", `${event.target.id}`);
   document.getElementById(event.target.id).innerHTML +=
-    " <i class=\"fa-solid fa-check\"></i>";
-  
+    ' <i class="fa-solid fa-check"></i>';
+
   //Only toggle the main theme popup when on index.html (the navbar dropdown has a close of its own)
-  if(window.location.pathname == "/"){
+  if (window.location.pathname == "/") {
     toggleThemePopup();
   }
 }
 
-
 function getThemes() {
   // index.html theme check
   var indexTheme = localStorage.getItem("index_theme");
-  if ((indexTheme) === null) {
-    document.getElementById(
-      "themeStylesheet"
-    ).href = "styles/themes/default.css";
+  if (indexTheme === null) {
+    document.getElementById("themeStylesheet").href =
+      "styles/themes/default.css";
   } else {
     document.getElementById(
       "themeStylesheet"
@@ -100,9 +97,8 @@ function getThemes() {
   // rungeon.html theme check
   var storageTheme = localStorage.getItem("theme");
   if (storageTheme === null) {
-    document.getElementById(
-      "themeStylesheet"
-    ).href = "styles/themes/default.css";
+    document.getElementById("themeStylesheet").href =
+      "styles/themes/default.css";
   } else {
     console.log("Getting rungeon themes...");
     let theme = storageTheme;
@@ -110,7 +106,7 @@ function getThemes() {
       "themeStylesheet"
     ).href = `styles/themes/${theme}.css`;
     document.getElementById(theme).innerHTML +=
-      " <i class=\"fa-solid fa-check\"></i>";
+      ' <i class="fa-solid fa-check"></i>';
   }
 }
 

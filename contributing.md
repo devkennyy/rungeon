@@ -9,7 +9,7 @@ If you plan on making visual changes familiarize yourself with CSS & Bootstrap, 
 
 Rungeon makes use of the following programs for development:
 
-- [NodeJS](https://nodejs.org) 
+- [NodeJS](https://nodejs.org)
 - [Express](https://expressjs.com/)
 - [Git](https://git-scm.com/)
 - [npm](https://www.npmjs.com/)
@@ -86,8 +86,7 @@ Here are the simplified steps for an issue/feature related pull request:
   <div
     id="stage_z-icon"
     class="icon fas fa-icon fa-3x align-self-center"
-    onclick="Stage_Specific_Function"
-  ></div>
+    onclick="Stage_Specific_Function"></div>
   <h1>First line</h1>
   <p>Second line</p>
   <div class="d-flex justify-content-center">
@@ -98,8 +97,7 @@ Here are the simplified steps for an issue/feature related pull request:
       id="stage_z-btn"
       class="btn btn-primary"
       disabled
-      onclick="Next_Stage(z)"
-    >
+      onclick="Next_Stage(z)">
       Continue
     </button>
   </div>

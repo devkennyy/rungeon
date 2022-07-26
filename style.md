@@ -70,9 +70,9 @@ It is not required to change all existing code to meet current style guidelines.
 {
   "semi": true,  // Print semicolons at the ends of statements
   "singleQuote": false,  // Use single quotes instead of double quotes
-  "trailingComma": "es5",  // Print trailing commas where possible 
+  "trailingComma": "es5",  // Print trailing commas where possible
   "tabWidth": 2,  // Number of spaces per indentation-level
-  "useTabs": false, // Don't indent lines with tabs 
+  "useTabs": false, // Don't indent lines with tabs
   "bracketSameLine": true,  // Put opening and closing brackets on the same line
   "arrowParens": "avoid" // Avoid parentheses around arrow function arguments
 }
