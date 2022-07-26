@@ -76,6 +76,10 @@ button, .banner
   border-radius: 5px;
 }
 
+.link-inline {
+  color: var(--primary_btn-color);
+}
+
 a:active
 {
   color: var(--active);
@@ -102,6 +106,11 @@ a:active
   color: var(--sub-color);
   font-size: 1.5rem;
   text-align: center;
+}
+
+#stage-button-container {
+  align-items: center;
+  gap: 36px;
 }
 
 #stage_1-icon:hover,
@@ -264,10 +273,14 @@ a:active
 }
 
 /* TODO: add gap between buttons (maybe grid layout) */
+
+/* added gap using the flex property. */
+
 .btn-primary
 {
   background-color: var(--primary_btn-color) !important;
   border: none !important;
+  border-radius: 40px !important;
 }
 
 .btn-danger
