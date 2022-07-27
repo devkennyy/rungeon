@@ -19,9 +19,9 @@ rungeon.get("/login", (req, res) => {
   });
 });
 
-rungeon.get("/signup", (req, res) => {
-  res.render("signup", {
-    title: "Rungeon - Sign Up",
+rungeon.get("/register", (req, res) => {
+  res.render("register", {
+    title: "Rungeon - Register",
   });
 });
 
