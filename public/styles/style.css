@@ -29,6 +29,7 @@ input[type="password"] {
   color: var(--text-color);
   transition: 0.2s ease-in-out;
 }
+
 input[type="text"]:focus,
 input[type="password"]:focus {
   border-bottom: 2px solid var(--primary_btn-color);
@@ -51,44 +52,56 @@ button {
   cursor: pointer;
   transition: 0.1s ease-in-out;
 }
+
 button:hover {
   border: 2px solid var(--primary_btn-color);
   transition: 0.2s ease-in-out;
 }
+
 button:focus {
   border: 2px solid var(--primary_btn-color);
   transition: 0.1s ease-in-out;
 }
+
 button:active {
   border: 2px solid var(--bad);
   transition: 0.2s ease-in-out;
 }
+
 button,
 .banner {
   border-radius: 5px;
 }
 
-a:active {
-  color: var(--active);
+.link-inline {
+  color: var(--primary_btn-color);
 }
 
 .stage {
   background-color: var(--bg-color);
   justify-content: center;
 }
+
 .stage .icon {
   color: var(--icon-color);
   margin-bottom: 1%;
 }
+
 .stage h1 {
   color: var(--text-color);
   font-size: 2.2rem;
   text-align: center;
 }
+
 .stage p {
   color: var(--sub-color);
   font-size: 1.5rem;
   text-align: center;
+}
+
+#stage-button-container {
+  align-items: center;
+  gap: 36px;
 }
 
 #stage_1-icon:hover,
@@ -98,9 +111,9 @@ a:active {
 }
 
 #stage_3-icon:hover {
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🟡</text></svg>")
-      16 0,
-    auto; /*!emojicursor.app*/
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🟡</text></svg>") 16 0,
+    auto;
+  /*!emojicursor.app*/
 }
 
 .hide-button {
@@ -117,6 +130,7 @@ a:active {
   justify-content: center;
   row-gap: 1em;
 }
+
 #index .doors {
   text-align: center;
   display: inline-block;
@@ -125,6 +139,7 @@ a:active {
   line-height: 100vh;
   vertical-align: middle;
 }
+
 #index .doors i {
   color: var(--text-color);
   font-size: 20rem;
@@ -134,30 +149,38 @@ a:active {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
+
 #index .doors :hover {
   font-size: 22rem;
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
   opacity: 1 !important;
 }
+
 @-webkit-keyframes blink {
+
   0%,
   100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
 }
+
 @keyframes blink {
+
   0%,
   100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
 }
+
 #index .links {
   user-select: none;
   z-index: 2;
@@ -169,18 +192,22 @@ a:active {
   font-size: 2rem;
   cursor: pointer;
 }
+
 #index .links i {
   color: var(--icon-color);
 }
+
 #index .links div {
   font-weight: 500;
   color: var(--text-color);
   display: inline-block;
 }
+
 #index .links a,
 .link {
   text-decoration: none;
 }
+
 #index .links :hover {
   margin-top: -3px;
 }
@@ -263,10 +290,10 @@ a:active {
   justify-content: center;
 }
 
-/* TODO: add gap between buttons (maybe grid layout) */
 .btn-primary {
-  background-color: var(--primary_btn-color) !important;
-  border: none !important;
+background-color: var(--primary_btn-color) !important;
+border: none !important;
+border-radius: 40px !important;
 }
 
 .btn-danger {
@@ -283,6 +310,7 @@ a:active {
   display: flex;
   flex-direction: column;
 }
+
 .login-panel,
 .signup-panel {
   margin: auto;
@@ -295,6 +323,7 @@ a:active {
   padding: 5px;
   background-color: var(--locked);
 }
+
 .banner-text {
   font-size: 12pt;
 }
