@@ -111,24 +111,29 @@
       border-color: #2691d9;
       transition: 0.5s;
     }
-    .register_link {
+    .login_link {
       margin: 30px 0;
       text-align: center;
       font-size: 16px;
       color: #666666;
     }
-    .register_link a {
+    .login_link a {
       color: #2691d9;
       text-decoration: none;
     }
-    .register_link a:hover {
+    .login_link a:hover {
       text-decoration: underline;
     }
   </style>
   <body>
     <div class="center">
-      <h1>Login</h1>
+      <h1>Register</h1>
       <form method="post">
+         <div class="txt_field">
+          <input type="email" required />
+          <span></span>
+          <label>Email</label>
+        </div>
         <div class="txt_field">
           <input type="text" required />
           <span></span>
@@ -140,9 +145,9 @@
           <label>Password</label>
         </div>
         <div class="pass">Forgot Password?</div>
-        <input type="submit" value="Login" />
-        <div class="register_link">
-          New to Rungeon? <a href="/register">Register</a>
+        <input type="submit" value="Register" />
+        <div class="login_link">
+           Already have an account? <a href="/login">Login</a>
         </div>
       </form>
     </div>
