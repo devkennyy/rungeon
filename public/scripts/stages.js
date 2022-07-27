@@ -51,12 +51,12 @@ const stages = [
   },
 ];
 
-const setStageText = (stageData) => {
+const setStageText = stageData => {
   document.getElementById("stage-title").innerText = stageData.title;
   document.getElementById("stage-body").innerText = stageData.body;
 };
 
-const setStageButtons = (stageData) => {
+const setStageButtons = stageData => {
   if (stageData.next == -1) {
     $("#stage-btn-restart").show();
     $("#stage-btn-back").hide();
@@ -72,11 +72,13 @@ const setStageButtons = (stageData) => {
   }
 };
 
-const setStageIcon = (stageData) => {
-  document.getElementById("stage-icon-container").innerHTML = `<i "id=stage-icon" class="fas fa-${stageData.icon}"></i>`;
+const setStageIcon = stageData => {
+  document.getElementById(
+    "stage-icon-container"
+  ).innerHTML = `<i "id=stage-icon" class="fas fa-${stageData.icon}"></i>`;
 };
 
-const setStage = (stageData) => {
+const setStage = stageData => {
   setStageIcon(stageData);
   setStageText(stageData);
   setStageButtons(stageData);

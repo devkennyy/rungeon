@@ -2,11 +2,12 @@
   "name": "rungeon",
   "version": "1.1.0",
   "description": "Rungeon is a minimal, open source, text-based adventure game.",
-  "main": "main.js",
+  "main": "server.js",
   "scripts": {
     "start": "nodemon .",
     "lint": "eslint .",
-    "lint-fix": "eslint . --fix"
+    "lint-fix": "eslint . --fix",
+    "format": "npx prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,8 @@
   },
   "devDependencies": {
     "eslint": "^8.20.0",
-    "nodemon": "^2.0.19"
+    "eslint-config-prettier": "^8.5.0",
+    "nodemon": "^2.0.19",
+    "prettier": "2.7.1"
   }
 }
