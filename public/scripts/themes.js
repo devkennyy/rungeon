@@ -70,6 +70,8 @@ const setTheme = theme => {
 const getTheme = oldTheme => {
   const newTheme = localStorage.getItem("theme");
   document.body.classList.replace(`theme-${oldTheme}`, `theme-${newTheme}`);
+  $('i').remove(".fa-check");
+  $(`div .theme-${newTheme}`).append(' <i class="fa-solid fa-check"></i>');
   // if (newTheme !== undefined) {
   //   document.body.classList.add(`theme-${newTheme}`);
   //   console.log(`theme: ${newTheme}`);
