@@ -60,55 +60,6 @@ function addPopupListener() {
   });
 }
 
-function setTheme(event) {
-  try {
-    let previousTheme = localStorage.getItem("theme");
-    document.getElementById(previousTheme).innerHTML = previousTheme;
-  } catch (error) {
-    getThemes();
-  }
-
-  document.getElementById(
-    "themeStylesheet"
-  ).href = `styles/themes/${event.target.id}.css`;
-  localStorage.setItem("index_theme", `${event.target.id}`);
-  localStorage.setItem("theme", `${event.target.id}`);
-  document.getElementById(event.target.id).innerHTML +=
-    ' <i class="fa-solid fa-check"></i>';
-
-  //Only toggle the main theme popup when on index.html (the navbar dropdown has a close of its own)
-  if (window.location.pathname == "/") {
-    toggleThemePopup();
-  }
-}
-
-function getThemes() {
-  // index.html theme check
-  var indexTheme = localStorage.getItem("index_theme");
-  if (indexTheme === null) {
-    document.getElementById("themeStylesheet").href =
-      "styles/themes/default.css";
-  } else {
-    document.getElementById(
-      "themeStylesheet"
-    ).href = `styles/themes/${indexTheme}.css`;
-  }
-
-  // rungeon.html theme check
-  var storageTheme = localStorage.getItem("theme");
-  if (storageTheme === null) {
-    document.getElementById("themeStylesheet").href =
-      "styles/themes/default.css";
-  } else {
-    console.log("Getting rungeon themes...");
-    let theme = storageTheme;
-    document.getElementById(
-      "themeStylesheet"
-    ).href = `styles/themes/${theme}.css`;
-    document.getElementById(theme).innerHTML +=
-      ' <i class="fa-solid fa-check"></i>';
-  }
-}
 
 function updateTitleProgress() {
   let val = stage / (totalStages + 2);
