@@ -64,7 +64,10 @@ const setTheme = theme => {
 
   getTheme(currTheme);
 
-  toggleThemePopup();
+  //Check if user is on index page
+  if (window.location.pathname == "/") {
+    toggleThemePopup();
+  }
 };
 
 const getTheme = oldTheme => {
