@@ -1,0 +1,16 @@
+# Default ignored files
+/node_modules/
+/shelf/
+/workspace.xml
+# VS Code
+/.vscode/
+*.code-workspace
+# Editor-based HTTP Client requests
+/httpRequests/
+# intellij configs
+.idea/
+#firebase
+.firebase
+.firebaserc
+firebase.json
+firebase-debug.log

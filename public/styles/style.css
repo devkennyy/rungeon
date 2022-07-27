@@ -7,19 +7,17 @@
   --locked: #ffffff05;
 }
 
-*
-{
+* {
   font-family: "Roboto", sans-serif;
 }
 
-body
-{
+body {
   overflow: hidden;
   margin: 0;
 }
 
-input[type=text], input[type=password]
-{
+input[type="text"],
+input[type="password"] {
   line-height: normal;
   height: 40px;
   outline: none;
@@ -29,22 +27,19 @@ input[type=text], input[type=password]
   width: 100%;
   font-size: 14pt;
   color: var(--text-color);
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
-input[type=text]:focus, input[type=password]:focus
-{
+input[type="text"]:focus,
+input[type="password"]:focus {
   border-bottom: 2px solid var(--primary_btn-color);
-  transition: .1s ease-in-out;
+  transition: 0.1s ease-in-out;
 }
 
-
-label
-{
+label {
   font-size: 11pt;
 }
 
-button
-{
+button {
   border: 2px solid var(--locked);
   text-align: center;
   outline: none;
@@ -54,25 +49,22 @@ button
   color: var(--text-color);
   width: fit-content;
   cursor: pointer;
-  transition: .1s ease-in-out;
+  transition: 0.1s ease-in-out;
 }
-button:hover
-{
+button:hover {
   border: 2px solid var(--primary_btn-color);
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
-button:focus
-{
+button:focus {
   border: 2px solid var(--primary_btn-color);
-  transition: .1s ease-in-out;
+  transition: 0.1s ease-in-out;
 }
-button:active
-{
+button:active {
   border: 2px solid var(--bad);
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
-button, .banner
-{
+button,
+.banner {
   border-radius: 5px;
 }
 
@@ -80,29 +72,20 @@ button, .banner
   color: var(--primary_btn-color);
 }
 
-a:active
-{
-  color: var(--active);
-}
-
-.stage
-{
+.stage {
   background-color: var(--bg-color);
   justify-content: center;
 }
-.stage .icon
-{
+.stage .icon {
   color: var(--icon-color);
   margin-bottom: 1%;
 }
-.stage h1
-{
+.stage h1 {
   color: var(--text-color);
   font-size: 2.2rem;
   text-align: center;
 }
-.stage p
-{
+.stage p {
   color: var(--sub-color);
   font-size: 1.5rem;
   text-align: center;
@@ -115,25 +98,21 @@ a:active
 
 #stage_1-icon:hover,
 #stage_2-coin:hover,
-#stage_4-key:hover
-{
+#stage_4-key:hover {
   cursor: pointer;
 }
 
-#stage_3-icon:hover
-{
+#stage_3-icon:hover {
   cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🟡</text></svg>")
       16 0,
     auto; /*!emojicursor.app*/
 }
 
-.hide-button
-{
+.hide-button {
   display: none;
 }
 
-#index
-{
+#index {
   z-index: 1;
   background-color: var(--bg-color);
   display: flex;
@@ -143,8 +122,7 @@ a:active
   justify-content: center;
   row-gap: 1em;
 }
-#index .doors
-{
+#index .doors {
   text-align: center;
   display: inline-block;
   margin: 0 auto;
@@ -152,8 +130,7 @@ a:active
   line-height: 100vh;
   vertical-align: middle;
 }
-#index .doors i
-{
+#index .doors i {
   color: var(--text-color);
   font-size: 20rem;
   cursor: pointer;
@@ -162,39 +139,31 @@ a:active
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-#index .doors :hover
-{
+#index .doors :hover {
   font-size: 22rem;
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
   opacity: 1 !important;
 }
-@-webkit-keyframes blink
-{
+@-webkit-keyframes blink {
   0%,
-  100%
-  {
+  100% {
     opacity: 1;
   }
-  50%
-  {
+  50% {
     opacity: 0;
   }
 }
-@keyframes blink
-{
+@keyframes blink {
   0%,
-  100%
-  {
+  100% {
     opacity: 1;
   }
-  50%
-  {
+  50% {
     opacity: 0;
   }
 }
-#index .links
-{
+#index .links {
   user-select: none;
   z-index: 2;
   margin-bottom: 220px;
@@ -205,27 +174,23 @@ a:active
   font-size: 2rem;
   cursor: pointer;
 }
-#index .links i
-{
+#index .links i {
   color: var(--icon-color);
 }
-#index .links div
-{
+#index .links div {
   font-weight: 500;
   color: var(--text-color);
   display: inline-block;
 }
-#index .links a, .link
-{
+#index .links a,
+.link {
   text-decoration: none;
 }
-#index .links :hover
-{
+#index .links :hover {
   margin-top: -3px;
 }
 
-#themePopup
-{
+#themePopup {
   z-index: 10;
   /* height: 384px; */
   margin-bottom: 150px;
@@ -234,8 +199,7 @@ a:active
   position: absolute;
 }
 
-#themePopup .title
-{
+#themePopup .title {
   font-size: 2rem;
   cursor: pointer;
   border-radius: 3px;
@@ -244,21 +208,54 @@ a:active
   text-align: center;
 }
 
-#themePopup .title:hover
-{
+#themePopup .title:hover {
   opacity: 0.9;
 }
 
-.nav-link
-{
+/* THEMES TAKEN FROM MONKEYTYPE */
+
+#themePopup #default {
+  background-color: #202124;
+  color: #adacad;
+}
+
+#themePopup #serika {
+  background-color: #323437;
+  color: #e2b714;
+}
+
+#themePopup #cobalt {
+  background-color: #181818;
+  color: #17b8bd;
+}
+
+#themePopup #hedge {
+  background-color: #415e31;
+  color: #f7f1d6;
+}
+
+#themePopup #passionfruit {
+  background-color: #7c2142;
+  color: #f4a3b4;
+}
+
+#themePopup #rgb {
+  animation: rgb 5s linear infinite;
+  background-color: #181818;
+}
+
+#themePopup #dots {
+  background-color: #121520;
+  color: #fff;
+}
+
+.nav-link {
   color: var(--nav_icon-color) !important;
 }
 
-.navbar
-{
+.navbar {
   background-color: var(--bg-color) !important;
 }
-
 
 /* This id is important to override Bootstrap */
 #navbar {
@@ -266,31 +263,23 @@ a:active
   width: 100%;
 }
 
-#navbarNavDropdown 
-{
+#navbarNavDropdown {
   text-align: center;
   justify-content: center;
 }
 
-/* TODO: add gap between buttons (maybe grid layout) */
-
-/* added gap using the flex property. */
-
 .btn-primary
-{
   background-color: var(--primary_btn-color) !important;
   border: none !important;
   border-radius: 40px !important;
 }
 
-.btn-danger
-{
+.btn-danger {
   background-color: var(--danger_btn-color) !important;
   border: none !important;
 }
 
-.panel
-{
+.panel {
   width: 420px;
   background-color: #1e1e1e;
   border-radius: 30px;
@@ -299,38 +288,33 @@ a:active
   display: flex;
   flex-direction: column;
 }
-.login-panel, .signup-panel
-{
+.login-panel,
+.signup-panel {
   margin: auto;
   color: var(--text-color);
   padding: 40px;
 }
 
-.banner
-{
+.banner {
   text-align: center;
   padding: 5px;
   background-color: var(--locked);
 }
-.banner-text
-{
+.banner-text {
   font-size: 12pt;
 }
 
-.form-title
-{
+.form-title {
   color: var(--primary_btn-color);
   margin-top: 0;
 }
 
-.input-field
-{
+.input-field {
   position: relative;
   margin: 20px 0;
 }
 
-#create-account-btn
-{
+#create-account-btn {
   margin: auto;
   margin-bottom: 20px;
 }

@@ -1,8 +1,7 @@
 var stageCounter = 0;
 
-
 document.getElementById("stage-btn-next").addEventListener("click", () => {
-  if(stageCounter == stages.length - 1) {
+  if (stageCounter == stages.length - 1) {
     return;
   }
 
@@ -11,10 +10,10 @@ document.getElementById("stage-btn-next").addEventListener("click", () => {
 });
 
 document.getElementById("stage-btn-back").addEventListener("click", () => {
-  if(stageCounter == 0) {
+  if (stageCounter == 0) {
     return;
   }
-  
+
   stageCounter--;
   setStage(stages[stageCounter]);
 });
