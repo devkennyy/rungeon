@@ -290,15 +290,17 @@ button,
   justify-content: center;
 }
 
+.btn {
+border-radius: 40px !important;
+border: none !important;
+}
+
 .btn-primary {
 background-color: var(--primary_btn-color) !important;
-border: none !important;
-border-radius: 40px !important;
 }
 
 .btn-danger {
   background-color: var(--danger_btn-color) !important;
-  border: none !important;
 }
 
 .panel {
