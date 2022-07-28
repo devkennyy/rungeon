@@ -8,14 +8,14 @@ const themes = [
   "passionfruit",
   "rgb",
   "serika",
-  "default"
+  "default",
 ];
 
 /**
  * Determines if provided theme names are the unique and therefore would
  * require a local storage update. For the cases in which no theme is present
- * in local storage, the default theme gets set 
- * 
+ * in local storage, the default theme gets set
+ *
  * Returns 1 if an update is needed and 0 otherwise
  */
 const checkNewTheme = (currentTheme, theme) => {
@@ -34,30 +34,54 @@ const checkNewTheme = (currentTheme, theme) => {
  * Sets the website theme as long as it exists. If the requested theme
  * is the same as the current theme, no operation is done
  */
-const setTheme = (theme) => {
+const setTheme = theme => {
   const currTheme = localStorage.getItem("theme");
   if (!checkNewTheme(currTheme, theme)) return;
 
   switch (theme) {
-    case themes[0]: localStorage.setItem("theme", themes[0]); break;
-    case themes[1]: localStorage.setItem("theme", themes[1]); break;
-    case themes[2]: localStorage.setItem("theme", themes[2]); break;
-    case themes[3]: localStorage.setItem("theme", themes[3]); break;
-    case themes[4]: localStorage.setItem("theme", themes[4]); break;
-    case themes[5]: localStorage.setItem("theme", themes[5]); break;
-    default: localStorage.setItem("theme", themes[6]); break;
+    case themes[0]:
+      localStorage.setItem("theme", themes[0]);
+      break;
+    case themes[1]:
+      localStorage.setItem("theme", themes[1]);
+      break;
+    case themes[2]:
+      localStorage.setItem("theme", themes[2]);
+      break;
+    case themes[3]:
+      localStorage.setItem("theme", themes[3]);
+      break;
+    case themes[4]:
+      localStorage.setItem("theme", themes[4]);
+      break;
+    case themes[5]:
+      localStorage.setItem("theme", themes[5]);
+      break;
+    default:
+      localStorage.setItem("theme", themes[6]);
+      break;
   }
 
   getTheme(currTheme);
+
+  //Check if user is on index page
+  if (window.location.pathname == "/") {
+    toggleThemePopup();
+  }
 };
 
-const getTheme = (oldTheme) => {
+const getTheme = oldTheme => {
   const newTheme = localStorage.getItem("theme");
   document.body.classList.replace(`theme-${oldTheme}`, `theme-${newTheme}`);
+  addCheckMark()
   // if (newTheme !== undefined) {
   //   document.body.classList.add(`theme-${newTheme}`);
   //   console.log(`theme: ${newTheme}`);
   //   return;
   // }
-
 };
+
+function addCheckMark(){
+  $('i').remove(".fa-check");
+  $(`#${localStorage.getItem("theme")}`).append(' <i class="fa-solid fa-check"></i>');
+}

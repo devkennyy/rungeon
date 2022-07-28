@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="description" content="🏃‍♂️Open source, puzzle based adventure game in your browser.">
+    <meta name="keywords" content="rungeon, Rungeon.live, rungeon live, game, puzzle, adventure game, browser game, open source game, puzzle game">
+    <meta name="author" content="devkennyy">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>░░░░░░░░░░</title>
+    <title><%= title %></title>
     <link rel="stylesheet" href="styles/themes.css" />
     <link rel="stylesheet" href="styles/style.css" />
     <style>
@@ -36,6 +39,7 @@
       window.onload = () => {
         console.log(localStorage.getItem("theme"));
         document.body.classList.add(`theme-${localStorage.getItem("theme")}`);
+        addCheckMark()//Add checkmark to dropdown item
         setStage(stages[stageCounter]);
       }
     </script>
@@ -173,7 +177,7 @@
       <p id="stage-body"></p>
       <div id="stage-button-container" class="d-flex justify-content-center">
         <button id="stage-btn-restart" class="btn btn-primary">restart</button>
-        <button id="stage-btn-back" class="btn btn-primary">back</button>
+        <button id="stage-btn-back" class="btn btn-danger">back</button>
         <button id="stage-btn-next" class="btn btn-primary">continue</button>
       </div>
     </div>
