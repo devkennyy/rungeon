@@ -6,7 +6,7 @@
 
 [![My Skills](https://skillicons.dev/icons?i=js,css,html)](https://skillicons.dev)
 
-![Repository version](https://img.shields.io/github/v/release/devkennyy/rungeon?color=fc7c34&style=for-the-badge)
+![Repository version](https://img.shields.io/github/v/release/devkennyy/rungeon?color=fc7c34&style=for-the-badge&label=version)
 ![Repository contributors](https://img.shields.io/github/contributors-anon/devkennyy/rungeon?color=fc7c34&style=for-the-badge)
 ![Repository license](https://img.shields.io/github/license/devkennyy/rungeon?style=for-the-badge)
 
