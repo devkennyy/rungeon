@@ -152,10 +152,10 @@
   animation: rgb 5s linear infinite;
   background-color: #181818;
   --bg-color: var(--gray1);
-  --text-color: var(--gray3);
+  /* --text-color: var(--gray3); */
   --sub-color: var(--gray6);
-  --icon-color: var(--gray3);
-  --nav_icon-color: var(--gray4);
+  /* --icon-color: var(--gray3); */
+  /* --nav_icon-color: var(--gray4); */
   --primary_btn-color: var(--green3);
   --danger_btn-color: var(--red1);
   /* --nav-color: #2e2e2e; */
