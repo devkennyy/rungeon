@@ -43,6 +43,14 @@ const stages = [
   },
   {
     id: 5,
+    title: "Time to eat",
+    body: "You've got to eat something, or you'll starve",
+    icon: "bacon",
+    back: 4,
+    next: 6,
+  },
+  {
+    id: 6,
     title: "You did it?",
     body: "Get out while you can.",
     icon: "person-running",
