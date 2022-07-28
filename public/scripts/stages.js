@@ -4,7 +4,7 @@ const stages = [
     title: "A mystery door, how exciting",
     body: "Maybe that button does something?",
     icon: {
-      name: "door-open"
+      name: "fa-door-open"
     },
     back: -1,
     next: 1,
@@ -14,7 +14,7 @@ const stages = [
     title: "The bugs are coming",
     body: "SQUASH THE BUG! DO IT! DO IT!",
     icon: {
-      name: "bugs"
+      name: "fa-bugs"
     },
     back: 0,
     next: 2,
@@ -24,7 +24,7 @@ const stages = [
     title: "Is that a dragon",
     body: "Take a breath, you've deserved it",
     icon: {
-      name: "wind"
+      name: "fa-wind"
     },
     back: 1,
     next: 3,
@@ -34,7 +34,7 @@ const stages = [
     title: "That's definitely a dragon",
     body: "Give him the coin or something!",
     icon: {
-      name: "dragon"
+      name: "fa-dragon"
     },
     back: 2,
     next: 4,
@@ -44,7 +44,7 @@ const stages = [
     title: "The door is locked",
     body: "What's this in your pocket? I doubt it's useful",
     icon: {
-      name: "lock"
+      name: "fa-lock"
     },
     back: 3,
     next: 5,
@@ -54,7 +54,7 @@ const stages = [
     title: "Time to eat",
     body: "You've got to eat something, or you'll starve",
     icon: {
-      name: "bacon"
+      name: "fa-bacon"
     },
     back: 4,
     next: 6,
@@ -64,7 +64,7 @@ const stages = [
     title: "You did it?",
     body: "Get out while you can.",
     icon: {
-      name: "person-running"
+      name: "fa-person-running"
     },
     back: -1,
     next: -1,
@@ -93,9 +93,9 @@ const setStageButtons = stageData => {
 };
 
 const setStageIcon = stageData => {
-  document.getElementById(
-    "stage-icon-container"
-  ).innerHTML = `<i "id=stage-icon" class="fas fa-${stageData.icon.name}"></i>`;
+  let icon = document.getElementById("stage-icon");
+  icon.className = "fas";
+  icon.classList.add(stageData.icon.name);
 };
 
 const setStage = stageData => {
