@@ -152,20 +152,22 @@
   animation: rgb 5s linear infinite;
   background-color: #181818;
   --bg-color: var(--gray1);
-  /* --text-color: var(--gray3); */
+  --text-color: var(--gray3);
   --sub-color: var(--gray6);
-  /* --icon-color: var(--gray3); */
-  /* --nav_icon-color: var(--gray4); */
+  --icon-color: var(--gray3);
+  --nav_icon-color: var(--gray4);
   --primary_btn-color: var(--green3);
   --danger_btn-color: var(--red1);
   /* --nav-color: #2e2e2e; */
 }
 #index.theme-rgb .nav-link,
-#index.theme-rgb .stage .icon,
 #index.theme-rgb .doors i,
 #index.theme-rgb .links i,
 #index.theme-rgb #themePopup,
-#index.theme-rgb #themePopup #closeButton {
+#index.theme-rgb #themePopup #closeButton,
+#rungeon.theme-rgb .navbar .container-fluid #navbarNavDropdown ul li i,
+#rungeon.theme-rgb #stage_container #stage-icon-container i,
+#rungeon.theme-rgb #stage_container #stage-title {
   animation: rgb 5s linear infinite !important;
 }
 
