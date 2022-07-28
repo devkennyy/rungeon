@@ -49,37 +49,6 @@ function addPopupListener() {
   });
 }
 
-
-function updateTitleProgress() {
-  let val = stage / (totalStages + 2);
-  switch (true) {
-    case val <= 0.1:
-      document.title = "██░░░░░░░░";
-      break;
-    case val <= 0.2:
-      document.title = "███░░░░░░░";
-      break;
-    case val <= 0.3:
-      document.title = "████░░░░░░";
-      break;
-    case val <= 0.4:
-      document.title = "█████░░░░░";
-      break;
-    case val <= 0.5:
-      document.title = "██████░░░░";
-      break;
-    case val <= 0.6:
-      document.title = "███████░░░";
-      break;
-    case val <= 0.7:
-      document.title = "████████░░";
-      break;
-    case val <= 0.8:
-      document.title = "██████████";
-      break;
-  }
-}
-
 // END OF GLOBAL FUNCTIONS
 
 // START OF STAGE SPECIFIC FUNCTIONS
