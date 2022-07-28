@@ -64,15 +64,24 @@ const setTheme = theme => {
 
   getTheme(currTheme);
 
-  toggleThemePopup();
+  //Check if user is on index page
+  if (window.location.pathname == "/") {
+    toggleThemePopup();
+  }
 };
 
 const getTheme = oldTheme => {
   const newTheme = localStorage.getItem("theme");
   document.body.classList.replace(`theme-${oldTheme}`, `theme-${newTheme}`);
+  addCheckMark()
   // if (newTheme !== undefined) {
   //   document.body.classList.add(`theme-${newTheme}`);
   //   console.log(`theme: ${newTheme}`);
   //   return;
   // }
 };
+
+function addCheckMark(){
+  $('i').remove(".fa-check");
+  $(`#${localStorage.getItem("theme")}`).append(' <i class="fa-solid fa-check"></i>');
+}
