@@ -1,11 +1,11 @@
-// todo: put this in a database somewhere
-// contains the text for all stages
 const stages = [
   {
     id: 0,
     title: "A mystery door, how exciting",
     body: "Maybe that button does something?",
-    icon: "door-open",
+    icon: {
+      name: "door-open"
+    },
     back: -1,
     next: 1,
   },
@@ -13,7 +13,9 @@ const stages = [
     id: 1,
     title: "The bugs are coming",
     body: "SQUASH THE BUG! DO IT! DO IT!",
-    icon: "bugs",
+    icon: {
+      name: "bugs"
+    },
     back: 0,
     next: 2,
   },
@@ -21,7 +23,9 @@ const stages = [
     id: 2,
     title: "Is that a dragon",
     body: "Take a breath, you've deserved it",
-    icon: "wind",
+    icon: {
+      name: "wind"
+    },
     back: 1,
     next: 3,
   },
@@ -29,7 +33,9 @@ const stages = [
     id: 3,
     title: "That's definitely a dragon",
     body: "Give him the coin or something!",
-    icon: "dragon",
+    icon: {
+      name: "dragon"
+    },
     back: 2,
     next: 4,
   },
@@ -37,7 +43,9 @@ const stages = [
     id: 4,
     title: "The door is locked",
     body: "What's this in your pocket? I doubt it's useful",
-    icon: "lock",
+    icon: {
+      name: "lock"
+    },
     back: 3,
     next: 5,
   },
@@ -45,7 +53,9 @@ const stages = [
     id: 5,
     title: "Time to eat",
     body: "You've got to eat something, or you'll starve",
-    icon: "bacon",
+    icon: {
+      name: "bacon"
+    },
     back: 4,
     next: 6,
   },
@@ -53,7 +63,9 @@ const stages = [
     id: 6,
     title: "You did it?",
     body: "Get out while you can.",
-    icon: "person-running",
+    icon: {
+      name: "person-running"
+    },
     back: -1,
     next: -1,
   },
@@ -83,7 +95,7 @@ const setStageButtons = stageData => {
 const setStageIcon = stageData => {
   document.getElementById(
     "stage-icon-container"
-  ).innerHTML = `<i "id=stage-icon" class="fas fa-${stageData.icon}"></i>`;
+  ).innerHTML = `<i "id=stage-icon" class="fas fa-${stageData.icon.name}"></i>`;
 };
 
 const setStage = stageData => {
