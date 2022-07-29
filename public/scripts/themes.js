@@ -75,7 +75,7 @@ const setTheme = theme => {
 const getTheme = oldTheme => {
   const newTheme = localStorage.getItem("theme");
   document.body.classList.replace(`theme-${oldTheme}`, `theme-${newTheme}`);
-  addCheckMark()
+  addCheckMark();
   // if (newTheme !== undefined) {
   //   document.body.classList.add(`theme-${newTheme}`);
   //   console.log(`theme: ${newTheme}`);
@@ -85,7 +85,7 @@ const getTheme = oldTheme => {
 
 function addCheckMark(){
   $('i').remove(".fa-check");
-  $(`#${localStorage.getItem("theme")}`).append(' <i class="fa-solid fa-check"></i>');
+  $(`#${localStorage.getItem("theme")}`).append(" <i class=\"fa-solid fa-check\"></i>");
 }
 
 
