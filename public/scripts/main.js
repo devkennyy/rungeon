@@ -18,7 +18,7 @@ var stageTwo_hasCoin = false;
 //Some stages require an initial setup before the stage is loaded. This script is run as soon as the page is loaded.
 function runStageRequiredScripts() {
   //Add checkmark to popup item
-  addCheckMark()
+  addCheckMark();
 
   //Check if user is on index page
   if (window.location.pathname == "/") {
@@ -41,7 +41,7 @@ function toggleThemePopup() {
 //when user clicks outside of theme popup, close it
 function addPopupListener() {
   window.addEventListener("click", function (e) {
-    if (document.getElementById("themePopup").style.display == 'none') {return;}
+    if (document.getElementById("themePopup").style.display == "none") {return;}
 
     if (e.target == document.body) {
       toggleThemePopup();
