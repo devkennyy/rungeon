@@ -1,4 +1,4 @@
-## Introduction
+# Introduction
 
 The purpose of this file is to cover Rungeon's coding standards. While you can automatically format your code with [Prettier](/contributing.md) it is suggested you refer to this file for specific styles.
 

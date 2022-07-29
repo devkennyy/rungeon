@@ -51,7 +51,7 @@ In order to connect on your phone or another device,
 - Determine your computer's IP address with `ipconfig` (Windows), `ifconfig` (MacOS), or `ip` (Linux).
 - Under the `en0` section, look for a `10.X.X.X` number and remember it.
 - Make sure that your device is connected to the same network as the computer that's running the server
-- Type `http://<10.X.X.X>:<port>/[route]` (e.g. http://10.0.0.4:3000/) in a browser tab on the device.
+- Type `http://<10.X.X.X>:<port>/[route]` (e.g. [http://10.0.0.4:3000/](http://10.0.0.4:3000/)) in a browser tab on the device.
 
 ## We Develop with Github
 
@@ -123,13 +123,13 @@ Here are the simplified steps for an issue/feature related pull request:
 
 - Run the linter for a list of issues
 
-```
+```sh
 npm run lint
 ```
 
 - Run linter to automatically fix issues
 
-```
+```sh
 npm run lint-fix
 ```
 
@@ -137,7 +137,7 @@ npm run lint-fix
 
 - Run the Prettier formatter to format all files
 
-```
+```sh
 npm run format
 ```
 
