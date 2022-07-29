@@ -161,12 +161,14 @@
   /* --nav-color: #2e2e2e; */
 }
 #index.theme-rgb .nav-link,
-#index.theme-rgb .stage .icon,
 #index.theme-rgb .doors i,
 #index.theme-rgb .links i,
 #index.theme-rgb #themePopup,
 #index.theme-rgb #themePopup #closeButton,
-.theme-rgb #progress-container i{
+.theme-rgb #progress-container i,
+#rungeon.theme-rgb .navbar .container-fluid #navbarNavDropdown ul li i,
+#rungeon.theme-rgb #stage_container #stage-icon-container i,
+#rungeon.theme-rgb #stage_container #stage-title {
   animation: rgb 5s linear infinite !important;
 }
 
