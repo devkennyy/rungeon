@@ -356,14 +356,24 @@ background-color: var(--primary_btn-color) !important;
   margin-right: auto;
 }
 
-.fa-person-running {
+#progressIcon {
   position:absolute; 
   /* width: 10px; */
   bottom:6px;
   left: 0%;
   z-index: 1;
   color: var(--text-color);
-  transition: left .6s ease;
+  transition: left .8s ease;
+}
+
+.animateRun {
+  animation: mymove 0.15s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes mymove {
+  0% {bottom:6px;}
+  100% {bottom:9px;}
 }
 
 .progress {
@@ -375,4 +385,5 @@ background-color: var(--primary_btn-color) !important;
 .progress-bar {
   background-color: var(--icon-color) !important;
   filter: brightness(80%);
+  transition: width .8s ease !important;
 }

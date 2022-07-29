@@ -83,6 +83,17 @@
                 ><i class="fa-brands fa-fw fa-discord"></i
               ></a>
             </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                onclick="$('#progress-container').toggle()"
+                style="cursor: pointer"
+                >
+                <i class="fa-solid fa-eye-slash"></i>
+              </a>
+
+            </li>
             <!--Dropdown menu for color schemes-->
             <li class="nav-item dropdown">
               <a
@@ -183,7 +194,7 @@
     </div>
  
     <div id="progress-container">
-      <i class="fa-solid fa-person-running fa-xl"></i>
+      <i id="progressIcon" class="fa-solid fa-person-running fa-xl"></i>
       <div class="progress rounded-pill">
         <div class="progress-bar rounded-pill" role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
