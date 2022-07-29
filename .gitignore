@@ -2,6 +2,7 @@
 /node_modules/
 /shelf/
 /workspace.xml
+.env
 # VS Code
 /.vscode/
 *.code-workspace
