@@ -11,7 +11,6 @@ function updateProgressBar(){
   let percentage = (stageCounter/(totalStages+1))*100
   $('.progress-bar').css('width', `${percentage}%`)
   $('.fa-person-running').css('left', `${percentage-1}%`)
-<<<<<<< HEAD
 
   //Start the icon run animation
   $('.fa-person-running').addClass('animateRun')
@@ -20,8 +19,6 @@ function updateProgressBar(){
   setTimeout(function() {
     $('.fa-person-running').removeClass('animateRun')
   }, 600)
-=======
->>>>>>> f94ddf5 (Initial commit)
 }
 
 document.getElementById("stage-btn-next").addEventListener("click", () => {
