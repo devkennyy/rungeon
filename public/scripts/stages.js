@@ -102,6 +102,7 @@ const setStageText = stageData => {
       document.getElementById("stage-body").innerText = stageData.body;
       break;
     case 2:
+      document.getElementById("stage-title").innerText = stageData.title;
       document.getElementById("stage-body")
         .innerText = stageData.body + " " + stageData.icons[1].name;
       break;
