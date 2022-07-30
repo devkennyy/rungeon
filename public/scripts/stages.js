@@ -81,9 +81,8 @@ const setStageButtons = stageData => {
 };
 
 const setStageIcon = stageData => {
-  document.getElementById(
-    "stage-icon-container"
-  ).innerHTML = `<i "id=stage-icon" class="fas fa-${stageData.icon}"></i>`;
+  //remove old icon classes and add new ones to change icon
+   $('#stage-icon').removeClass().addClass(`fas fa-${stageData.icon}`)
 };
 
 const setStage = stageData => {
