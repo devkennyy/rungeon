@@ -1,7 +1,5 @@
 // todo: fix themes not showing for /rungeon.html
 
-const e = require("express");
-
 // list of available themes
 const themes = [
   "cobalt",
