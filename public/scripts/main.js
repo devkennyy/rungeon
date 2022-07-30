@@ -24,6 +24,11 @@ function runStageRequiredScripts() {
     //Add listener to close theme popup when clicked outside
     addPopupListener();
   }
+
+  //Set theme in localStorage if it doesn't exist
+  if (localStorage.getItem("theme") == null){
+    localStorage.setItem("theme", 'default');
+  }
 }
 
 function toggleThemePopup() {
