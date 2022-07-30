@@ -344,3 +344,45 @@ background-color: var(--primary_btn-color) !important;
   margin: auto;
   margin-bottom: 20px;
 }
+
+
+#progress-container {
+  position:absolute; 
+  bottom: 20px;
+  width: 95%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#progressIcon {
+  position:absolute; 
+  bottom:6px;
+  left: -1%;
+  z-index: 1;
+  color: var(--text-color);
+  transition: left .8s ease;
+}
+
+.animateRun {
+  animation: mymove 0.15s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes mymove {
+  0% {bottom:6px;}
+  100% {bottom:9px;}
+}
+
+.progress {
+  background-color: var(--bg-color) !important;
+  filter: brightness(140%);
+  height: 12px !important;
+}
+
+.progress-bar {
+  background-color: var(--icon-color) !important;
+  filter: brightness(80%);
+  transition: width .8s ease !important;
+}

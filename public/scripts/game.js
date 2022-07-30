@@ -7,6 +7,20 @@ function updateTitleProgress() {
   document.title = "Stage " + (stageCounter ) + "/" + totalStages;
 }
 
+function updateProgressBar(){
+  let percentage = (stageCounter/(totalStages+1))*100
+  $('.progress-bar').css('width', `${percentage}%`)
+  $('.fa-person-running').css('left', `${percentage-1}%`)
+
+  //Start the icon run animation
+  $('.fa-person-running').addClass('animateRun')
+
+  //Stop the run animation after the progress bar stops moving
+  setTimeout(function() {
+    $('.fa-person-running').removeClass('animateRun')
+  }, 600)
+}
+
 document.getElementById("stage-btn-next").addEventListener("click", () => {
   if (stageCounter == stages.length - 1) {
     return;
@@ -15,6 +29,7 @@ document.getElementById("stage-btn-next").addEventListener("click", () => {
   stageCounter++;
   setStage(stages[stageCounter]);
   updateTitleProgress();
+  updateProgressBar();
 });
 
 document.getElementById("stage-btn-back").addEventListener("click", () => {
@@ -25,9 +40,11 @@ document.getElementById("stage-btn-back").addEventListener("click", () => {
   stageCounter--;
   setStage(stages[stageCounter]);
   updateTitleProgress();
+  updateProgressBar();
 });
 
 document.getElementById("stage-btn-restart").addEventListener("click", () => {
   stageCounter = 0;
   setStage(stages[stageCounter]);
+  updateProgressBar();
 });
