@@ -129,8 +129,7 @@ const setStageButtons = stageData => {
 };
 
 const setStageIcon = stageData => {
-  //remove old icon classes and add new ones to change icon
-   $("#stage-icon").removeClass().addClass(`fas ${stageData.icons[0].name}`);
+  $("#stage-icon").removeClass().addClass(`fas ${stageData.icons[0].name}`);
 };
 
 const setStage = stageData => {

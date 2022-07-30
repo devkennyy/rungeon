@@ -82,17 +82,17 @@ const getTheme = oldTheme => {
 };
 
 function addCheckMark(){
-  $('i').remove(".fa-check");
+  $("i").remove(".fa-check");
   $(`#${localStorage.getItem("theme")}`).append(" <i class=\"fa-solid fa-check\"></i>");
 }
 
 
 function progressVisabilityToggle(){
-  $('#progress-container').toggle()
+  $("#progress-container").toggle();
 
-  if($('#progress-container').is(':visible')){
-    $('#visabilityIcon').removeClass('fa-eye-slash').addClass('fa-eye')
+  if($("#progress-container").is(":visible")){
+    $("#visabilityIcon").removeClass("fa-eye-slash").addClass("fa-eye");
   }else{
-    $('#visabilityIcon').removeClass('fa-eye').addClass('fa-eye-slash')
+    $("#visabilityIcon").removeClass("fa-eye").addClass("fa-eye-slash");
   }
 }
