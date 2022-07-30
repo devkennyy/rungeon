@@ -6,9 +6,9 @@
 
 [![My Skills](https://skillicons.dev/icons?i=js,css,html)](https://skillicons.dev)
 
-![Repository version](https://img.shields.io/github/v/release/devkennyy/rungeon?color=fc7c34&style=for-the-badge&label=version)
-![Repository contributors](https://img.shields.io/github/contributors-anon/devkennyy/rungeon?color=fc7c34&style=for-the-badge)
-![Repository license](https://img.shields.io/github/license/devkennyy/rungeon?style=for-the-badge)
+![Repository version](https://img.shields.io/github/v/release/devkennyy/rungeon?color=0874bc&label=version)
+![Repository contributors](https://img.shields.io/github/contributors-anon/devkennyy/rungeon?color=0874bc)
+![Repository license](https://img.shields.io/github/license/devkennyy/rungeon?color=0874bc)
 
 </div>
 
@@ -60,7 +60,7 @@ If you can understand the solution from the code, you deserve it.
 
 > The game side isn't my thing, can I still contribute code?
 
-Rungeon is not just a game, it's an environment for developers to improve and enhance their developing skills!
+Rungeon is not just a game, it's an environment for developers to learn and improve their developing skills!
 
 > How can I reach out or join the community?
 
