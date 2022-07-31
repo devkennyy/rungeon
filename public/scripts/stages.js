@@ -6,9 +6,10 @@ const stages = [
     body: "Maybe that button does something?",
     icons: [
       {
-        name: "fa-door-open"
-      }
+        name: "fa-door-open",
+      },
     ],
+    startDisabled: false,
     back: -1,
     next: 1,
   },
@@ -18,9 +19,10 @@ const stages = [
     body: "SQUASH THE BUG! DO IT! DO IT!",
     icons: [
       {
-        name: "fa-bugs"
-      }
+        name: "fa-bugs",
+      },
     ],
+    startDisabled: false,
     back: 0,
     next: 2,
   },
@@ -30,12 +32,13 @@ const stages = [
     body: "Take a breath, you've deserved it",
     icons: [
       {
-        name: "fa-circle-question" // originally fa-wind
-      }
+        name: "fa-circle-question", // originally fa-wind
+      },
       // {
       //   name: ""
       // }
     ],
+    startDisabled: false,
     back: 1,
     next: 3,
   },
@@ -45,12 +48,13 @@ const stages = [
     body: "Give him the coin or something!",
     icons: [
       {
-        name: "fa-dragon"
+        name: "fa-dragon",
       },
       {
-        name: "🟡"
-      }
+        name: "🟡",
+      },
     ],
+    startDisabled: true,
     back: 2,
     next: 4,
   },
@@ -60,12 +64,13 @@ const stages = [
     body: "What's this in your pocket? I doubt it's useful",
     icons: [
       {
-        name: "fa-lock"
+        name: "fa-lock",
       },
       {
-        name: "🗝️"
-      }
+        name: "🗝️",
+      },
     ],
+    startDisabled: true,
     back: 3,
     next: 5,
   },
@@ -75,9 +80,10 @@ const stages = [
     body: "You've got to eat something, or you'll starve",
     icons: [
       {
-        name: "fa-bacon"
-      }
+        name: "fa-bacon",
+      },
     ],
+    startDisabled: false,
     back: 4,
     next: 6,
   },
@@ -87,9 +93,10 @@ const stages = [
     body: "Get out while you can.",
     icons: [
       {
-        name: "fa-person-running"
-      }
+        name: "fa-person-running",
+      },
     ],
+    startDisabled: false,
     back: -1,
     next: -1,
   },
