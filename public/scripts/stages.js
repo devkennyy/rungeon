@@ -103,15 +103,18 @@ const stages = [
 ];
 
 const setStageText = stageData => {
-  switch(stageData.icons.length) {
+  switch (stageData.icons.length) {
     case 1:
       document.getElementById("stage-title").innerText = stageData.title;
       document.getElementById("stage-body").innerText = stageData.body;
       break;
     case 2:
       document.getElementById("stage-title").innerText = stageData.title;
-      document.getElementById("stage-body")
-        .innerText = stageData.body + " " + stageData.icons[1].name;
+      document.getElementById("stage-body").innerText = stageData.body + " ";
+      var textIcon = document.createElement("i");
+      textIcon.id = "stage-body-icon";
+      textIcon.innerText = stageData.icons[1].name;
+      document.getElementById("stage-body").append(textIcon);
       break;
     default:
       console.log("too many icons.");
@@ -135,6 +138,58 @@ const setStageButtons = stageData => {
   }
 };
 
+const disable = id => {
+  document.getElementById(id).disabled = true;
+};
+
+const enable = id => {
+  document.getElementById(id).disabled = false;
+};
+
+const handleStage = stageData => {
+
+  if(stageData.startDisabled) {
+    disable("stage-btn-next");
+  }
+
+  switch (stageData.id) {
+    case 1:
+      handleStage1();
+      break;
+    case 3: // done
+      handleStage3();
+      break;
+    case 4:
+      break;
+    default:
+      break;
+  }
+const handleStage1 = stageData => {
+  disable("stage-btn-next");
+  let totalClicksRequired = 3;
+  let clickCount = 1;
+  let opacityCalculator = 1;
+  $("#stage-icon").click(() => {
+    clickCount++;
+    opacityCalculator -= 1 / totalClicksRequired;
+    console.log(opacityCalculator);
+    $("#stage-icon").css("opacity", `${opacityCalculator.toString()}`);
+
+    if (clickCount > totalClicksRequired) {
+      enable("stage-btn-next");
+      // stageReset()
+    }
+  });
+};
+
+const handleStage3 = () => {
+  // Running Animation stops after this stage. Freezes?
+  document.getElementById("stage-body-icon").addEventListener("click", () => {
+    $("#stage-body-icon").hide();
+    enable("stage-btn-next");
+  });
+};
+
 const setStageIcon = stageData => {
   $("#stage-icon").removeClass().addClass(`fas ${stageData.icons[0].name}`);
 };
@@ -143,4 +198,5 @@ const setStage = stageData => {
   setStageIcon(stageData);
   setStageText(stageData);
   setStageButtons(stageData);
+  handleStage(stageData);
 };
