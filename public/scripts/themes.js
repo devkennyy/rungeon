@@ -81,18 +81,19 @@ const getTheme = oldTheme => {
   // }
 };
 
-function addCheckMark(){
+function addCheckMark() {
   $("i").remove(".fa-check");
-  $(`#${localStorage.getItem("theme")}`).append(" <i class=\"fa-solid fa-check\"></i>");
+  $(`#${localStorage.getItem("theme")}`).append(
+    ' <i class="fa-solid fa-check"></i>'
+  );
 }
 
-
-function progressVisabilityToggle(){
+function progressVisabilityToggle() {
   $("#progress-container").toggle();
 
-  if($("#progress-container").is(":visible")){
+  if ($("#progress-container").is(":visible")) {
     $("#visabilityIcon").removeClass("fa-eye-slash").addClass("fa-eye");
-  }else{
+  } else {
     $("#visabilityIcon").removeClass("fa-eye").addClass("fa-eye-slash");
   }
 }

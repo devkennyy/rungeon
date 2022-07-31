@@ -54,21 +54,21 @@ function addPopupListener() {
 // START OF STAGE SPECIFIC FUNCTIONS
 
 /* STAGE ONE */
-function stageOneSquish() {
-  stageOne_ClickCount++;
-  stageOne_Opacity -= 0.4;
+// function stageOneSquish() {
+//   stageOne_ClickCount++;
+//   stageOne_Opacity -= 0.4;
 
-  if (stageOne_BtnDisabled == false) {
-    document.getElementById("stage_1-icon").style.opacity -= stageOne_Opacity;
-  }
+//   if (stageOne_BtnDisabled == false) {
+//     document.getElementById("stage_1-icon").style.opacity -= stageOne_Opacity;
+//   }
 
-  if (stageOne_ClickCount >= 3) {
-    enableContinueButton(1);
-    stageOne_BtnDisabled = true;
-    document.getElementById("stage_1-icon").style.opacity = 0;
-    document.getElementById("stage_1-icon").style.visibility = "hidden";
-  }
-}
+//   if (stageOne_ClickCount >= 3) {
+//     enableContinueButton(1);
+//     stageOne_BtnDisabled = true;
+//     document.getElementById("stage_1-icon").style.opacity = 0;
+//     document.getElementById("stage_1-icon").style.visibility = "hidden";
+//   }
+// }
 
 /* STAGE TWO */
 function stageTwoCoin() {

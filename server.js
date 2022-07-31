@@ -6,7 +6,6 @@ const rungeon = express();
 const port = 3000;
 const viewsPath = "../public/views/";
 
-
 rungeon.use(express.static(__dirname + "/public"));
 rungeon.set("view engine", "ejs");
 

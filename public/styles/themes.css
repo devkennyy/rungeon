@@ -168,8 +168,7 @@
 #rungeon.theme-rgb .navbar .container-fluid #navbarNavDropdown ul li i,
 #rungeon.theme-rgb #stage_container #stage-icon-container i,
 #rungeon.theme-rgb #stage_container #stage-title,
-.theme-rgb #progress-container i{
-
+.theme-rgb #progress-container i {
   animation: rgb 5s linear infinite !important;
 }
 

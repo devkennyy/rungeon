@@ -3,16 +3,16 @@ var totalStages = stages.length - 2;
 
 // TODO: if the user is on the final stage display a different title since 6/5 is innaccurate
 
-function updateProgressBar(){
-  let percentage = (stageCounter/(totalStages+1))*100;
+function updateProgressBar() {
+  let percentage = (stageCounter / (totalStages + 1)) * 100;
   $(".progress-bar").css("width", `${percentage}%`);
-  $(".fa-person-running").css("left", `${percentage-1}%`);
+  $(".fa-person-running").css("left", `${percentage - 1}%`);
 
   //Start the icon run animation
   $(".fa-person-running").addClass("animateRun");
 
   //Stop the run animation after the progress bar stops moving
-  setTimeout(function() {
+  setTimeout(function () {
     $(".fa-person-running").removeClass("animateRun");
   }, 600);
 }
