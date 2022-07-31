@@ -23,6 +23,7 @@ document.getElementById("stage-btn-next").addEventListener("click", () => {
   }
 
   stageCounter++;
+  stageReset(stages[stageCounter]);
   setStage(stages[stageCounter]);
   updateProgressBar();
 });
