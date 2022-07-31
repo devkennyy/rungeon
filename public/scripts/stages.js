@@ -147,8 +147,7 @@ const enable = id => {
 };
 
 const handleStage = stageData => {
-
-  if(stageData.startDisabled) {
+  if (stageData.startDisabled) {
     disable("stage-btn-next");
   }
 
@@ -156,14 +155,52 @@ const handleStage = stageData => {
     case 1:
       handleStage1();
       break;
-    case 3: // done
+    case 3:
       handleStage3();
       break;
     case 4:
+      handleStage4();
       break;
     default:
       break;
   }
+};
+
+const stageReset = stageData => {
+  switch (stageData.id) {
+    case 0:
+      break;
+    case 1:
+      break;
+    case 2:
+      $("#stage-icon").css("opacity", "1");
+      $("#stage-icon").off("click");
+      break;
+    case 3:
+      $("#stage-body-icon").show();
+      break;
+    case 4:
+      break;
+    case 5:
+      break;
+    case 6:
+      break;
+    default:
+      break;
+  }
+};
+
+const setStageIcon = stageData => {
+  $("#stage-icon").removeClass().addClass(`fas ${stageData.icons[0].name}`);
+};
+
+const setStage = stageData => {
+  setStageIcon(stageData);
+  setStageText(stageData);
+  setStageButtons(stageData);
+  handleStage(stageData);
+};
+
 const handleStage1 = stageData => {
   disable("stage-btn-next");
   let totalClicksRequired = 3;
@@ -181,37 +218,24 @@ const handleStage1 = stageData => {
 };
 
 const handleStage3 = () => {
-  // Running Animation stops after this stage. Freezes?
   document.getElementById("stage-body-icon").addEventListener("click", () => {
     $("#stage-body-icon").hide();
     enable("stage-btn-next");
   });
 };
 
-const setStageIcon = stageData => {
-  $("#stage-icon").removeClass().addClass(`fas ${stageData.icons[0].name}`);
-};
 const handleStage4 = stageData => {
   $("#stage-body-icon").addClass("unselectable");
   $("#stage-body-icon").draggable();
-
   $("#stage-icon").droppable({
     tolerance: "fit",
-    drop: function(){
+    drop: function () {
       $("#stage-body-icon").remove();
-  
       $("#stage-icon").removeClass().addClass("fa-solid fa-lock-open");
-  
-      $("#stage-title").innerHtml = "The door is unlocked";
-      $("#stage-body-text").innerHtml =
+      document.getElementById("stage-title").innerText = "The door is unlocked";
+      document.getElementById("stage-body").innerText =
         "I knew that was useful, good work!";
       enable("stage-btn-next");
-    }
+    },
   });
-
-const setStage = stageData => {
-  setStageIcon(stageData);
-  setStageText(stageData);
-  setStageButtons(stageData);
-  handleStage(stageData);
 };
