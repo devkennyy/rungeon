@@ -172,9 +172,7 @@ const handleStage1 = stageData => {
   $("#stage-icon").click(() => {
     clickCount++;
     opacityCalculator -= 1 / totalClicksRequired;
-    console.log(opacityCalculator);
     $("#stage-icon").css("opacity", `${opacityCalculator.toString()}`);
-
     if (clickCount > totalClicksRequired) {
       enable("stage-btn-next");
       // stageReset()
