@@ -193,6 +193,23 @@ const handleStage3 = () => {
 const setStageIcon = stageData => {
   $("#stage-icon").removeClass().addClass(`fas ${stageData.icons[0].name}`);
 };
+const handleStage4 = stageData => {
+  $("#stage-body-icon").addClass("unselectable");
+  $("#stage-body-icon").draggable();
+
+  $("#stage-icon").droppable({
+    tolerance: "fit",
+    drop: function(){
+      $("#stage-body-icon").remove();
+  
+      $("#stage-icon").removeClass().addClass("fa-solid fa-lock-open");
+  
+      $("#stage-title").innerHtml = "The door is unlocked";
+      $("#stage-body-text").innerHtml =
+        "I knew that was useful, good work!";
+      enable("stage-btn-next");
+    }
+  });
 
 const setStage = stageData => {
   setStageIcon(stageData);
