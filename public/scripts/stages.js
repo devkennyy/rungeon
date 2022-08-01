@@ -91,6 +91,19 @@ const stages = [
   },
   {
     id: 6,
+    title: "A tile puzzle?",
+    body: "How ominous",
+    icons: [
+      {
+        name: "",
+      },
+    ],
+    startDisabled: true,
+    back: 5,
+    next: 7,
+  },
+  {
+    id: 7,
     title: "You did it?",
     body: "Get out while you can.",
     icons: [
@@ -163,6 +176,9 @@ const handleStage = stageData => {
     case 4:
       handleStage4();
       break;
+    case 6:
+      handleStage6();
+      break;
     default:
       break;
   }
@@ -187,6 +203,7 @@ const stageReset = stageData => {
     case 5:
       break;
     case 6:
+      $("#tileGroup").remove()
       break;
     default:
       break;
@@ -198,7 +215,7 @@ const setStageIcon = stageData => {
 };
 
 const setStage = stageData => {
-  console.log(highestStage);
+
   if (stageData.id > highestStage) {
     highestStage = stageData.id;
   }
@@ -246,3 +263,70 @@ const handleStage4 = stageData => {
     },
   });
 };
+
+
+function handleStage6(){
+  //Generate the stage HTML
+  $('#stage_container').prepend($("<div>", {id: "tileGroup"}))
+
+  for (let i = 0; i < 9; i++){
+      $("#tileGroup").append($("<div>", {"class": "tileContainer"}))
+  }
+
+  $(".tileContainer").append($("<div>", {"class": "tile"}))
+  $(".tile").append($("<i>", {"class": "icon fas fa-dungeon fa-2x"}))
+
+
+  tileIds = [
+      "T1",
+      "T2",
+      "T3",
+      "T4",
+      "T5",
+      "T6",
+      "T7",
+      "T8",
+      "T9"
+  ]
+  //Randomly assign the IDs to the tiles
+  $(".tile i").each(function(){
+      let i = (Math.random() * tileIds.length) | 0
+      $(this).attr("id", tileIds.splice(i, 1)[0]) 
+  })
+
+
+  $(".tile").draggable({
+      revert: true,
+      revertDuration: 0
+    });
+    $(".tileContainer").droppable({
+      accept: '.tile',
+      drop: function(event, ui) {
+      if ($(this).children().length > 0) {
+          //swap the IDs of the two elements
+          
+          let droppedId = $(ui.draggable).find("i").attr("id")
+          let recievedId = $(this).find('i').attr("id")
+
+          $(this).find('i').attr("id", droppedId)
+          $(ui.draggable).find("i").attr("id", recievedId)
+      }
+  
+      //Check if the tiles are in the correct order
+      let tileList = $(".tile i")
+      let correctCounter = 0
+
+      for(let i = 0; i < 9; i++){
+          if(tileList[i].id == `T${i+1}`){
+              correctCounter++;
+          }
+      }
+          if(correctCounter == 9){
+              document.getElementById("stage-title").innerText = "You did it!";
+              document.getElementById("stage-body").innerText = "That wasn't too hard";
+              enable("stage-btn-next");
+              // setTimeout(function() { alert("You did it!"); $(".tile").draggable("disable")}, 100);
+          }
+      }
+    });
+}
