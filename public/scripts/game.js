@@ -44,7 +44,7 @@ document.getElementById("stage-btn-back").addEventListener("click", () => {
 
   stageCounter--;
   setStage(stages[stageCounter]);
-  stageReset(stages[stageCounter]);
+  stageReset(stages[stageCounter + 1]);
   updateProgressBar();
 });
 

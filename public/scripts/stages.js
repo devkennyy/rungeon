@@ -225,11 +225,9 @@ const setStageIcon = stageData => {
 const stageCompleted = id => {
   if (completedStages[id] == true) {
     enable("stage-btn-next");
-    console.log("enabled button");
     return 1;
   }
 
-  console.log(completedStages);
   return 0;
 };
 
