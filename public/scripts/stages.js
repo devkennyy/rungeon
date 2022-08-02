@@ -1,5 +1,3 @@
-var highestStage = -1;
-var completedStages = [true];
 
 // icons[0] is always going to be the icon above the prompt
 const stages = [
@@ -13,6 +11,7 @@ const stages = [
       },
     ],
     startDisabled: false,
+    completed: false,
     back: -1,
     next: 1,
   },
@@ -26,6 +25,7 @@ const stages = [
       },
     ],
     startDisabled: true,
+    completed: false,
     back: 0,
     next: 2,
   },
@@ -42,6 +42,7 @@ const stages = [
       // }
     ],
     startDisabled: false,
+    completed: false,
     back: 1,
     next: 3,
   },
@@ -58,6 +59,7 @@ const stages = [
       },
     ],
     startDisabled: true,
+    completed: false,
     back: 2,
     next: 4,
   },
@@ -74,6 +76,7 @@ const stages = [
       },
     ],
     startDisabled: true,
+    completed: false,
     back: 3,
     next: 5,
   },
@@ -87,6 +90,7 @@ const stages = [
       },
     ],
     startDisabled: false,
+    completed: false,
     back: 4,
     next: 6,
   },
@@ -100,6 +104,7 @@ const stages = [
       },
     ],
     startDisabled: true,
+    completed: false,
     back: 5,
     next: 7,
   },
@@ -113,6 +118,7 @@ const stages = [
       },
     ],
     startDisabled: false,
+    completed: false,
     back: -1,
     next: -1,
   },
@@ -155,21 +161,21 @@ const setStageButtons = stageData => {
 };
 
 const disable = id => {
-  document.getElementById(id).disabled = true;
+  $(`#${id}`).prop("disabled", true)
 };
 
 const enable = id => {
-  document.getElementById(id).disabled = false;
+  $(`#${id}`).prop("disabled", false)
 };
 
 const handleStage = stageData => {
-  if (highestStage <= stageData.id && stageData.startDisabled) {
-    disable("stage-btn-next");
+  //enable continue button by default
+  enable("stage-btn-next")
+
+  if (!stageData.completed && stageData.startDisabled) {
+      disable("stage-btn-next");
   }
 
-  // if (highestStage == 6 && !stageCompleted(6)) {
-  //   $("#tileGroup").hide();
-  // }
 
   switch (stageData.id) {
     case 1:
@@ -185,9 +191,6 @@ const handleStage = stageData => {
       handleStage6(stageData.id);
       break;
     default:
-      if (stageCompleted(stageData.id)) return;
-      completedStages.push(true);
-      stageCompleted(stageData.id);
       break;
   }
 };
@@ -204,8 +207,8 @@ const stageReset = stageData => {
       $("#stage-body-icon").show();
       break;
     case 4:
-      $("#stage-body-icon").removeClass("unselectable");
-      $("#stage-body-icon").draggable("disable");
+      $("#stage-icon-container").removeClass("fa-4x").addClass("fa-3x")
+      $("#stage-icon-container").attr("style", "")
       $("#stage-icon").droppable("disable");
       break;
     case 5:
@@ -222,19 +225,8 @@ const setStageIcon = stageData => {
   $("#stage-icon").removeClass().addClass(`fas ${stageData.icons[0].name}`);
 };
 
-const stageCompleted = id => {
-  if (completedStages[id] == true) {
-    enable("stage-btn-next");
-    return 1;
-  }
-
-  return 0;
-};
 
 const setStage = stageData => {
-  if (stageData.id > highestStage) {
-    highestStage = stageData.id;
-  }
 
   setStageIcon(stageData);
   setStageText(stageData);
@@ -243,7 +235,6 @@ const setStage = stageData => {
 };
 
 const handleStage1 = id => {
-  if (stageCompleted(id)) return;
   let totalClicksRequired = 3;
   let clickCount = 1;
   let opacityCalculator = 1;
@@ -252,27 +243,25 @@ const handleStage1 = id => {
     opacityCalculator -= 1 / totalClicksRequired;
     $("#stage-icon").css("opacity", `${opacityCalculator.toString()}`);
     if (clickCount > totalClicksRequired) {
-      completedStages.push(true);
-      stageCompleted(id);
-      // stageReset()
+      stages[id].completed = true
+      enable("stage-btn-next")
     }
   });
 };
 
 const handleStage3 = id => {
-  if (stageCompleted(id)) return;
   document.getElementById("stage-body-icon").addEventListener("click", () => {
     $("#stage-body-icon").hide();
-    completedStages.push(true);
-    stageCompleted(id);
+    stages[id].completed = true
+    enable("stage-btn-next")
   });
 };
 
 const handleStage4 = id => {
-  if (stageCompleted(id)) return;
   $("#stage-body-icon").addClass("unselectable");
-  $("#stage-body-icon").draggable({ revert: "invalid", tolerance: "fit" });
+  $("#stage-body-icon").draggable({ disabled: false, revert: "invalid"});
   $("#stage-icon").droppable({
+    disabled: false,
     tolerance: "touch",
     over: function() {
       $("#stage-icon-container").removeClass("fa-3x").addClass("fa-4x")
@@ -288,14 +277,13 @@ const handleStage4 = id => {
       document.getElementById("stage-title").innerText = "The door is unlocked";
       document.getElementById("stage-body").innerText =
         "I knew that was useful, good work!";
-      completedStages.push(true);
-      stageCompleted(id);
+        stages[id].completed = true
+        enable("stage-btn-next")
     },
   });
 };
 
 const handleStage6 = id => {
-  if (stageCompleted(id)) return;
   // generates stage HTML
   $("#stage_container").prepend($("<div>", { id: "tileGroup" }));
   for (let i = 0; i < 9; i++) {
@@ -341,9 +329,8 @@ const handleStage6 = id => {
         document.getElementById("stage-title").innerText = "You did it!";
         document.getElementById("stage-body").innerText =
           "That wasn't too hard";
-        completedStages.push(true);
-        stageCompleted(id);
-        // setTimeout(function() { alert("You did it!"); $(".tile").draggable("disable")}, 100);
+          stages[id].completed = true
+          enable("stage-btn-next")
       }
     },
   });
