@@ -4,7 +4,7 @@
 
 [Rungeon](https://rungeon.live/) is an **open source, puzzle based adventure game**.
 
-[![My Skills](https://skillicons.dev/icons?i=js,css,html)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=js,css,html,jquery,bootstrap)](https://skillicons.dev)
 
 ![Repository version](https://img.shields.io/github/v/release/devkennyy/rungeon?color=0874bc&label=version)
 ![Repository contributors](https://img.shields.io/github/contributors-anon/devkennyy/rungeon?color=0874bc)
@@ -18,11 +18,30 @@ Rungeon features a series of puzzles in the form of stages, in which the user re
 The site offers a sense of customizability with a variety of themes sure to fit a user's preference.
 We're in an active state of development, always building, and preparing the next rungeon stage as you read!
 
-<!--
-- Rungeon achieves all these things while maintaining a minimal feel
-- List noteworthy features.
-- State what problem it solves/the aim.
--->
+## 💾 Installation
+
+1. Fork the repository
+![fork](https://docs.github.com/assets/cb-23088/images/help/repository/fork_button.png)
+
+1. Clone your repository under `yourUsername/rungeon`
+```shell
+git clone https://github.com/yourUsername/rungeon.git
+```
+
+2.  Move into the new folder
+```shell
+cd rungeon
+```
+
+3. Install dependancies
+```shell
+npm install
+```
+
+4. Start the local server
+```shell
+npm run start
+```
 
 ## 🤝 Contributing
 
@@ -33,20 +52,6 @@ Refer to the [contributing file](contributing.md) for a beginner-friendly guide 
 - Add new stages
 - Create and solve issues
 - Share the repo
-
-<!--
-- Code Style/Requirements
-- Format for commit messages
-- Add link for CONTRIBUTING.md
--->
-
-<!--
-## 📝 TODO
-
-- Next steps
-- Features planned
-- Known bugs (shortlist)
--->
 
 ## 💛 Support
 
