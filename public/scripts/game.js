@@ -1,5 +1,3 @@
-// todo: find out if a stage is complete
-
 var stageCounter = 0;
 var totalStages = stages.length - 2;
 // last completed stage closest to the end of the game

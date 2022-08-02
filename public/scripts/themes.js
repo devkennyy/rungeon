@@ -1,5 +1,3 @@
-// todo: fix themes not showing for /rungeon.html
-
 // list of available themes
 const themes = [
   "cobalt",

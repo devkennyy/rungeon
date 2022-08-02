@@ -1,4 +1,5 @@
 var highestStage = -1;
+var completedStages = [true];
 
 // icons[0] is always going to be the icon above the prompt
 const stages = [
@@ -166,20 +167,27 @@ const handleStage = stageData => {
     disable("stage-btn-next");
   }
 
+  // if (highestStage == 6 && !stageCompleted(6)) {
+  //   $("#tileGroup").hide();
+  // }
+
   switch (stageData.id) {
     case 1:
-      handleStage1();
+      handleStage1(stageData.id);
       break;
     case 3:
-      handleStage3();
+      handleStage3(stageData.id);
       break;
     case 4:
-      handleStage4();
+      handleStage4(stageData.id);
       break;
     case 6:
-      handleStage6();
+      handleStage6(stageData.id);
       break;
     default:
+      if (stageCompleted(stageData.id)) return;
+      completedStages.push(true);
+      stageCompleted(stageData.id);
       break;
   }
 };
@@ -214,6 +222,17 @@ const setStageIcon = stageData => {
   $("#stage-icon").removeClass().addClass(`fas ${stageData.icons[0].name}`);
 };
 
+const stageCompleted = id => {
+  if (completedStages[id] == true) {
+    enable("stage-btn-next");
+    console.log("enabled button");
+    return 1;
+  }
+
+  console.log(completedStages);
+  return 0;
+};
+
 const setStage = stageData => {
   if (stageData.id > highestStage) {
     highestStage = stageData.id;
@@ -225,7 +244,8 @@ const setStage = stageData => {
   handleStage(stageData);
 };
 
-const handleStage1 = stageData => {
+const handleStage1 = id => {
+  if (stageCompleted(id)) return;
   let totalClicksRequired = 3;
   let clickCount = 1;
   let opacityCalculator = 1;
@@ -234,20 +254,24 @@ const handleStage1 = stageData => {
     opacityCalculator -= 1 / totalClicksRequired;
     $("#stage-icon").css("opacity", `${opacityCalculator.toString()}`);
     if (clickCount > totalClicksRequired) {
-      enable("stage-btn-next");
+      completedStages.push(true);
+      stageCompleted(id);
       // stageReset()
     }
   });
 };
 
-const handleStage3 = () => {
+const handleStage3 = id => {
+  if (stageCompleted(id)) return;
   document.getElementById("stage-body-icon").addEventListener("click", () => {
     $("#stage-body-icon").hide();
-    enable("stage-btn-next");
+    completedStages.push(true);
+    stageCompleted(id);
   });
 };
 
-const handleStage4 = stageData => {
+const handleStage4 = id => {
+  if (stageCompleted(id)) return;
   $("#stage-body-icon").addClass("unselectable");
   $("#stage-body-icon").draggable({ revert: "invalid" });
   $("#stage-icon").droppable({
@@ -258,23 +282,23 @@ const handleStage4 = stageData => {
       document.getElementById("stage-title").innerText = "The door is unlocked";
       document.getElementById("stage-body").innerText =
         "I knew that was useful, good work!";
-      enable("stage-btn-next");
+      completedStages.push(true);
+      stageCompleted(id);
     },
   });
 };
 
-function handleStage6() {
-  //Generate the stage HTML
+const handleStage6 = id => {
+  if (stageCompleted(id)) return;
+  // generates stage HTML
   $("#stage_container").prepend($("<div>", { id: "tileGroup" }));
-
   for (let i = 0; i < 9; i++) {
     $("#tileGroup").append($("<div>", { class: "tileContainer" }));
   }
 
   $(".tileContainer").append($("<div>", { class: "tile" }));
   $(".tile").append($("<i>", { class: "icon fas fa-dungeon fa-2x" }));
-
-  tileIds = ["T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8", "T9"];
+  let tileIds = ["T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8", "T9"];
   //Randomly assign the IDs to the tiles
   $(".tile i").each(function () {
     let i = (Math.random() * tileIds.length) | 0;
@@ -311,9 +335,10 @@ function handleStage6() {
         document.getElementById("stage-title").innerText = "You did it!";
         document.getElementById("stage-body").innerText =
           "That wasn't too hard";
-        enable("stage-btn-next");
+        completedStages.push(true);
+        stageCompleted(id);
         // setTimeout(function() { alert("You did it!"); $(".tile").draggable("disable")}, 100);
       }
     },
   });
-}
+};
