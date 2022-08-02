@@ -169,8 +169,7 @@
 #rungeon.theme-rgb #stage_container #stage-icon-container i,
 #rungeon.theme-rgb #stage_container #stage-title,
 #rungeon.theme-rgb #stage_container #tileGroup .tileContainer .tile i,
-.theme-rgb #progress-container i{
-
+.theme-rgb #progress-container i {
   animation: rgb 5s linear infinite !important;
 }
 

@@ -26,8 +26,8 @@ function runStageRequiredScripts() {
   }
 
   //Set theme in localStorage if it doesn't exist
-  if (localStorage.getItem("theme") == null){
-    localStorage.setItem("theme", 'default');
+  if (localStorage.getItem("theme") == null) {
+    localStorage.setItem("theme", "default");
   }
 }
 

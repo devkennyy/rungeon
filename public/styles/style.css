@@ -409,8 +409,8 @@ button,
 
 .tileContainer {
   float: left;
-  width: calc(var(--totalWidth)/3);
-  height: calc(var(--totalWidth)/3);
+  width: calc(var(--totalWidth) / 3);
+  height: calc(var(--totalWidth) / 3);
 }
 
 .tile {
@@ -418,51 +418,46 @@ button,
   width: 100%;
   height: 100%;
   /* background-color: blue; */
-  font-size: calc(var(--totalWidth)/2) !important;
-  overflow :hidden;
+  font-size: calc(var(--totalWidth) / 2) !important;
+  overflow: hidden;
 }
 
 .tile i {
   display: block;
 }
 
-
-#T2{
-  margin-left: calc(var(--totalWidth)/-3);
+#T2 {
+  margin-left: calc(var(--totalWidth) / -3);
 }
 
-#T3{
-  margin-left: calc(2*var(--totalWidth)/-3);
+#T3 {
+  margin-left: calc(2 * var(--totalWidth) / -3);
 }
 
-
-
-#T4{
-  margin-top: calc(var(--totalWidth)/-3);
+#T4 {
+  margin-top: calc(var(--totalWidth) / -3);
 }
 
-#T5{
-  margin-top: calc(var(--totalWidth)/-3);
-  margin-left: calc(var(--totalWidth)/-3);
+#T5 {
+  margin-top: calc(var(--totalWidth) / -3);
+  margin-left: calc(var(--totalWidth) / -3);
 }
 
-#T6{
-  margin-top: calc(var(--totalWidth)/-3);
-  margin-left: calc(2*var(--totalWidth)/-3);
+#T6 {
+  margin-top: calc(var(--totalWidth) / -3);
+  margin-left: calc(2 * var(--totalWidth) / -3);
 }
 
-
-
-#T7{
-  margin-top: calc(2*var(--totalWidth)/-3);
+#T7 {
+  margin-top: calc(2 * var(--totalWidth) / -3);
 }
 
-#T8{
-  margin-top: calc(2*var(--totalWidth)/-3);
-  margin-left: calc(var(--totalWidth)/-3);
+#T8 {
+  margin-top: calc(2 * var(--totalWidth) / -3);
+  margin-left: calc(var(--totalWidth) / -3);
 }
 
-#T9{
-  margin-top: calc(2*var(--totalWidth)/-3);
-  margin-left: calc(2*var(--totalWidth)/-3);
+#T9 {
+  margin-top: calc(2 * var(--totalWidth) / -3);
+  margin-left: calc(2 * var(--totalWidth) / -3);
 }
