@@ -1,4 +1,3 @@
-
 // icons[0] is always going to be the icon above the prompt
 const stages = [
   {
@@ -161,21 +160,20 @@ const setStageButtons = stageData => {
 };
 
 const disable = id => {
-  $(`#${id}`).prop("disabled", true)
+  $(`#${id}`).prop("disabled", true);
 };
 
 const enable = id => {
-  $(`#${id}`).prop("disabled", false)
+  $(`#${id}`).prop("disabled", false);
 };
 
 const handleStage = stageData => {
   //enable continue button by default
-  enable("stage-btn-next")
+  enable("stage-btn-next");
 
   if (!stageData.completed && stageData.startDisabled) {
-      disable("stage-btn-next");
+    disable("stage-btn-next");
   }
-
 
   switch (stageData.id) {
     case 1:
@@ -207,8 +205,8 @@ const stageReset = stageData => {
       $("#stage-body-icon").show();
       break;
     case 4:
-      $("#stage-icon-container").removeClass("fa-4x").addClass("fa-3x")
-      $("#stage-icon-container").attr("style", "")
+      $("#stage-icon-container").removeClass("fa-4x").addClass("fa-3x");
+      $("#stage-icon-container").attr("style", "");
       $("#stage-icon").droppable("disable");
       break;
     case 5:
@@ -225,9 +223,7 @@ const setStageIcon = stageData => {
   $("#stage-icon").removeClass().addClass(`fas ${stageData.icons[0].name}`);
 };
 
-
 const setStage = stageData => {
-
   setStageIcon(stageData);
   setStageText(stageData);
   setStageButtons(stageData);
@@ -243,8 +239,8 @@ const handleStage1 = id => {
     opacityCalculator -= 1 / totalClicksRequired;
     $("#stage-icon").css("opacity", `${opacityCalculator.toString()}`);
     if (clickCount > totalClicksRequired) {
-      stages[id].completed = true
-      enable("stage-btn-next")
+      stages[id].completed = true;
+      enable("stage-btn-next");
     }
   });
 };
@@ -252,24 +248,27 @@ const handleStage1 = id => {
 const handleStage3 = id => {
   document.getElementById("stage-body-icon").addEventListener("click", () => {
     $("#stage-body-icon").hide();
-    stages[id].completed = true
-    enable("stage-btn-next")
+    stages[id].completed = true;
+    enable("stage-btn-next");
   });
 };
 
 const handleStage4 = id => {
   $("#stage-body-icon").addClass("unselectable");
-  $("#stage-body-icon").draggable({ disabled: false, revert: "invalid"});
+  $("#stage-body-icon").draggable({ disabled: false, revert: "invalid" });
   $("#stage-icon").droppable({
     disabled: false,
     tolerance: "touch",
-    over: function() {
-      $("#stage-icon-container").removeClass("fa-3x").addClass("fa-4x")
-      $("#stage-icon-container").attr("style", "margin-bottom: -7px; margin-top: -7px;")
+    over: function () {
+      $("#stage-icon-container").removeClass("fa-3x").addClass("fa-4x");
+      $("#stage-icon-container").attr(
+        "style",
+        "margin-bottom: -7px; margin-top: -7px;"
+      );
     },
-    out: function(){
-      $("#stage-icon-container").removeClass("fa-4x").addClass("fa-3x")
-      $("#stage-icon-container").attr("style", "")
+    out: function () {
+      $("#stage-icon-container").removeClass("fa-4x").addClass("fa-3x");
+      $("#stage-icon-container").attr("style", "");
     },
     drop: function () {
       $("#stage-body-icon").remove();
@@ -277,8 +276,8 @@ const handleStage4 = id => {
       document.getElementById("stage-title").innerText = "The door is unlocked";
       document.getElementById("stage-body").innerText =
         "I knew that was useful, good work!";
-        stages[id].completed = true
-        enable("stage-btn-next")
+      stages[id].completed = true;
+      enable("stage-btn-next");
     },
   });
 };
@@ -329,8 +328,8 @@ const handleStage6 = id => {
         document.getElementById("stage-title").innerText = "You did it!";
         document.getElementById("stage-body").innerText =
           "That wasn't too hard";
-          stages[id].completed = true
-          enable("stage-btn-next")
+        stages[id].completed = true;
+        enable("stage-btn-next");
       }
     },
   });

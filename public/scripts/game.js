@@ -34,7 +34,6 @@ document.getElementById("stage-btn-back").addEventListener("click", () => {
     return;
   }
 
-
   stageCounter--;
   setStage(stages[stageCounter]);
   stageReset(stages[stageCounter + 1]);
@@ -44,9 +43,9 @@ document.getElementById("stage-btn-back").addEventListener("click", () => {
 document.getElementById("stage-btn-restart").addEventListener("click", () => {
   console.log("restart clicked");
   stageCounter = 0;
-  
-  for (let i = 0; i < stages.length; i++){
-    console.log(stages[i].id)
+
+  for (let i = 0; i < stages.length; i++) {
+    console.log(stages[i].id);
     stages[i].completed = false;
   }
   setStage(stages[stageCounter]);
