@@ -43,6 +43,8 @@ npm install
 npm run start
 ```
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ## 🤝 Contributing
 
 Refer to the [contributing file](contributing.md) for a beginner-friendly guide on how you can contribute.
@@ -53,9 +55,18 @@ Refer to the [contributing file](contributing.md) for a beginner-friendly guide 
 - Create and solve issues
 - Share the repo
 
-## 💛 Support
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-You can support the development of this project by starring the repository, it makes us feel special.
+## 🛣️ Roadmap
+- [x] Rework stages to be contributing friendly
+- [ ] Add achievements 
+  - [ ] Easter Eggs
+- [ ] Add login system
+- [ ] Multi-language support
+
+See the [open issues](https://github.com/devkennyy/rungeon) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## 🤔 FAQ
 
@@ -74,3 +85,5 @@ You can participate in the [discussions](https://github.com/devkennyy/rungeon/di
 ## 📜 License
 
 This content is licensed under the [GNU Public GPL-3.0](/license) license
+
+<p align="right">(<a href="#top">back to top</a>)</p>
