@@ -271,9 +271,17 @@ const handleStage3 = id => {
 const handleStage4 = id => {
   if (stageCompleted(id)) return;
   $("#stage-body-icon").addClass("unselectable");
-  $("#stage-body-icon").draggable({ revert: "invalid" });
+  $("#stage-body-icon").draggable({ revert: "invalid", tolerance: "fit" });
   $("#stage-icon").droppable({
-    tolerance: "fit",
+    tolerance: "touch",
+    over: function() {
+      $("#stage-icon-container").removeClass("fa-3x").addClass("fa-4x")
+      $("#stage-icon-container").attr("style", "margin-bottom: -7px; margin-top: -7px;")
+    },
+    out: function(){
+      $("#stage-icon-container").removeClass("fa-4x").addClass("fa-3x")
+      $("#stage-icon-container").attr("style", "")
+    },
     drop: function () {
       $("#stage-body-icon").remove();
       $("#stage-icon").removeClass().addClass("fa-solid fa-lock-open");
