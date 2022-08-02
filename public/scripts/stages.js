@@ -1,3 +1,5 @@
+var highestStage = -1;
+
 // icons[0] is always going to be the icon above the prompt
 const stages = [
   {
@@ -22,7 +24,7 @@ const stages = [
         name: "fa-bugs",
       },
     ],
-    startDisabled: false,
+    startDisabled: true,
     back: 0,
     next: 2,
   },
@@ -147,7 +149,7 @@ const enable = id => {
 };
 
 const handleStage = stageData => {
-  if (stageData.startDisabled) {
+  if (highestStage <= stageData.id && stageData.startDisabled) {
     disable("stage-btn-next");
   }
 
@@ -168,10 +170,8 @@ const handleStage = stageData => {
 
 const stageReset = stageData => {
   switch (stageData.id) {
-    case 0:
-      break;
+    case 0: // fixes stage 0 inheriting stage 1 level functionality
     case 1:
-      break;
     case 2:
       $("#stage-icon").css("opacity", "1");
       $("#stage-icon").off("click");
@@ -180,6 +180,9 @@ const stageReset = stageData => {
       $("#stage-body-icon").show();
       break;
     case 4:
+      $("#stage-body-icon").removeClass("unselectable");
+      $("#stage-body-icon").draggable("disable");
+      $("#stage-icon").droppable("disable");
       break;
     case 5:
       break;
@@ -195,6 +198,11 @@ const setStageIcon = stageData => {
 };
 
 const setStage = stageData => {
+  console.log(highestStage);
+  if (stageData.id > highestStage) {
+    highestStage = stageData.id;
+  }
+
   setStageIcon(stageData);
   setStageText(stageData);
   setStageButtons(stageData);
@@ -202,7 +210,6 @@ const setStage = stageData => {
 };
 
 const handleStage1 = stageData => {
-  disable("stage-btn-next");
   let totalClicksRequired = 3;
   let clickCount = 1;
   let opacityCalculator = 1;
@@ -226,7 +233,7 @@ const handleStage3 = () => {
 
 const handleStage4 = stageData => {
   $("#stage-body-icon").addClass("unselectable");
-  $("#stage-body-icon").draggable();
+  $("#stage-body-icon").draggable({ revert: "invalid" });
   $("#stage-icon").droppable({
     tolerance: "fit",
     drop: function () {
