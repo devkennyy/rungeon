@@ -119,6 +119,11 @@ Here are the simplified steps for an issue/feature related pull request:
 - Ensure your contributions are safe for work.
 - Test your changes and ensure it works after clearing cache.
 
+## Commit Message
+- Do not end the subject line with a period
+- If more than 50 characters use the body (description)
+- Use the body to explain why not how, this can been seen in the code
+
 ## ESLint
 
 - Run the linter for a list of issues
