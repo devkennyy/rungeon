@@ -45,7 +45,6 @@ document.getElementById("stage-btn-restart").addEventListener("click", () => {
   stageCounter = 0;
 
   for (let i = 0; i < stages.length; i++) {
-    console.log(stages[i].id);
     stages[i].completed = false;
   }
   setStage(stages[stageCounter]);
