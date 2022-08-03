@@ -8,7 +8,7 @@
 }
 
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -16,8 +16,8 @@ body {
   margin: 0;
 }
 
-input[type="text"],
-input[type="password"] {
+input[type='text'],
+input[type='password'] {
   line-height: normal;
   height: 40px;
   outline: none;
@@ -30,8 +30,8 @@ input[type="password"] {
   transition: 0.2s ease-in-out;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus {
+input[type='text']:focus,
+input[type='password']:focus {
   border-bottom: 2px solid var(--primary_btn-color);
   transition: 0.1s ease-in-out;
 }
@@ -111,9 +111,7 @@ button,
 }
 
 #stage_3-icon:hover {
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🟡</text></svg>")
-      16 0,
-    auto;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🟡</text></svg>") 16 0, auto;
   /*!emojicursor.app*/
 }
 

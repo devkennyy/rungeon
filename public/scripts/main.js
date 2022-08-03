@@ -20,32 +20,32 @@ function runStageRequiredScripts() {
   addCheckMark();
 
   //Check if user is on index page
-  if (window.location.pathname == "/") {
+  if (window.location.pathname == '/') {
     //Add listener to close theme popup when clicked outside
     addPopupListener();
   }
 
   //Set theme in localStorage if it doesn't exist
-  if (localStorage.getItem("theme") == null) {
-    localStorage.setItem("theme", "default");
+  if (localStorage.getItem('theme') == null) {
+    localStorage.setItem('theme', 'default');
   }
 }
 
 function toggleThemePopup() {
   themeToggler = 2;
-  if (document.getElementById("themePopup").style.display === "none") {
-    document.getElementById("themePopup").style.display = "block";
-    document.getElementById("doors_icon").style.visibility = "hidden";
+  if (document.getElementById('themePopup').style.display === 'none') {
+    document.getElementById('themePopup').style.display = 'block';
+    document.getElementById('doors_icon').style.visibility = 'hidden';
   } else {
-    document.getElementById("themePopup").style.display = "none";
-    document.getElementById("doors_icon").style.visibility = "visible";
+    document.getElementById('themePopup').style.display = 'none';
+    document.getElementById('doors_icon').style.visibility = 'visible';
   }
 }
 
 //when user clicks outside of theme popup, close it
 function addPopupListener() {
-  window.addEventListener("click", function (e) {
-    if (document.getElementById("themePopup").style.display == "none") {
+  window.addEventListener('click', function (e) {
+    if (document.getElementById('themePopup').style.display == 'none') {
       return;
     }
 
@@ -78,7 +78,7 @@ function addPopupListener() {
 
 /* STAGE TWO */
 function stageTwoCoin() {
-  document.getElementById("stage_2-coin").style.display = "none";
+  document.getElementById('stage_2-coin').style.display = 'none';
   stageTwo_hasCoin = true;
 }
 
@@ -86,8 +86,8 @@ function stageTwoCoin() {
 function stageThreeCoin() {
   if (stageTwo_hasCoin) {
     enableContinueButton(3);
-    document.getElementById("stage_3-btn").disabled = false;
-    document.getElementById("stage_3-icon").style.cursor = "auto";
+    document.getElementById('stage_3-btn').disabled = false;
+    document.getElementById('stage_3-icon').style.cursor = 'auto';
   }
 }
 
@@ -97,15 +97,14 @@ function allowDrop(ev) {
 }
 
 function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
+  ev.dataTransfer.setData('text', ev.target.id);
 }
 
 function drop(ev) {
   ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
+  var data = ev.dataTransfer.getData('text');
   ev.target.appendChild(document.getElementById(data));
-  document.getElementById("stage_4-h1").textContent = "The door is unlocked";
-  document.getElementById("stage_4-p").textContent =
-    "I knew that was useful, good work!";
+  document.getElementById('stage_4-h1').textContent = 'The door is unlocked';
+  document.getElementById('stage_4-p').textContent = 'I knew that was useful, good work!';
   enableContinueButton(4);
 }

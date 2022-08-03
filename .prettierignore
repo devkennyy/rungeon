@@ -2,7 +2,7 @@
 /node_modules/
 /shelf/
 /workspace.xml
-/thirdParty/
+/public/thirdParty/
 # VS Code
 /.vscode/
 *.code-workspace
