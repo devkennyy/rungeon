@@ -1,7 +1,5 @@
 var stageCounter = 0;
 var totalStages = stages.length - 2;
-// last completed stage closest to the end of the game
-var highestStage = 0;
 
 // TODO: if the user is on the final stage display a different title since 6/5 is innaccurate
 
@@ -26,7 +24,6 @@ document.getElementById("stage-btn-next").addEventListener("click", () => {
 
   stageCounter++;
 
-  // console.log("next clicked", highestStage);
   stageReset(stages[stageCounter - 1]);
   setStage(stages[stageCounter]);
   updateProgressBar();
@@ -35,11 +32,6 @@ document.getElementById("stage-btn-next").addEventListener("click", () => {
 document.getElementById("stage-btn-back").addEventListener("click", () => {
   if (stageCounter == 0) {
     return;
-  }
-
-  if (stageCounter <= highestStage) {
-    console.log("back clicked", highestStage);
-    enable("stage-btn-next");
   }
 
   stageCounter--;
@@ -51,7 +43,10 @@ document.getElementById("stage-btn-back").addEventListener("click", () => {
 document.getElementById("stage-btn-restart").addEventListener("click", () => {
   console.log("restart clicked");
   stageCounter = 0;
-  highestStage = -1;
+
+  for (let i = 0; i < stages.length; i++) {
+    stages[i].completed = false;
+  }
   setStage(stages[stageCounter]);
   updateProgressBar();
 });
