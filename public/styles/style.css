@@ -461,3 +461,10 @@ button,
   margin-top: calc(2 * var(--totalWidth) / -3);
   margin-left: calc(2 * var(--totalWidth) / -3);
 }
+
+#cursor-head {
+  height: 80px;
+  width: 80px;
+  border: 5px solid #121520;
+  border-radius: 50%;
+}

@@ -351,7 +351,21 @@ const handleStage6 = id => {
     },
   });
 };
+
 const handleStage7 = id => {
+  $("#rungeon").css({cursor: "none"});
+  $("#rungeon").prepend($("<div>", {id: "cursor"}));
+  $("#cursor").append($("<div>", {id: "cursor-head"}));
+
+  const moveCursor = event => {
+    const x = event.clientX;
+    const y = event.clientY;
+     
+    $("#cursor").css({transform: `translate3d(${x}px, ${y}px, 0)`});
+    $("#cursor").css({transform: `translate3d(${x}px, ${y}px, 0)`});
+  };
+
+  window.addEventListener("mousemove", moveCursor);
   // stages[id].completed = true;
   // enable("stage-btn-next");
 };
