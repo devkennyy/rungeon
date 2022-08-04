@@ -109,6 +109,20 @@ const stages = [
   },
   {
     id: 7,
+    title: "",
+    body: "",
+    icons: [
+      {
+        name: "",
+      },
+    ],
+    startDisabled: true,
+    completed: false,
+    back: 6,
+    next: 8,
+  },
+  {
+    id: 8,
     title: "You did it?",
     body: "Get out while you can.",
     icons: [
@@ -118,7 +132,7 @@ const stages = [
     ],
     startDisabled: false,
     completed: false,
-    back: -1,
+    back: 7,
     next: -1,
   },
 ];
@@ -188,6 +202,9 @@ const handleStage = stageData => {
     case 6:
       handleStage6(stageData.id);
       break;
+    case 7:
+      handleStage7(stageData.id);
+      break;
     default:
       break;
   }
@@ -209,10 +226,10 @@ const stageReset = stageData => {
       $("#stage-icon-container").attr("style", "");
       $("#stage-icon").droppable("disable");
       break;
-    case 5:
-      break;
     case 6:
       $("#tileGroup").remove();
+      break;
+    case 7:
       break;
     default:
       break;
@@ -333,4 +350,8 @@ const handleStage6 = id => {
       }
     },
   });
+};
+const handleStage7 = id => {
+  // stages[id].completed = true;
+  // enable("stage-btn-next");
 };
