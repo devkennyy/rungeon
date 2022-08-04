@@ -1,8 +1,6 @@
 var stageCounter = 0;
 var totalStages = stages.length - 2;
 
-// TODO: if the user is on the final stage display a different title since 6/5 is innaccurate
-
 function updateProgressBar() {
   let percentage = (stageCounter / (totalStages + 1)) * 100;
   $(".progress-bar").css("width", `${percentage}%`);
