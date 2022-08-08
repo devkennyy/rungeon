@@ -88,7 +88,7 @@ const stages = [
         name: 'fa-bacon',
       },
     ],
-    startDisabled: false,
+    startDisabled: true,
     completed: false,
     back: 4,
     next: 6,
@@ -185,6 +185,9 @@ const handleStage = stageData => {
     case 4:
       handleStage4(stageData.id);
       break;
+    case 5:
+      handleStage5(stageData.id);
+      break;
     case 6:
       handleStage6(stageData.id);
       break;
@@ -210,6 +213,8 @@ const stageReset = stageData => {
       $('#stage-icon').droppable('disable');
       break;
     case 5:
+      $('#stage-icon').css('opacity', '1');
+      $('#stage-icon').off('click');
       break;
     case 6:
       $('#tileGroup').remove();
@@ -277,6 +282,22 @@ const handleStage4 = id => {
     },
   });
 };
+
+const handleStage5 = id => {
+  let totalClicksRequired = 3;
+  let clickCount = 1;
+  let opacityCalculator = 1;
+  $('#stage-icon').click(() => {
+    clickCount++;
+    opacityCalculator -= 1 / totalClicksRequired;
+    $('#stage-icon').css('opacity', `${opacityCalculator.toString()}`);
+    if (clickCount > totalClicksRequired) {
+      stages[id].completed = true;
+      enable('stage-btn-next');
+    }
+  });
+};
+    
 
 const handleStage6 = id => {
   // generates stage HTML
