@@ -8,7 +8,7 @@
 }
 
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -16,8 +16,8 @@ body {
   margin: 0;
 }
 
-input[type="text"],
-input[type="password"] {
+input[type='text'],
+input[type='password'] {
   line-height: normal;
   height: 40px;
   outline: none;
@@ -30,8 +30,8 @@ input[type="password"] {
   transition: 0.2s ease-in-out;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus {
+input[type='text']:focus,
+input[type='password']:focus {
   border-bottom: 2px solid var(--primary_btn-color);
   transition: 0.1s ease-in-out;
 }
@@ -111,8 +111,7 @@ button,
 }
 
 #stage_3-icon:hover {
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🟡</text></svg>") 16 0,
-    auto;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:19px;'><text y='50%'>🟡</text></svg>") 16 0, auto;
   /*!emojicursor.app*/
 }
 
@@ -158,7 +157,6 @@ button,
 }
 
 @-webkit-keyframes blink {
-
   0%,
   100% {
     opacity: 1;
@@ -170,7 +168,6 @@ button,
 }
 
 @keyframes blink {
-
   0%,
   100% {
     opacity: 1;
@@ -291,12 +288,12 @@ button,
 }
 
 .btn {
-border-radius: 40px !important;
-border: none !important;
+  border-radius: 40px !important;
+  border: none !important;
 }
 
 .btn-primary {
-background-color: var(--primary_btn-color) !important;
+  background-color: var(--primary_btn-color) !important;
 }
 
 .btn-danger {
@@ -345,9 +342,8 @@ background-color: var(--primary_btn-color) !important;
   margin-bottom: 20px;
 }
 
-
 #progress-container {
-  position:absolute; 
+  position: absolute;
   bottom: 20px;
   width: 95%;
   left: 0;
@@ -357,12 +353,12 @@ background-color: var(--primary_btn-color) !important;
 }
 
 #progressIcon {
-  position:absolute; 
-  bottom:6px;
+  position: absolute;
+  bottom: 6px;
   left: -1%;
   z-index: 1;
   color: var(--text-color);
-  transition: left .8s ease;
+  transition: left 0.8s ease;
 }
 
 .animateRun {
@@ -371,8 +367,12 @@ background-color: var(--primary_btn-color) !important;
 }
 
 @keyframes mymove {
-  0% {bottom:6px;}
-  100% {bottom:9px;}
+  0% {
+    bottom: 6px;
+  }
+  100% {
+    bottom: 9px;
+  }
 }
 
 .progress {
@@ -384,5 +384,78 @@ background-color: var(--primary_btn-color) !important;
 .progress-bar {
   background-color: var(--icon-color) !important;
   filter: brightness(80%);
-  transition: width .8s ease !important;
+  transition: width 0.8s ease !important;
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#tileGroup {
+  --totalWidth: 270px;
+  width: var(--totalWidth);
+  height: var(--totalWidth);
+  /* background-color: red; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tileContainer {
+  float: left;
+  width: calc(var(--totalWidth) / 3);
+  height: calc(var(--totalWidth) / 3);
+}
+
+.tile {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* background-color: blue; */
+  font-size: calc(var(--totalWidth) / 2) !important;
+  overflow: hidden;
+}
+
+.tile i {
+  display: block;
+}
+
+#T2 {
+  margin-left: calc(var(--totalWidth) / -3);
+}
+
+#T3 {
+  margin-left: calc(2 * var(--totalWidth) / -3);
+}
+
+#T4 {
+  margin-top: calc(var(--totalWidth) / -3);
+}
+
+#T5 {
+  margin-top: calc(var(--totalWidth) / -3);
+  margin-left: calc(var(--totalWidth) / -3);
+}
+
+#T6 {
+  margin-top: calc(var(--totalWidth) / -3);
+  margin-left: calc(2 * var(--totalWidth) / -3);
+}
+
+#T7 {
+  margin-top: calc(2 * var(--totalWidth) / -3);
+}
+
+#T8 {
+  margin-top: calc(2 * var(--totalWidth) / -3);
+  margin-left: calc(var(--totalWidth) / -3);
+}
+
+#T9 {
+  margin-top: calc(2 * var(--totalWidth) / -3);
+  margin-left: calc(2 * var(--totalWidth) / -3);
 }

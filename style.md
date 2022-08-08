@@ -29,7 +29,7 @@ Include a trailing comma whenever there is a line break between the final elemen
 Example:
 
 ```js
-const values = ["first value", "second value"];
+const values = ['first value', 'second value'];
 ```
 
 ### Arrow functions

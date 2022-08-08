@@ -83,23 +83,12 @@ Here are the simplified steps for an issue/feature related pull request:
 
 ```html
 <div id="stage_z" class="stage d-flex flex-column flex-nowrap vh-100 d-none">
-  <div
-    id="stage_z-icon"
-    class="icon fas fa-icon fa-3x align-self-center"
-    onclick="Stage_Specific_Function"></div>
+  <div id="stage_z-icon" class="icon fas fa-icon fa-3x align-self-center" onclick="Stage_Specific_Function"></div>
   <h1>First line</h1>
   <p>Second line</p>
   <div class="d-flex justify-content-center">
-    <button class="btn btn-danger me-5" onclick="Previous_Stage(z)">
-      Return
-    </button>
-    <button
-      id="stage_z-btn"
-      class="btn btn-primary"
-      disabled
-      onclick="Next_Stage(z)">
-      Continue
-    </button>
+    <button class="btn btn-danger me-5" onclick="Previous_Stage(z)">Return</button>
+    <button id="stage_z-btn" class="btn btn-primary" disabled onclick="Next_Stage(z)">Continue</button>
   </div>
 </div>
 ```
