@@ -68,6 +68,8 @@ See the [open issues](https://github.com/devkennyy/rungeon) for a full list of p
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<!--
+
 ## 🤔 FAQ
 
 > What's stopping me from checking the code for answers?
@@ -81,6 +83,8 @@ Rungeon is not just a game, it's an environment for developers to learn and impr
 > How can I reach out or join the community?
 
 You can participate in the [discussions](https://github.com/devkennyy/rungeon/discussions), [send me an email](mailto:devkenny@outlook.com) or [join our Discord](https://discord.gg/SFX2KSuzep).
+
+-->
 
 ## 📜 License
 
