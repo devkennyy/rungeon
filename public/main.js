@@ -50,6 +50,7 @@ function addPopupListener() {
     }
 
     if (e.target == document.body) {
+      console.log("clicked outside")
       toggleThemePopup();
     }
   });
