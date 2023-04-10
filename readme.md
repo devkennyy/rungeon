@@ -10,9 +10,6 @@
 ![Repository contributors](https://img.shields.io/github/contributors-anon/devkennyy/rungeon?color=0874bc)
 ![Repository license](https://img.shields.io/github/license/devkennyy/rungeon?color=0874bc)
 
-> **Warning**
-> The site is currently down. Can only be run locally.
-
 </div>
 
 ## 📙 About
