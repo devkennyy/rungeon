@@ -58,5 +58,13 @@
         onclick="window.location.href='rungeon.html'"
       ></i>
     </div>
+    <p id="alert_text">
+      Press the icon to play
+    </p>
+    <script>
+      setTimeout(() => {
+        document.getElementById('alert_text').classList.add('animateAlert');
+      }, 3500);
+    </script>
   </body>
 </html>
