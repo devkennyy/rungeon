@@ -4,7 +4,7 @@
 
 [Rungeon](https://rungeon.live/) is an **open source, puzzle based adventure game**.
 
-[![My Skills](https://skillicons.dev/icons?i=js,css,html,jquery,bootstrap)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=js,css,html)](https://skillicons.dev)
 
 ![Repository version](https://img.shields.io/github/v/release/devkennyy/rungeon?color=0874bc&label=version)
 ![Repository contributors](https://img.shields.io/github/contributors-anon/devkennyy/rungeon?color=0874bc)
