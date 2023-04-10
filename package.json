@@ -20,8 +20,7 @@
   },
   "homepage": "https://github.com/devkennyy/rungeon#readme",
   "dependencies": {
-    "ejs": "^3.1.8",
-    "express": "^4.18.1"
+    "ejs": "^3.1.8"
   },
   "devDependencies": {
     "eslint": "^8.20.0",
