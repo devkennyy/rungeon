@@ -141,7 +141,7 @@ button,
 
 #index .doors i {
   color: var(--text-color);
-  font-size: 20rem;
+  font-size: 27rem;
   cursor: pointer;
   -webkit-animation: blink 1s;
   animation: blink 1s;
@@ -150,7 +150,7 @@ button,
 }
 
 #index .doors :hover {
-  font-size: 22rem;
+  font-size: 26rem;
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
   opacity: 1 !important;
