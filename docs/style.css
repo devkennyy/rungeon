@@ -361,9 +361,27 @@ button,
   transition: left 0.8s ease;
 }
 
+#alert_text {
+  opacity: 0;
+}
+
 .animateRun {
   animation: mymove 0.15s infinite;
   animation-direction: alternate;
+}
+
+.animateAlert {
+  animation: reveal 0.4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes mymove {
