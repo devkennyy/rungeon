@@ -10,8 +10,3 @@
 /httpRequests/
 # intellij configs
 .idea/
-#firebase
-.firebase
-.firebaserc
-firebase.json
-firebase-debug.log
