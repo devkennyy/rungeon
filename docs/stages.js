@@ -2,8 +2,8 @@
 const stages = [
   {
     id: 0,
-    title: "A mystery door, how exciting",
-    body: "Maybe that button does something?",
+    title: "A mysterious door",
+    body: "That button looks like it might be important.",
     icons: [
       {
         name: "fa-door-open",
@@ -30,11 +30,11 @@ const stages = [
   },
   {
     id: 2,
-    title: "Is that a dragon",
-    body: "Take a breath, you've deserved it",
+    title: "A moment of rest",
+    body: "Catch your breath, you'll need it",
     icons: [
       {
-        name: "fa-circle-question", // originally fa-wind
+        name: "fa-lungs", 
       },
       // {
       //   name: ""
@@ -47,8 +47,8 @@ const stages = [
   },
   {
     id: 3,
-    title: "That's definitely a dragon",
-    body: "Give him the coin or something!",
+    title: "Steal from the dragon",
+    body: "We need that coin, take it",
     icons: [
       {
         name: "fa-dragon",
@@ -64,7 +64,7 @@ const stages = [
   },
   {
     id: 4,
-    title: "The door is locked",
+    title: "A locked door",
     body: "What's this in your pocket? I doubt it's useful",
     icons: [
       {
@@ -82,10 +82,10 @@ const stages = [
   {
     id: 5,
     title: "Time to eat",
-    body: "You've got to eat something, or you'll starve",
+    body: "Are you hungry? Eat the food",
     icons: [
       {
-        name: "fa-bacon",
+        name: "fa-hamburger",
       },
     ],
     startDisabled: true,
