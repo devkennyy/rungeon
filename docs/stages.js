@@ -252,6 +252,7 @@ const setStage = stageData => {
   setStageText(stageData);
   setStageButtons(stageData);
   handleStage(stageData);
+  checkDevmode();
 };
 
 const handleStage1 = id => {
@@ -382,16 +383,13 @@ const handleStage7 = id => {
   });
 };
 
-//  set it to true and you will be able to skip stages
-// never commit code with this set to true
 
-// const devmode = false; 
+// this should be false in production
+let devmode = true;
 
-// check if devmode is true, if it is, allow the next button to be clicked
-// call this everytime a stage is loaded
-
-// const checkDevmode = () => {
-//   if (devmode) {
-//     enable("stage-btn-next");
-//   }
-// }
+const checkDevmode = () => {
+  if (devmode){
+    enable("stage-btn-next");
+    console.log("stage completed (devmode)")
+  };
+};
