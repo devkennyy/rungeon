@@ -477,3 +477,7 @@ button,
   margin-top: calc(2 * var(--totalWidth) / -3);
   margin-left: calc(2 * var(--totalWidth) / -3);
 }
+
+.brightness-down {
+  filter: brightness(0.5);
+}

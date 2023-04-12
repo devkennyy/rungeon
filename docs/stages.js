@@ -109,6 +109,20 @@ const stages = [
   },
   {
     id: 7,
+    title: "It's dark in here",
+    body: "I can't see, turn on the light",
+    icons: [
+      {
+        name: "fa-lightbulb",
+      },
+    ],
+    startDisabled: true,
+    completed: false,
+    back: 6,
+    next: 8,
+  },
+  {
+    id: 8,
     title: "You did it?",
     body: "Get out while you can.",
     icons: [
@@ -191,6 +205,9 @@ const handleStage = stageData => {
     case 6:
       handleStage6(stageData.id);
       break;
+    case 7:
+      handleStage7(stageData.id);
+      break;
     default:
       break;
   }
@@ -219,6 +236,8 @@ const stageReset = stageData => {
     case 6:
       $("#tileGroup").remove();
       break;
+    case 7:
+      $("#stage-icon").addClass("brightness-down");
     default:
       break;
   }
@@ -347,3 +366,32 @@ const handleStage6 = id => {
     },
   });
 };
+
+const handleStage7 = id => {
+    $("#stage-icon").addClass("brightness-down");
+  
+    $("#stage-icon").click(() => {
+      $("#stage-icon").toggleClass("brightness-down");
+      $("#stage-icon").toggleClass("brightness-up");
+  
+    if ($("#stage-icon").hasClass("brightness-up")) {
+      console.log("level is cleared")
+      stages[id].completed = true;
+      enable("stage-btn-next");
+    }
+  });
+};
+
+//  set it to true and you will be able to skip stages
+// never commit code with this set to true
+
+// const devmode = false; 
+
+// check if devmode is true, if it is, allow the next button to be clicked
+// call this everytime a stage is loaded
+
+// const checkDevmode = () => {
+//   if (devmode) {
+//     enable("stage-btn-next");
+//   }
+// }
