@@ -236,6 +236,12 @@ const handleStage = stageData => {
     case 7:
       handleStage7(stageData.id);
       break;
+    case 8:
+      handleStage8(stageData.id);
+      break;
+    case 9:
+      handleStage9(stageData.id);
+      break;
     default:
       break;
   }
