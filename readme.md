@@ -14,9 +14,7 @@
 
 ## 📙 About
 
-Rungeon features a series of puzzles in the form of stages, in which the user relies on their wits to 'escape'.
-The site offers a sense of customizability with a variety of themes sure to fit a user's preference.
-We're in an active state of development, always building, and preparing the next rungeon stage as you read!
+Rungeon is an open source puzzle game for the browser that challenges players to use their wits to escape from a variety of themed stages. With a constant flow of new stages being developed, there's always something fresh and exciting for players to explore.
 
 ## 💾 Installation
 
@@ -33,14 +31,13 @@ git clone https://github.com/yourUsername/rungeon.git
 cd rungeon
 ```
 
-3. Install dependancies
-```shell
-npm install
-```
+### Visual Studio Code: 
+3. Install ["Live Server"](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension
 
-4. Start the local server
+
+4. Go live
 ```shell
-npm run start
+
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -61,7 +58,6 @@ Refer to the [contributing file](contributing.md) for a beginner-friendly guide 
 - [x] Rework stages to be contributing friendly
 - [ ] Add achievements 
   - [ ] Easter Eggs
-- [ ] Add login system
 - [ ] Multi-language support
 
 See the [open issues](https://github.com/devkennyy/rungeon) for a full list of proposed features (and known issues).
