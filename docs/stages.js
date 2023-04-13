@@ -123,6 +123,34 @@ const stages = [
   },
   {
     id: 8,
+    title: "Fire up the campfire",
+    body: "Fuel it to heat up the room",
+    icons: [
+      {
+        name: "fa-campfire",
+      },
+    ],
+    startDisabled: true,
+    completed: false,
+    back: 7,
+    next: 9,
+  },
+  {
+    id: 9,
+    title: "Kill the ghost",
+    body: "Hunt down the ghost already",
+    icons: [
+      {
+        name: "fa-ghost",
+      },
+    ],
+    startDisabled: true,
+    completed: false,
+    back: 8,
+    next: 10,
+  },
+  {
+    id: 10,
     title: "You did it?",
     body: "Get out while you can.",
     icons: [
