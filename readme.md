@@ -35,10 +35,11 @@ cd rungeon
 3. Install ["Live Server"](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension
 
 
-4. Go live
-```shell
 
-```
+
+4. Go live from the buttom of the page
+<img width="533" alt="image" src="https://user-images.githubusercontent.com/105208736/232226335-f3ac9e83-3a57-46ae-b5e9-6291a3ac5bde.png">
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
