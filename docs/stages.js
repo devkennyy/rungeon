@@ -123,11 +123,11 @@ const stages = [
   },
   {
     id: 8,
-    title: "Fire up the campfire",
-    body: "Fuel it to heat up the room",
+    title: "Fuel the furnace",
+    body: "Use the correct fuel",
     icons: [
       {
-        name: "fa-campfire",
+        name: "fa-fire-burner",
       },
     ],
     startDisabled: true,
@@ -272,6 +272,9 @@ const stageReset = stageData => {
       break;
     case 7:
       $("#stage-icon").addClass("brightness-down");
+      break;
+    case 8:
+      $(".icon-container").remove();
     default:
       break;
   }
@@ -417,6 +420,64 @@ const handleStage7 = id => {
   });
 };
 
+const handleStage8 = id => {
+// Shuffle array function
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+// append 6 icons into stage_container
+//! change these icons to 3 fuels 3 non (staff, leaves, etc)
+const iconArray = [
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+]
+
+// shuffle icon array
+const shuffledArray = shuffleArray(iconArray);
+console.log(shuffledArray);
+
+// append a container for the icons
+$("#stage_container").append($("<div>", { class: "icon-container" }));
+
+// append the icons in iconArray to the icon container
+for (let i = 0; i < iconArray.length; i++) {
+  $(".icon-container").append($("<i>", { class: `icon fas fa-${iconArray[i]} fa-2x` }));
+}
+
+// define the icons
+const icons = $('.icon');
+const campfire = $("#stage-icon")
+
+// Add event listeners to icons for dragging
+icons.each(function () {
+  $(this).draggable({
+    revert: true,
+    revertDuration: 0,
+    start: function () {
+      $(this).addClass("dragging");
+    },
+    stop: function () {
+      $(this).removeClass("dragging");
+    },
+  });
+});
+
+// check if icon is dropped touching the stage-icon class
+
+// check that all fuels are hidden
+};
+
+
+    
 
 // this should be false in production
 let devmode = true;
