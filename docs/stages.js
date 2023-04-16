@@ -185,31 +185,27 @@ const handleStage = stageData => {
   if (!stageData.completed && stageData.startDisabled) {
     disable("stage-btn-next");
   }
-
-  switch (stageData.id) {
+    switch (stageData.id) {
     case 1:
-      handleStage1(stageData.id);
+      handleStageBugs(stageData.id);
       break;
     case 2:
-      handleStage2(stageData.id);
+      handleStageCoin(stageData.id);
       break;
     case 3:
-      handleStage3(stageData.id);
+      handleStageLock(stageData.id);
       break;
     case 4:
-      handleStage4(stageData.id);
+      handleStageBrickPuzzle(stageData.id);
       break;
     case 5:
-      handleStage5(stageData.id);
+      handleStageLight(stageData.id);
       break;
     case 6:
-      handleStage6(stageData.id);
+      handleStageFurnace(stageData.id);
       break;
     case 7:
-      handleStage7(stageData.id);
-      break;
-    case 8:
-      handleStage8(stageData.id);
+      handleStageGhost(stageData.id);
       break;
     default:
       break;
@@ -220,6 +216,8 @@ const stageReset = stageData => {
   switch (stageData.id) {
     case 0: // fixes stage 0 inheriting stage 1 level functionality
     case 1:
+      $("#stage-icon").css("opacity", "1");
+      $("#stage-icon").off("click");
     case 2:
       $("#stage-body-icon").show();
       break;
@@ -235,8 +233,7 @@ const stageReset = stageData => {
       $("#stage-icon").addClass("brightness-down");
       break;
     case 6:
-      $("#icon-left-container").remove();
-      $("#icon-right-container").remove();
+      $(".icon-container").hide();
     default:
       break;
   }
@@ -254,7 +251,7 @@ const setStage = stageData => {
   checkDevmode();
 };
 
-const handleStage1 = id => {
+const handleStageBugs = id => {
   let totalClicksRequired = 3;
   let clickCount = 1;
   let opacityCalculator = 1;
@@ -269,7 +266,7 @@ const handleStage1 = id => {
   });
 };
 
-const handleStage2 = id => {
+const handleStageCoin = id => {
   document.getElementById("stage-body-icon").addEventListener("click", () => {
     $("#stage-body-icon").hide();
     stages[id].completed = true;
@@ -277,7 +274,7 @@ const handleStage2 = id => {
   });
 };
 
-const handleStage3 = id => {
+const handleStageLock = id => {
   $("#stage-body-icon").addClass("unselectable");
   $("#stage-body-icon").draggable({ disabled: false, revert: "invalid" });
   $("#stage-icon").droppable({
@@ -302,7 +299,7 @@ const handleStage3 = id => {
   });
 };
 
-const handleStage4 = id => {
+const handleStageBrickPuzzle = id => {
   // generates stage HTML
   $("#stage_container").prepend($("<div>", { id: "tileGroup" }));
   for (let i = 0; i < 9; i++) {
@@ -351,73 +348,109 @@ const handleStage4 = id => {
   });
 };
 
-const handleStage6 = id => {
-// Shuffle array function
-function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
+const handleStageLight = id => {
+    $("#stage-icon").addClass("brightness-down");
+
+    $("#stage-icon").click(() => {
+      $("#stage-icon").toggleClass("brightness-down");
+      $("#stage-icon").toggleClass("brightness-up");
+
+    if ($("#stage-icon").hasClass("brightness-up")) {
+      console.log("level is cleared")
+      stages[id].completed = true;
+      enable("stage-btn-next");
+    }
+  });
+};
+
+const handleStageFurnace = id => {
+  // Shuffle array function
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
   }
-  return array;
-}
 
-// append 6 icons into stage_container
-//! change these icons to 3 fuels 3 non (staff, leaves, etc)
-const iconArray = [
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-]
+  const iconArray = [
+    "drumstick-bite",
+    "carrot",
+    "fish",
+    "bone",
+    "pizza-slice",
+    "ice-cream",
+    "lemon",
+    "pepper-hot",
+  ];
 
-// shuffle icon array
-const shuffledArray = shuffleArray(iconArray);
-console.log(shuffledArray);
+  const fuelArray = [
+    "paper-plane",
+    "newspaper",
+    "leaf",
+  ];
 
-// append two container for the left and right side icons
-$("#stage_container").append($("<div>", { id: "icon-left-container" }));
-$("#stage_container").append($("<div>", { id: "icon-right-container" }));
+  // Shuffle icon array
+  const shuffledArray = shuffleArray(iconArray).slice(0, 6);
+  // Add at least one fuel icon
+  const hasFuelIcon = shuffledArray.some(icon => fuelArray.includes(icon));
+  if (!hasFuelIcon) {
+    const randomIndex = Math.floor(Math.random() * 6);
+    shuffledArray[randomIndex] = fuelArray[Math.floor(Math.random() * 3)];
+  }
 
-// append 3 of six icons in iconArray to the icon left container
-for (let i = 0; i < 3; i++) {
-  $("#icon-left-container").append($("<i>", { class: `icon fas fa-${iconArray[i]} fa-2x` }));
-  $(".icon").attr("id", shuffledArray[i]);
-}
+  const $iconContainer = $("<div>", { class: "icon-container" });
+  $("#stage_container").append($iconContainer);
 
-// append remaining 3 icons to the icon right container
-for (let i = 3; i < 6; i++) {
-  $("#icon-right-container").append($("<i>", { class: `icon fas fa-${iconArray[i]} fa-2x` }));
-  $(".icon").attr("id", shuffledArray[i]);
-}
+  // Append icons to icon container with unique IDs
+  for (let i = 0; i < shuffledArray.length; i++) {
+    const iconId = `${shuffledArray[i]}`;
+    const isFuel = fuelArray.includes(shuffledArray[i]);
+    const iconClass = isFuel ? "fuel" : "non-fuel";
+    const $icon = $("<i>", {
+      class: `${iconClass} icon fas fa-${shuffledArray[i]} fa-2x`,
+      id: iconId,
+    });
+    $iconContainer.append($icon);
+  }
 
+  $("#stage-icon").addClass("inactive ui-draggable-disabled");
 
-// define the icons
-const icons = $('.icon');
-const campfire = $("#stage-icon")
+  $("#paper-plane, #newspaper, #leaf, #pepper-hot, #lemon, #ice-cream, #pizza-slice, #bone, #fish, #carrot, #drumstick-bite").draggable({ disabled: false, revert: "invalid" });
 
-// Add event listeners to icons for dragging
-icons.each(function () {
-  $(this).draggable({
-    revert: true,
-    revertDuration: 0,
-    start: function () {
-      $(this).addClass("dragging");
+  $("#stage-icon").droppable({
+    disabled: false,
+    tolerance: "touch",
+    over: function () {
+      $("#stage-icon").removeClass("inactive").addClass("fueled");
     },
-    stop: function () {
-      $(this).removeClass("dragging");
+    out: function () {
+      $("#stage-icon").removeClass("fueled").addClass("inactive");
+    },
+    drop: function (event, ui) {
+      const droppedIcon = $(ui.draggable).attr("id");
+      console.log(droppedIcon)
+      if (fuelArray.includes(droppedIcon)) {
+        console.log("correct fuel");
+        $(`#${droppedIcon}`).hide();
+        $(".icon-container").hide();
+        $("#stage-icon").removeClass("inactive").addClass("fueled");
+        stages[id].completed = true;
+        enable("stage-btn-next");
+      } else {
+        console.log("incorrect");
+        $("#stage-icon").removeClass("fueled").addClass("inactive");
+        // revert position
+        $(ui.draggable).animate({ top: 0, left: 0 }, "fast");
+      }
     },
   });
-});
-
-// check if icon is dropped touching the stage-icon class
-
-// check that all fuels are hidden
 };
 
 
-    
+// handleStageGhost = id => {
+//   console.log("ghost stage");
+// };
 
 // this should be false in production
 let devmode = true;

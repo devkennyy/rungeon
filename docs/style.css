@@ -481,3 +481,33 @@ button,
 .brightness-down {
   filter: brightness(0.5);
 }
+
+.icon-container {
+  font-size: larger;
+  padding: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.inactive {
+color: var(--bg-color);
+filter: sepia(100%) contrast(1.9) brightness(1);
+}
+
+.fueled {
+color: var(--icon-color);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+animation: flicker 1s infinite;
+}
+
+/* Define the animation for the fueled furnace */
+@keyframes flicker {
+0% {opacity: 1;}
+50% {opacity: 0.7;}
+100% {opacity: 1;}
+}
+
+.invisible {
+  display: none;
+}
