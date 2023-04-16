@@ -445,13 +445,22 @@ const iconArray = [
 const shuffledArray = shuffleArray(iconArray);
 console.log(shuffledArray);
 
-// append a container for the icons
-$("#stage_container").append($("<div>", { class: "icon-container" }));
+// append two container for the left and right side icons
+$("#stage_container").append($("<div>", { id: "icon-left-container" }));
+$("#stage_container").append($("<div>", { id: "icon-right-container" }));
 
-// append the icons in iconArray to the icon container
-for (let i = 0; i < iconArray.length; i++) {
-  $(".icon-container").append($("<i>", { class: `icon fas fa-${iconArray[i]} fa-2x` }));
+// append 3 of six icons in iconArray to the icon left container
+for (let i = 0; i < 3; i++) {
+  $("#icon-left-container").append($("<i>", { class: `icon fas fa-${iconArray[i]} fa-2x` }));
+  $(".icon").attr("id", shuffledArray[i]);
 }
+
+// append remaining 3 icons to the icon right container
+for (let i = 3; i < 6; i++) {
+  $("#icon-right-container").append($("<i>", { class: `icon fas fa-${iconArray[i]} fa-2x` }));
+  $(".icon").attr("id", shuffledArray[i]);
+}
+
 
 // define the icons
 const icons = $('.icon');
