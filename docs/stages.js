@@ -30,23 +30,6 @@ const stages = [
   },
   {
     id: 2,
-    title: "A moment of rest",
-    body: "Catch your breath, you'll need it",
-    icons: [
-      {
-        name: "fa-lungs", 
-      },
-      // {
-      //   name: ""
-      // }
-    ],
-    startDisabled: false,
-    completed: false,
-    back: 1,
-    next: 3,
-  },
-  {
-    id: 3,
     title: "Steal from the dragon",
     body: "We need that coin, take it",
     icons: [
@@ -63,7 +46,7 @@ const stages = [
     next: 4,
   },
   {
-    id: 4,
+    id: 3,
     title: "A locked door",
     body: "What's this in your pocket? I doubt it's useful",
     icons: [
@@ -76,25 +59,11 @@ const stages = [
     ],
     startDisabled: true,
     completed: false,
-    back: 3,
-    next: 5,
+    back: 2,
+    next: 4,
   },
   {
-    id: 5,
-    title: "Time to eat",
-    body: "Are you hungry? Eat the food",
-    icons: [
-      {
-        name: "fa-hamburger",
-      },
-    ],
-    startDisabled: true,
-    completed: false,
-    back: 4,
-    next: 6,
-  },
-  {
-    id: 6,
+    id: 4,
     title: "A tile puzzle?",
     body: "How ominous",
     icons: [
@@ -104,11 +73,11 @@ const stages = [
     ],
     startDisabled: true,
     completed: false,
-    back: 5,
-    next: 7,
+    back: 3,
+    next: 5,
   },
   {
-    id: 7,
+    id: 5,
     title: "It's dark in here",
     body: "I can't see, turn on the light",
     icons: [
@@ -118,11 +87,11 @@ const stages = [
     ],
     startDisabled: true,
     completed: false,
-    back: 6,
-    next: 8,
+    back: 4,
+    next: 6,
   },
   {
-    id: 8,
+    id: 6,
     title: "Fuel the furnace",
     body: "Use the correct fuel",
     icons: [
@@ -132,11 +101,11 @@ const stages = [
     ],
     startDisabled: true,
     completed: false,
-    back: 7,
-    next: 9,
+    back: 5,
+    next: 7,
   },
   {
-    id: 9,
+    id: 7,
     title: "Kill the ghost",
     body: "Hunt down the ghost already",
     icons: [
@@ -146,11 +115,11 @@ const stages = [
     ],
     startDisabled: true,
     completed: false,
-    back: 8,
-    next: 10,
+    back: 6,
+    next: 8,
   },
   {
-    id: 10,
+    id: 8,
     title: "You did it?",
     body: "Get out while you can.",
     icons: [
@@ -221,6 +190,9 @@ const handleStage = stageData => {
     case 1:
       handleStage1(stageData.id);
       break;
+    case 2:
+      handleStage2(stageData.id);
+      break;
     case 3:
       handleStage3(stageData.id);
       break;
@@ -239,9 +211,6 @@ const handleStage = stageData => {
     case 8:
       handleStage8(stageData.id);
       break;
-    case 9:
-      handleStage9(stageData.id);
-      break;
     default:
       break;
   }
@@ -252,29 +221,22 @@ const stageReset = stageData => {
     case 0: // fixes stage 0 inheriting stage 1 level functionality
     case 1:
     case 2:
-      $("#stage-icon").css("opacity", "1");
-      $("#stage-icon").off("click");
-      break;
-    case 3:
       $("#stage-body-icon").show();
       break;
-    case 4:
+    case 3:
       $("#stage-icon-container").removeClass("fa-4x").addClass("fa-3x");
       $("#stage-icon-container").attr("style", "");
       $("#stage-icon").droppable("disable");
       break;
-    case 5:
-      $("#stage-icon").css("opacity", "1");
-      $("#stage-icon").off("click");
-      break;
-    case 6:
+    case 4:
       $("#tileGroup").remove();
       break;
-    case 7:
+    case 5:
       $("#stage-icon").addClass("brightness-down");
       break;
-    case 8:
-      $(".icon-container").remove();
+    case 6:
+      $("#icon-left-container").remove();
+      $("#icon-right-container").remove();
     default:
       break;
   }
@@ -307,7 +269,7 @@ const handleStage1 = id => {
   });
 };
 
-const handleStage3 = id => {
+const handleStage2 = id => {
   document.getElementById("stage-body-icon").addEventListener("click", () => {
     $("#stage-body-icon").hide();
     stages[id].completed = true;
@@ -315,7 +277,7 @@ const handleStage3 = id => {
   });
 };
 
-const handleStage4 = id => {
+const handleStage3 = id => {
   $("#stage-body-icon").addClass("unselectable");
   $("#stage-body-icon").draggable({ disabled: false, revert: "invalid" });
   $("#stage-icon").droppable({
@@ -340,23 +302,7 @@ const handleStage4 = id => {
   });
 };
 
-const handleStage5 = id => {
-  let totalClicksRequired = 3;
-  let clickCount = 1;
-  let opacityCalculator = 1;
-  $("#stage-icon").click(() => {
-    clickCount++;
-    opacityCalculator -= 1 / totalClicksRequired;
-    $("#stage-icon").css("opacity", `${opacityCalculator.toString()}`);
-    if (clickCount > totalClicksRequired) {
-      stages[id].completed = true;
-      enable("stage-btn-next");
-    }
-  });
-};
-    
-
-const handleStage6 = id => {
+const handleStage4 = id => {
   // generates stage HTML
   $("#stage_container").prepend($("<div>", { id: "tileGroup" }));
   for (let i = 0; i < 9; i++) {
@@ -405,22 +351,7 @@ const handleStage6 = id => {
   });
 };
 
-const handleStage7 = id => {
-    $("#stage-icon").addClass("brightness-down");
-  
-    $("#stage-icon").click(() => {
-      $("#stage-icon").toggleClass("brightness-down");
-      $("#stage-icon").toggleClass("brightness-up");
-  
-    if ($("#stage-icon").hasClass("brightness-up")) {
-      console.log("level is cleared")
-      stages[id].completed = true;
-      enable("stage-btn-next");
-    }
-  });
-};
-
-const handleStage8 = id => {
+const handleStage6 = id => {
 // Shuffle array function
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
