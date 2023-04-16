@@ -491,8 +491,8 @@ button,
 }
 
 .inactive {
-color: var(--bg-color);
-filter: sepia(100%) contrast(1.9) brightness(1);
+color: var(--icon-color);
+filter: brightness(0.25);
 }
 
 .fueled {
