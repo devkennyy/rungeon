@@ -34,11 +34,23 @@ cd rungeon
 ### Visual Studio Code: 
 3. Install ["Live Server"](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension
 
+4. Go live from the bottom of the window
+
+5. Go to `http://localhost:5500` in your browser
+
+### Other:
+3. Install [Node.js](https://nodejs.org/en/)
+4. Install [http-server](https://www.npmjs.com/package/http-server)
+```shell
+npm install http-server -g
+```
+
+5. Run the server
+```shell
+http-server
+```
 
 
-
-4. Go live from the buttom of the page
-<img width="533" alt="image" src="https://user-images.githubusercontent.com/105208736/232226335-f3ac9e83-3a57-46ae-b5e9-6291a3ac5bde.png">
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
