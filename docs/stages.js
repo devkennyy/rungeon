@@ -107,7 +107,7 @@ const stages = [
   {
     id: 7,
     title: "Kill the ghost",
-    body: "Hunt down the ghost already",
+    body: "I'm not scared, you are",
     icons: [
       {
         name: "fa-ghost",
@@ -448,12 +448,11 @@ const handleStageFurnace = id => {
 };
 
 
-// handleStageGhost = id => {
-//   console.log("ghost stage");
-// };
+handleStageGhost = id => {
+};
 
 // this should be false in production
-let devmode = true;
+let devmode = false;
 
 const checkDevmode = () => {
   if (devmode){
