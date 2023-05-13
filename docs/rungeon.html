@@ -32,7 +32,7 @@
   <script src="game.js" defer></script>
   <script>
     window.onload = () => {
-      console.log(localStorage.getItem("theme"));
+      console.log("loaded theme: " + localStorage.getItem("theme"));
       document.body.classList.add(`theme-${localStorage.getItem("theme")}`);
       addCheckMark() //Add checkmark to dropdown item
       setStage(stages[stageCounter]);
@@ -96,7 +96,7 @@
                 </a>
               </li>
               <li>
-                <a class="dropdown-item" id="dots" onclick="setTheme('dots')" href="#">dots
+                <a class="dropdown-item" id="vivid" onclick="setTheme('vivid')" href="#">vivid
                 </a>
               </li>
               <li>

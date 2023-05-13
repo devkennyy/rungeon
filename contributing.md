@@ -41,17 +41,7 @@ Listening on port 3000
 (ctrl + click: http://localhost:3000/)
 ```
 
-Afterwards, direct a browser tab to point to `localhost:<port>` (e.g. localhost:3000).
-
-### Running Rungeon on Other Devices
-
-In order to connect on your phone or another device,
-
-- Start the server from your computer with the instructions above.
-- Determine your computer's IP address with `ipconfig` (Windows), `ifconfig` (MacOS), or `ip` (Linux).
-- Under the `en0` section, look for a `10.X.X.X` number and remember it.
-- Make sure that your device is connected to the same network as the computer that's running the server
-- Type `http://<10.X.X.X>:<port>/[route]` (e.g. http://10.0.0.4:3000/) in a browser tab on the device.
+Afterwards, direct a browser tab to point to `localhost:<port>` (e.g. localhost:5500).
 
 ## We Develop with Github
 
@@ -104,39 +94,14 @@ Here are the simplified steps for an issue/feature related pull request:
 
 ## Guidelines
 
-- Format your code with ESLint before submitting.
 - Ensure your contributions are safe for work.
 - Test your changes and ensure it works after clearing cache.
+- Turn off developer mode when submitting a pull request.
 
 ## Commit Message
 - Do not end the subject line with a period
 - If more than 50 characters use the body (description)
 - Use the body to explain why not how, this can been seen in the code
-
-## ESLint
-
-- Run the linter for a list of issues
-
-```
-npm run lint
-```
-
-- Run linter to automatically fix issues
-
-```
-npm run lint-fix
-```
-
-## Prettier Formatting
-
-- Run the Prettier formatter to format all files
-
-```
-npm run format
-```
-
-> **Note**
-> You can check the [style guide](/style.md) for specific formatting.
 
 ## Questions
 

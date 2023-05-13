@@ -263,7 +263,7 @@ button,
   background-color: #181818;
 }
 
-#themePopup #dots {
+#themePopup #vivid {
   background-color: #121520;
   color: #fff;
 }
@@ -476,4 +476,38 @@ button,
 #T9 {
   margin-top: calc(2 * var(--totalWidth) / -3);
   margin-left: calc(2 * var(--totalWidth) / -3);
+}
+
+.brightness-down {
+  filter: brightness(0.5);
+}
+
+.icon-container {
+  font-size: larger;
+  padding: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.inactive {
+color: var(--icon-color);
+filter: brightness(0.25);
+}
+
+.fueled {
+color: var(--icon-color);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+animation: flicker 1s infinite;
+}
+
+/* Define the animation for the fueled furnace */
+@keyframes flicker {
+0% {opacity: 1;}
+50% {opacity: 0.7;}
+100% {opacity: 1;}
+}
+
+.invisible {
+  display: none;
 }
