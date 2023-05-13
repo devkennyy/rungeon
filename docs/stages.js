@@ -234,6 +234,9 @@ const stageReset = stageData => {
       break;
     case 6:
       $(".icon-container").hide();
+    case 7:
+      $("#stage-icon").off("click");
+      $("#stage-icon").stop();
     default:
       break;
   }
@@ -455,10 +458,64 @@ const handleStageFurnace = id => {
 
 
 handleStageGhost = id => {
+  // get stage icon
+  const stageIcon = $("#stage-icon");
+
+  // make stageIcon position moveable
+  stageIcon.css("position", "absolute");
+
+  // set stageicon starting position
+  stageIcon.css("top", "33%");
+
+  function makeNewPosition() {
+        // Get viewport dimensions (remove the dimension of the div)
+        var h = $(window).height() - 50;
+        var w = $(window).width() - 50;
+
+        var nh = Math.floor(Math.random() * h);
+        var nw = Math.floor(Math.random() * w);
+
+        return [nh, nw];
+  }
+
+  // make stageIcon move randomly from the centre of the page
+  const moveStageIcon = () => {
+     var newq = makeNewPosition();
+
+     // 1000, is the speed of the animation in ms
+      stageIcon.animate({ top: newq[0], left: newq[1] }, 1500, function () {
+        moveStageIcon();
+      });
+    
+    console.log("moving stage icon")
+  }
+
+  // how often the icon moves
+  setInterval(moveStageIcon, 2000);
+
+  // make stageIcon clickable
+  stageIcon.click(() => {
+    // stop icon from moving
+    stageIcon.stop();
+    // remove event listener
+    stageIcon.off();
+    // remove class
+    stageIcon.removeClass("ghost");
+    // change icon
+    stageIcon.removeClass("fa-ghost").addClass("fa-check");
+    // change text
+    $("#stage-title").text("You did it!");
+    $("#stage-body").text("That wasn't too hard");
+    // mark stage as completed
+    stages[id].completed = true;
+    // enable next button
+    enable("stage-btn-next");
+  }
+  );  
 };
 
 // this should be false in production
-let devmode = false;
+let devmode = true;
 
 const checkDevmode = () => {
   if (devmode){
