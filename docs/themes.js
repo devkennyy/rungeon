@@ -1,5 +1,5 @@
 // list of available themes
-const themes = ["cobalt", "dots", "hedge", "passionfruit", "rgb", "serika", "default"];
+const themes = ["cobalt", "vivid", "hedge", "passionfruit", "rgb", "serika", "default"];
 
 /**
  * Determines if provided theme names are the unique and therefore would
