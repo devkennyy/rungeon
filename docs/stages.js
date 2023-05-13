@@ -176,6 +176,7 @@ const disable = id => {
 
 const enable = id => {
   $(`#${id}`).prop("disabled", false);
+  console.log("level is cleared")
 };
 
 const handleStage = stageData => {
@@ -230,7 +231,6 @@ const stageReset = stageData => {
       $("#tileGroup").remove();
       break;
     case 5:
-      $("#stage-icon").addClass("brightness-down");
       break;
     case 6:
       $(".icon-container").hide();
@@ -352,19 +352,25 @@ const handleStageLight = id => {
     $("#stage-icon").addClass("brightness-down");
 
     $("#stage-icon").click(() => {
-      $("#stage-icon").toggleClass("brightness-down");
-      $("#stage-icon").toggleClass("brightness-up");
+      lightOnOff();
+    });
 
-    if ($("#stage-icon").hasClass("brightness-up")) {
-      console.log("level is cleared")
-      stages[id].completed = true;
-      enable("stage-btn-next");
-    }
-  });
+    function lightOnOff() {
+        $("#stage-icon").toggleClass("brightness-down");
+        $("#stage-icon").toggleClass("brightness-up");
+
+        stages[id].completed = true;
+        enable("stage-btn-next");
+      }
 };
 
 const handleStageFurnace = id => {
   // Shuffle array function
+
+  // remove event listener from previous stage
+  $("#stage-icon").off("click");
+
+
   function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
