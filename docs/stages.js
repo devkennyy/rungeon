@@ -515,7 +515,7 @@ handleStageGhost = id => {
 };
 
 // this should be false in production
-let devmode = true;
+let devmode = false;
 
 const checkDevmode = () => {
   if (devmode){
